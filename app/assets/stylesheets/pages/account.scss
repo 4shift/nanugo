@@ -1,0 +1,1181 @@
+#login .hero:before,
+#signup .hero:before,
+#login .hero:after,
+#signup .hero:after {
+  content: " ";
+  display: table
+}
+
+#login .hero:after,
+#signup .hero:after {
+  clear: both
+}
+
+#login h1,
+#signup h1 {
+  font-size: 32px;
+  font-family: $default-font;
+  color: $account-h1-color;
+}
+
+@media(max-width:767px) {
+  #login h1, #signup h1 {
+    font-size: 18px;
+  }
+}
+
+#login h4,
+#signup h4 {
+  color: $account-h1-color;
+  font-weight: 200;
+}
+
+@media(max-width:767px) {
+  #login h4, #signup h4 {
+    font-size: 14px
+  }
+}
+
+#login .login-wrapper,
+#signup .login-wrapper,
+#login .signup-wrapper,
+#signup .signup-wrapper {
+  position: absolute;
+  padding: 0 60px;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  background-color: $main-bg-color;
+  @include transform(translate(-50%, -50%));
+  @include box-shadow(0 2px 20px $box-shadow-color);
+}
+
+#login .login-wrapper header,
+#signup .login-wrapper header,
+#login .signup-wrapper header,
+#signup .signup-wrapper header {
+  margin-bottom: 30px
+}
+
+@media(min-width:992px) {
+  #login .login-wrapper header > h1,
+  #signup .login-wrapper header > h1,
+  #login .signup-wrapper header > h1,
+  #signup .signup-wrapper header > h1,
+  #login .login-wrapper header > h2,
+  #signup .login-wrapper header > h2,
+  #login .signup-wrapper header > h2,
+  #signup .signup-wrapper header > h2,
+  #login .login-wrapper header > h3,
+  #signup .login-wrapper header > h3,
+  #login .signup-wrapper header > h3,
+  #signup .signup-wrapper header > h3,
+  #login .login-wrapper header > h4,
+  #signup .login-wrapper header > h4,
+  #login .signup-wrapper header > h4,
+  #signup .signup-wrapper header > h4,
+  #login .login-wrapper header > h5,
+  #signup .login-wrapper header > h5,
+  #login .signup-wrapper header > h5,
+  #signup .signup-wrapper header > h5,
+  #login .login-wrapper header > h6,
+  #signup .login-wrapper header > h6,
+  #login .signup-wrapper header > h6,
+  #signup .signup-wrapper header > h6 {
+    margin: 27px 0 18px 0;
+  }
+}
+
+@media(max-width:991px) {
+  #login .login-wrapper,
+  #signup .login-wrapper,
+  #login .signup-wrapper,
+  #signup .signup-wrapper {
+    width: 80%;
+  }
+}
+
+@media(max-width:767px) {
+  #login .login-wrapper,
+  #signup .login-wrapper,
+  #login .signup-wrapper,
+  #signup .signup-wrapper {
+    width: 280px;
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+#login .seperator,
+#signup .seperator {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#login .seperator hr,
+#signup .seperator hr {
+  height: 2px;
+  background: $hr-color;
+}
+
+#login .seperator span,
+#signup .seperator span {
+  display: inline-block;
+  padding: 0 24px;
+  background: $main-bg-color;
+  position: relative;
+  top: -32px;
+}
+
+#login .fields,
+#signup .fields {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0 6px;
+}
+
+@media(min-width:992px) {
+  #login .fields,
+  #signup .fields {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+
+#login .fields .form-group,
+#signup .fields .form-group {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0 6px;
+}
+
+@media(min-width:992px) {
+  #login .fields .form-group,
+  #signup .fields .form-group {
+    float: left;
+    width: 100%;
+  }
+}
+
+#login .fields .form-group input,
+#signup .fields .form-group input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $low-black;
+  vertical-align: middle;
+  background-color: $main-bg-color;
+  background-image: none;
+  border: 1px solid $box-shadow-color;
+  border-radius: 1.5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  border: 0;
+  box-shadow: none;
+  height: 42px;
+  border: 1px solid $input-border-color;
+}
+
+#login .fields .form-group input:-moz-placeholder,
+#signup .fields .form-group input:-moz-placeholder {
+  color: $gray-color;
+}
+
+#login .fields .form-group input:-ms-input-placeholder,
+#signup .fields .form-group input:-ms-input-placeholder {
+  color: $gray-color;
+}
+
+#login .fields .form-group input::-webkit-input-placeholder,
+#signup .fields .form-group input::-webkit-input-placeholder {
+  color: $gray-color;
+}
+
+#login .fields .form-group input:focus,
+#signup .fields .form-group input:focus {
+  border-color: $input-focus-color;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#login .fields .form-group input[disabled],
+#signup .fields .form-group input[disabled],
+#login .fields .form-group input[readonly],
+#signup .fields .form-group input[readonly],
+fieldset[disabled] #login .fields .form-group input,
+fieldset[disabled] #signup .fields .form-group input {
+  cursor: not-allowed;
+  background-color: $input-bg-color;
+}
+
+textarea#login .fields .form-group input,
+textarea#signup .fields .form-group input {
+  height: auto;
+}
+
+#login .login,
+#signup .login,
+#login .signup,
+#signup .signup {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+}
+
+@media(min-width:992px) {
+  #login .login,
+  #signup .login,
+  #login .signup,
+  #signup .signup {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+
+@media(max-width:991px) {
+  #login .login,
+  #signup .login,
+  #login .signup,
+  #signup .signup {
+    padding: 0 12px;
+  }
+}
+
+#login .login input,
+#signup .login input,
+#login .signup input,
+#signup .signup input {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-weight: 400;
+  border-width: 1px;
+  text-transform: none;
+  border-radius: 1.5px;
+  font-family: $default-font;
+  color: $main-bg-color;
+  background-color: $main-color;
+  border-color: $main-color;
+}
+#login .login input:focus,
+#signup .login input:focus,
+#login .signup input:focus,
+#signup .signup input:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+#login .login input:hover,
+#signup .login input:hover,
+#login .signup input:hover,
+#signup .signup input:hover,
+#login .login input:focus,
+#signup .login input:focus,
+#login .signup input:focus,
+#signup .signup input:focus {
+  color: $main-bg-color;
+  text-decoration: none;
+}
+
+#login .login input:active,
+#signup .login input:active,
+#login .signup input:active,
+#signup .signup input:active,
+#login .login input.active,
+#signup .login input.active,
+#login .signup input.active,
+#signup .signup input.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+#login .login input.disabled,
+#signup .login input.disabled,
+#login .signup input.disabled,
+#signup .signup input.disabled,
+#login .login input[disabled],
+#signup .login input[disabled],
+#login .signup input[disabled],
+#signup .signup input[disabled],
+fieldset[disabled] #login .login input,
+fieldset[disabled] #signup .login input,
+fieldset[disabled] #login .signup input,
+fieldset[disabled] #signup .signup input {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+
+#login .login input.btn-link,
+#signup .login input.btn-link,
+#login .signup input.btn-link,
+#signup .signup input.btn-link {
+  color: $main-color;
+  padding: 0;
+}
+
+#login .login input.btn-outline,
+#signup .login input.btn-outline,
+#login .signup input.btn-outline,
+#signup .signup input.btn-outline {
+  border: 1px solid;
+  border-color: #9b9b9b;
+  background-color: transparent;
+  padding: 9px 12px;
+  border-radius: 2px;
+}
+
+#login .login input.btn-outline:hover,
+#signup .login input.btn-outline:hover,
+#login .signup input.btn-outline:hover,
+#signup .signup input.btn-outline:hover {
+  color: $main-color;
+  border-color: $main-color;
+}
+
+#login .login input.btn-outline:active,
+#signup .login input.btn-outline:active,
+#login .signup input.btn-outline:active,
+#signup .signup input.btn-outline:active {
+  box-shadow: none;
+}
+
+#login .login input.btn-full-width,
+#signup .login input.btn-full-width,
+#login .signup input.btn-full-width,
+#signup .signup input.btn-full-width {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#login .login input.btn-wrap,
+#signup .login input.btn-wrap,
+#login .signup input.btn-wrap,
+#signup .signup input.btn-wrap {
+  white-space: normal;
+}
+
+#login .login input:focus,
+#signup .login input:focus,
+#login .signup input:focus,
+#signup .signup input:focus {
+  outline: 0;
+}
+
+#login .login input.btn-secondary,
+#signup .login input.btn-secondary,
+#login .signup input.btn-secondary,
+#signup .signup input.btn-secondary {
+  background-color: $main-color;
+  border-color: $main-color;
+  margin: 0;
+}
+
+#login .login input.btn-secondary:hover,
+#signup .login input.btn-secondary:hover,
+#login .signup input.btn-secondary:hover,
+#signup .signup input.btn-secondary:hover {
+  background-color: #0188b5;
+  border-color: #0188b5;
+}
+
+#login .login input.btn-text,
+#signup .login input.btn-text,
+#login .signup input.btn-text,
+#signup .signup input.btn-text {
+  color: $main-color;
+  padding: 4px 0;
+}
+
+#login .login input.btn-text:active,
+#signup .login input.btn-text:active,
+#login .signup input.btn-text:active,
+#signup .signup input.btn-text:active {
+  box-shadow: none;
+}
+
+#login .login input img.logo,
+#signup .login input img.logo,
+#login .signup input img.logo,
+#signup .signup input img.logo {
+  height: 32px;
+  margin: 0 8px;
+}
+
+#login .login input.btn-get-the-app,
+#signup .login input.btn-get-the-app,
+#login .signup input.btn-get-the-app,
+#signup .signup input.btn-get-the-app,
+#login .login input.btn-download-presskit,
+#signup .login input.btn-download-presskit,
+#login .signup input.btn-download-presskit,
+#signup .signup input.btn-download-presskit {
+  margin: 10px 0 0 0;
+  padding: 0;
+  height: 64px;
+  max-width: 340px;
+  min-width: 105px;
+  width: 100%;
+  border: 2px solid;
+  border-radius: 2px;
+  font-size: 18px;
+  height: 3em;
+  line-height: 3em;
+}
+
+#login .login input.btn-get-the-app.btn-blue,
+#signup .login input.btn-get-the-app.btn-blue,
+#login .signup input.btn-get-the-app.btn-blue,
+#signup .signup input.btn-get-the-app.btn-blue,
+#login .login input.btn-download-presskit.btn-blue,
+#signup .login input.btn-download-presskit.btn-blue,
+#login .signup input.btn-download-presskit.btn-blue,
+#signup .signup input.btn-download-presskit.btn-blue {
+  margin-top: 20px;
+  border-color: $main-color;
+  color: $main-color;
+}
+
+#login .login input.btn-get-the-app.btn-blue:hover,
+#signup .login input.btn-get-the-app.btn-blue:hover,
+#login .signup input.btn-get-the-app.btn-blue:hover,
+#signup .signup input.btn-get-the-app.btn-blue:hover,
+#login .login input.btn-download-presskit.btn-blue:hover,
+#signup .login input.btn-download-presskit.btn-blue:hover,
+#login .signup input.btn-download-presskit.btn-blue:hover,
+#signup .signup input.btn-download-presskit.btn-blue:hover {
+  background-color: #ebf6fb;
+}
+
+#login .login input.btn-get-the-app.btn-green-inverse,
+#signup .login input.btn-get-the-app.btn-green-inverse,
+#login .signup input.btn-get-the-app.btn-green-inverse,
+#signup .signup input.btn-get-the-app.btn-green-inverse,
+#login .login input.btn-download-presskit.btn-green-inverse,
+#signup .login input.btn-download-presskit.btn-green-inverse,
+#login .signup input.btn-download-presskit.btn-green-inverse,
+#signup .signup input.btn-download-presskit.btn-green-inverse {
+  border-color: white;
+  color: white;
+}
+
+#login .login input.btn-get-the-app.btn-green-inverse:hover,
+#signup .login input.btn-get-the-app.btn-green-inverse:hover,
+#login .signup input.btn-get-the-app.btn-green-inverse:hover,
+#signup .signup input.btn-get-the-app.btn-green-inverse:hover,
+#login .login input.btn-download-presskit.btn-green-inverse:hover,
+#signup .login input.btn-download-presskit.btn-green-inverse:hover,
+#login .signup input.btn-download-presskit.btn-green-inverse:hover,
+#signup .signup input.btn-download-presskit.btn-green-inverse:hover {
+  color: #2dd7aa;
+  background-color: $main-bg-color;
+}
+
+#login .login input.btn-get-the-app.btn-white,
+#signup .login input.btn-get-the-app.btn-white,
+#login .signup input.btn-get-the-app.btn-white,
+#signup .signup input.btn-get-the-app.btn-white,
+#login .login input.btn-download-presskit.btn-white,
+#signup .login input.btn-download-presskit.btn-white,
+#login .signup input.btn-download-presskit.btn-white,
+#signup .signup input.btn-download-presskit.btn-white {
+  border-color: white;
+  color: $main-color;
+  background-color: $main-bg-color;
+}
+
+#login .login input:hover,
+#signup .login input:hover,
+#login .signup input:hover,
+#signup .signup input:hover,
+#login .login input:focus,
+#signup .login input:focus,
+#login .signup input:focus,
+#signup .signup input:focus,
+#login .login input:active,
+#signup .login input:active,
+#login .signup input:active,
+#signup .signup input:active,
+.open .dropdown-toggle#login .login input,
+.open .dropdown-toggle#signup .login input,
+.open .dropdown-toggle#login .signup input,
+.open .dropdown-toggle#signup .signup input {
+  color: #fff;
+  background-color: #069ff4;
+  border-color: #0592e0;
+}
+
+#login .login input:active,
+#signup .login input:active,
+#login .signup input:active,
+#signup .signup input:active,
+#login .login input.active,
+#signup .login input.active,
+.open .dropdown-toggle#login .login input,
+.open .dropdown-toggle#signup .login input,
+.open .dropdown-toggle#login .signup input,
+.open .dropdown-toggle#signup .signup input {
+  background-image: none;
+}
+
+#login .login input.disabled,
+#signup .login input.disabled,
+#login .signup input.disabled,
+#signup .signup input.disabled,
+#login .login input[disabled],
+#signup .login input[disabled],
+#login .signup input[disabled],
+#signup .signup input[disabled],
+fieldset[disabled] #login .login input,
+fieldset[disabled] #signup .login input,
+fieldset[disabled] #login .signup input,
+fieldset[disabled] #signup .signup input,
+#login .login input.disabled:hover,
+#signup .login input.disabled:hover,
+#login .signup input.disabled:hover,
+#signup .signup input.disabled:hover,
+#login .login input[disabled]:hover,
+#signup .login input[disabled]:hover,
+#login .signup input[disabled]:hover,
+#signup .signup input[disabled]:hover,
+fieldset[disabled] #login .login input:hover,
+fieldset[disabled] #signup .login input:hover,
+fieldset[disabled] #login .signup input:hover,
+fieldset[disabled] #signup .signup input:hover,
+#login .login input.disabled:focus,
+#signup .login input.disabled:focus,
+#login .signup input.disabled:focus,
+#signup .signup input.disabled:focus,
+#login .login input[disabled]:focus,
+#signup .login input[disabled]:focus,
+#login .signup input[disabled]:focus,
+#signup .signup input[disabled]:focus,
+fieldset[disabled] #login .login input:focus,
+fieldset[disabled] #signup .login input:focus,
+fieldset[disabled] #login .signup input:focus,
+fieldset[disabled] #signup .signup input:focus,
+#login .login input.disabled:active,
+#signup .login input.disabled:active,
+#login .signup input.disabled:active,
+#signup .signup input.disabled:active,
+#login .login input[disabled]:active,
+#signup .login input[disabled]:active,
+#login .signup input[disabled]:active,
+#signup .signup input[disabled]:active,
+fieldset[disabled] #login .login input:active,
+fieldset[disabled] #signup .login input:active,
+fieldset[disabled] #login .signup input:active,
+fieldset[disabled] #signup .signup input:active,
+#login .login input.disabled.active,
+#signup .login input.disabled.active,
+#login .signup input.disabled.active,
+#signup .signup input.disabled.active,
+#login .login input[disabled].active,
+#signup .login input[disabled].active,
+#login .signup input[disabled].active,
+#signup .signup input[disabled].active,
+fieldset[disabled] #login .login input.active,
+fieldset[disabled] #signup .login input.active,
+fieldset[disabled] #login .signup input.active,
+fieldset[disabled] #signup .signup input.active {
+  background-color: $main-color;
+  border-color: $main-color;
+}
+
+@media(max-width:991px) {
+  #login .login input,
+  #signup .login input,
+  #login .signup input,
+  #signup .signup input {
+    width: 100%;
+  }
+}
+
+#login .social-connect,
+#signup .social-connect {
+  margin: 0;
+}
+
+#login section.social-connect > ul,
+#signup section.social-connect > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#login section.social-connect > ul li,
+#signup section.social-connect > ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media(max-width:767px) {
+  #login section.social-connect > ul li,
+  #signup section.social-connect > ul li {
+    display: block;
+    margin: 0;
+  }
+}
+
+#login .facebook > a,
+#signup .facebook > a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color: #fff;
+  font-weight: 400;
+  border-width: 1px;
+  text-transform: none;
+  border-radius: 1.5px;
+  font-family: $default-font;
+  background-color: #3b5998;
+}
+
+#login .facebook > a:focus,
+#signup .facebook > a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+#login .facebook > a:hover,
+#signup .facebook > a:hover,
+#login .facebook > a:focus,
+#signup .facebook > a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+#login .facebook > a:active,
+#signup .facebook > a:active,
+#login .facebook > a.active,
+#signup .facebook > a.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+#login .facebook > a.disabled,
+#signup .facebook > a.disabled,
+#login .facebook > a[disabled],
+#signup .facebook > a[disabled],
+fieldset[disabled] #login .facebook > a,
+fieldset[disabled] #signup .facebook > a {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+
+#login .facebook > a.btn-link,
+#signup .facebook > a.btn-link {
+  color: $main-color;
+  padding: 0;
+}
+
+#login .facebook > a.btn-outline,
+#signup .facebook > a.btn-outline {
+  border: 1px solid;
+  border-color: #9b9b9b;
+  background-color: transparent;
+  padding: 9px 12px;
+  border-radius: 2px;
+}
+
+#login .facebook > a.btn-outline:hover,
+#signup .facebook > a.btn-outline:hover {
+  color: $main-color;
+  border-color: $main-color;
+}
+
+#login .facebook > a.btn-outline:active,
+#signup .facebook > a.btn-outline:active {
+  box-shadow: none;
+}
+
+#login .facebook > a.btn-full-width,
+#signup .facebook > a.btn-full-width {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#login .facebook > a.btn-wrap,
+#signup .facebook > a.btn-wrap {
+  white-space: normal;
+}
+
+#login .facebook > a:focus,
+#signup .facebook > a:focus {
+  outline: 0;
+}
+
+#login .facebook > a.btn-secondary,
+#signup .facebook > a.btn-secondary {
+  background-color: $main-color;
+  border-color: $main-color;
+  margin: 0;
+}
+
+#login .facebook > a.btn-secondary:hover,
+#signup .facebook > a.btn-secondary:hover {
+  background-color: #0188b5;
+  border-color: #0188b5;
+}
+
+#login .facebook > a.btn-text,
+#signup .facebook > a.btn-text {
+  color: $main-color;
+  padding: 4px 0;
+}
+
+#login .facebook > a.btn-text:active,
+#signup .facebook > a.btn-text:active {
+  box-shadow: none;
+}
+
+#login .facebook > a img.logo,
+#signup .facebook > a img.logo {
+  height: 32px;
+  margin: 0 8px;
+}
+
+#login .facebook > a.btn-get-the-app,
+#signup .facebook > a.btn-get-the-app,
+#login .facebook > a.btn-download-presskit,
+#signup .facebook > a.btn-download-presskit {
+  margin: 10px 0 0 0;
+  padding: 0;
+  height: 64px;
+  max-width: 340px;
+  min-width: 105px;
+  width: 100%;
+  border: 2px solid;
+  border-radius: 2px;
+  font-size: 18px;
+  height: 3em;
+  line-height: 3em;
+}
+#login .facebook > a.btn-get-the-app.btn-blue,
+#signup .facebook > a.btn-get-the-app.btn-blue,
+#login .facebook > a.btn-download-presskit.btn-blue,
+#signup .facebook > a.btn-download-presskit.btn-blue {
+  margin-top: 20px;
+  border-color: $main-color;
+  color: $main-color;
+}
+
+#login .facebook > a.btn-get-the-app.btn-blue:hover,
+#signup .facebook > a.btn-get-the-app.btn-blue:hover,
+#login .facebook > a.btn-download-presskit.btn-blue:hover,
+#signup .facebook > a.btn-download-presskit.btn-blue:hover {
+  background-color: #ebf6fb;
+}
+
+#login .facebook > a.btn-get-the-app.btn-green-inverse,
+#signup .facebook > a.btn-get-the-app.btn-green-inverse,
+#login .facebook > a.btn-download-presskit.btn-green-inverse,
+#signup .facebook > a.btn-download-presskit.btn-green-inverse {
+  border-color: white;
+  color: white;
+}
+
+#login .facebook > a.btn-get-the-app.btn-green-inverse:hover,
+#signup .facebook > a.btn-get-the-app.btn-green-inverse:hover,
+#login .facebook > a.btn-download-presskit.btn-green-inverse:hover,
+#signup .facebook > a.btn-download-presskit.btn-green-inverse:hover {
+  color: #2dd7aa;
+  background-color: white;
+}
+
+#login .facebook > a.btn-get-the-app.btn-white,
+#signup .facebook > a.btn-get-the-app.btn-white,
+#login .facebook > a.btn-download-presskit.btn-white,
+#signup .facebook > a.btn-download-presskit.btn-white {
+  border-color: white;
+  color: $main-color;
+  background-color: white;
+}
+
+#login .facebook > a:hover,
+#signup .facebook > a:hover {
+  background-color: #2d4373;
+}
+
+@media(max-width:767px) {
+  #login .facebook > a,
+  #signup .facebook > a {
+    font-size: 14px;
+    width: 100%;
+    margin: 3px 0;
+  }
+}
+
+#login .google-plus > a,
+#signup .google-plus > a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color: #fff;
+  font-weight: 400;
+  border-width: 1px;
+  text-transform: none;
+  border-radius: 1.5px;
+  font-family: $default-font;
+  background-color: #dd4b39;
+}
+
+#login .google-plus > a:focus,
+#signup .google-plus > a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+#login .google-plus > a:hover,
+#signup .google-plus > a:hover,
+#login .google-plus > a:focus,
+#signup .google-plus > a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+#login .google-plus > a:active,
+#signup .google-plus > a:active,
+#login .google-plus > a.active,
+#signup .google-plus > a.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+};
+
+#login .google-plus > a.disabled,
+#signup .google-plus > a.disabled,
+#login .google-plus > a[disabled],
+#signup .google-plus > a[disabled],
+fieldset[disabled] #login .google-plus > a,
+fieldset[disabled] #signup .google-plus > a {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+
+#login .google-plus > a.btn-link,
+#signup .google-plus > a.btn-link {
+  color: $main-color;
+  padding: 0;
+}
+
+#login .google-plus > a.btn-outline,
+#signup .google-plus > a.btn-outline {
+  border: 1px solid;
+  border-color: #9b9b9b;
+  background-color: transparent;
+  padding: 9px 12px;
+  border-radius: 2px;
+}
+
+#login .google-plus > a.btn-outline:hover,
+#signup .google-plus > a.btn-outline:hover {
+  color: $main-color;
+  border-color: $main-color;
+}
+
+#login .google-plus > a.btn-outline:active,
+#signup .google-plus > a.btn-outline:active {
+  box-shadow: none;
+}
+
+#login .google-plus > a.btn-full-width,
+#signup .google-plus > a.btn-full-width {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#login .google-plus > a.btn-wrap,
+#signup .google-plus > a.btn-wrap {
+  white-space: normal;
+}
+
+#login .google-plus > a:focus,
+#signup .google-plus > a:focus {
+  outline: 0;
+}
+
+#login .google-plus > a.btn-secondary,
+#signup .google-plus > a.btn-secondary {
+  background-color: $main-color;
+  border-color: $main-color;
+  margin: 0;
+}
+
+#login .google-plus > a.btn-secondary:hover,
+#signup .google-plus > a.btn-secondary:hover {
+  background-color: #0188b5;
+  border-color: #0188b5;
+}
+
+#login .google-plus > a.btn-text,
+#signup .google-plus > a.btn-text {
+  color: $main-color;
+  padding: 4px 0;
+}
+
+#login .google-plus > a.btn-text:active,
+#signup .google-plus > a.btn-text:active {
+  box-shadow: none;
+}
+
+#login .google-plus > a img.logo,
+#signup .google-plus > a img.logo {
+  height: 32px;
+  margin: 0 8px;
+}
+
+#login .google-plus > a.btn-get-the-app,
+#signup .google-plus > a.btn-get-the-app,
+#login .google-plus > a.btn-download-presskit,
+#signup .google-plus > a.btn-download-presskit {
+  margin: 10px 0 0 0;
+  padding: 0;
+  height: 64px;
+  max-width: 340px;
+  min-width: 105px;
+  width: 100%;
+  border: 2px solid;
+  border-radius: 2px;
+  font-size: 18px;
+  height: 3em;
+  line-height: 3em;
+}
+
+#login .google-plus > a.btn-get-the-app.btn-blue,
+#signup .google-plus > a.btn-get-the-app.btn-blue,
+#login .google-plus > a.btn-download-presskit.btn-blue,
+#signup .google-plus > a.btn-download-presskit.btn-blue {
+  margin-top: 20px;
+  border-color: $main-color;
+  color: $main-color;
+}
+
+#login .google-plus > a.btn-get-the-app.btn-blue:hover,
+#signup .google-plus > a.btn-get-the-app.btn-blue:hover,
+#login .google-plus > a.btn-download-presskit.btn-blue:hover,
+#signup .google-plus > a.btn-download-presskit.btn-blue:hover {
+  background-color: #ebf6fb;
+}
+
+#login .google-plus > a.btn-get-the-app.btn-green-inverse,
+#signup .google-plus > a.btn-get-the-app.btn-green-inverse,
+#login .google-plus > a.btn-download-presskit.btn-green-inverse,
+#signup .google-plus > a.btn-download-presskit.btn-green-inverse {
+  border-color: white;
+  color: white;
+}
+
+#login .google-plus > a.btn-get-the-app.btn-green-inverse:hover,
+#signup .google-plus > a.btn-get-the-app.btn-green-inverse:hover,
+#login .google-plus > a.btn-download-presskit.btn-green-inverse:hover,
+#signup .google-plus > a.btn-download-presskit.btn-green-inverse:hover {
+  color: #2dd7aa;
+  background-color: white;
+}
+
+#login .google-plus > a.btn-get-the-app.btn-white,
+#signup .google-plus > a.btn-get-the-app.btn-white,
+#login .google-plus > a.btn-download-presskit.btn-white,
+#signup .google-plus > a.btn-download-presskit.btn-white {
+  border-color: white;
+  color: $main-color;
+  background-color: white;
+}
+
+#login .google-plus > a:hover,
+#signup .google-plus > a:hover {
+  background-color: #c23321;
+}
+
+@media(max-width:767px) {
+  #login .google-plus > a,
+  #signup .google-plus > a {
+    font-size: 14px;
+    width: 100%;
+    margin: 3px 0;
+  }
+}
+
+#login .forgot-password,
+#signup .forgot-password {
+  position: absolute;
+  right: 18px;
+  top: 11px;
+  background-color: white;
+  font-size: 12px;
+}
+
+@media(max-width:767px) {
+  .login-flow {
+    margin: 0 10px;
+  }
+}
+
+.login-flow .error-message {
+  color: #f05f55;
+  border-color: #ddd;
+}
+
+.login-flow .help-block {
+  font-size: 13px;
+}
+
+.login-flow .form-control {
+  border: 1px solid #ddd;
+}
+
+.login-flow .has-error .help-block {
+  color: #f05f55;
+}
+
+.login-flow .has-error .form-control:focus {
+  box-shadow: none;
+  border-color: #ddd;
+}
+
+.login-flow .has-error .control-label {
+  color: #a7a7a8;
+}
+
+.login-flow .stuck {
+  white-space: nowrap;
+}
+
+.login-flow .disclaimer {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 12px;
+  padding-top: 20px;
+}
+
+@media(min-width:768px) {
+  .login-flow .disclaimer {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+
+@media(min-width:768px) {
+  .login-flow .disclaimer {
+    margin-left: 8.33333333%;
+  }
+}
+
+.login-flow .disclaimer,
+.login-flow .disclaimer a {
+  color: #a7a7a8;
+}
+
+.login-flow .disclaimer a {
+  text-decoration: underline;
+}
+
+section {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 32px;
+}
+
+section:before,
+section:after {
+  content: " ";
+  display: table;
+}
+
+section:after {
+  clear: both;
+}
+
+section:before,
+section:after {
+  content: " ";
+  display: table;
+}
+
+section:after {
+  clear: both;
+}
+
+.breadcrumb {
+  font-family: $default-font;
+}
+
+.breadcrumb,
+.breadcrumb a {
+  color: #6c6c6c;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}

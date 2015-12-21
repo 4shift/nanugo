@@ -46,6 +46,7 @@ header.navbar.navbar-default {
 
       a.btn.btn-outline:hover {
         color: $main-color;
+        border-color: $main-color;
       }
 
       &.search {

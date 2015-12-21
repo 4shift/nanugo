@@ -1,7 +1,8 @@
-@import url(//fonts.googleapis.com/css?family=Varela+Round);
+// @import url('//fonts.googleapis.com/css?family=Varela+Round');
+@import url('//fonts.googleapis.com/css?family=Exo+2');
 
 // body에 적용되는 전경 및 배경 색상
-$main-color: #f1c40f;
+$main-color: #28affa;
 $main-bg-color: #fff;
 $reverse-color: #fff;
 $header-default-color: #a7a7a8;
@@ -11,37 +12,18 @@ $gray-color: #a7a7a8;
 $low-white: #fafafa;
 $low-black: #333;
 $footer-link: #4b4948;
+$account-h1-color: #4b4948;
 $gray-color: #999999;
-$default-font: 'Varela Round', 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'AppleSDGothic', '애플SD고딕', 'Nanum Gothic', 'Malgun Gothic', '맑은고딕', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$hr-color: #f6e7d1;
+$input-border-color: #eaeaea;
+$input-focus-color: #66afe9;
+$input-bg-color: #eee;
+//툴팁 배경 색상
+$cb-tooltip-bg-color: #2d3339;
+
+// $default-font: 'Varela Round', 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'AppleSDGothic', '애플SD고딕', 'Nanum Gothic', 'Malgun Gothic', '맑은고딕', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$default-font: 'Exo 2', 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'AppleSDGothic', '애플SD고딕', 'Nanum Gothic', 'Malgun Gothic', '맑은고딕', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $border-radius: 4px;
 
 // landing-page
 $hero-background: #f6e7d1;
-
-
-//링크
-$cb-box-main-color: #666;
-$cb-box-sub-color: #999;
-
-// 배우고/올리고/피드백에 적용되는 항목
-$cb-box-main-color: #666;
-$cb-box-sub-color: #999;
-$cb-box-inverse-text-color: white;
-$cb-box-info-height: 100px;
-$cb-box-divide-size: 100px;
-$cb-avatar-round-color: #F8B228;
-$cb-large-box-info-height: 200px;
-$cb-font-weight-semi-bold: 300;
-
-// 피드백 랭킹항목에 적용되는 값
-$cb-rank-header-bg-color: #717b85;
-
-// 클레비 폰트 설정
-$cb-regular-font: 'Varela Round', 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'AppleSDGothic', '애플SD고딕', 'Nanum Gothic', 'Malgun Gothic', '맑은고딕', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$cb-eng-font: 'Varela Round', Helvetica Neue, Helvetica, Arial, sans-serif;
-
-//검색바 상단
-$cb-search-header-bg-color: #717b85;
-
-//툴팁 배경 색상
-$cb-tooltip-bg-color: #2d3339;

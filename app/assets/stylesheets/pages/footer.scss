@@ -26,16 +26,20 @@ footer {
     li {
       list-style-type: none;
       display: inline-block;
-      margin: 0 9px;
+      padding: 0 9px;
       font-weight: 600;
+      font-size: 14px;
+      border-right: 1px solid $gray-color;
     }
 
     li:first-child {
+      padding-left: 0;
       margin-left: 0;
     }
 
     li:last-child {
       margin-right: 0;
+      border: none;
     }
 
     li, li a,
@@ -60,6 +64,10 @@ footer {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
+
+      li {
+        border: none;
+      }
 
       a {
         display: inline-block;
@@ -126,7 +134,12 @@ footer {
 
     ul.footer-links li {
       display: block;
-      margin: 9px;
+      padding: 9px;
+      border: none;
+    }
+
+    ul.share li {
+      border: none;
     }
 
     p.with-love {

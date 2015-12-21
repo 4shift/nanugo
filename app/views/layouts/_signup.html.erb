@@ -1,0 +1,38 @@
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modal">
+  <div id="signup">
+    <div class="signup-wrapper">
+      <header>
+        <h1>회원가입</h1>
+        <h4>지금 회원가입을 하면 30 나누고 포인트를 드립니다.</h4>
+      </header>
+      <section class="social-connect">
+        <ul>
+          <li class="facebook">
+            <a href="/auth/facebook/">
+              <span>Facebook 계정으로 가입하기</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="sign-in">
+        <div class="seperator">
+          <hr />
+          <span>또는</span>
+        </div>
+        <form action="/registrations/new" accept-charset="UTF-8" method="post">
+          <div class="fields">
+            <div class="form-group">
+              <input placeholder="Email Address" type="email" name="user[email]" id="user_email">
+            </div>
+          </div>
+          <div class="signup">
+            <input type="submit" name="commit" value="회원가입">
+          </div>
+        </form>
+      </section>
+      <section class="text-center">
+        <span>이미 NanuGO 계정이 있으신가요? <a href="/login">로그인하기</a> </span>
+      </section>
+    </div>
+  </div>
+</div>
