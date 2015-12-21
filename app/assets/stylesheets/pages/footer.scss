@@ -1,0 +1,136 @@
+
+footer {
+  position: relative;
+  padding: 32px 22px 12px 32px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+
+  .footer-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0 9px;
+      font-weight: 600;
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+
+    li, li a,
+    li:hover, li a:hover,
+    li:focus, li a:focus {
+      color: $footer-link;
+      text-decoration: none;
+    }
+
+    &.footer-links {
+      margin-bottom: 5px;
+    }
+
+    &.share {
+      font-size: 24px;
+      line-height: 1em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      a {
+        display: inline-block;
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 40px;
+        height: 40px;
+        background: url('//s3-ap-northeast-1.amazonaws.com/clebee/footer-sa.png') no-repeat;
+
+        &.facebook-share {
+          background-position: 0 -147px;
+        }
+
+        &.twitter-share {
+          margin: 0 5px;
+          background-position: 0 -67px;
+        }
+
+        &.blog-share {
+          background-position: 0 -267px;
+        }
+      }
+
+      a:hover {
+        &.facebook-share {
+          background-position: 0 -187px;
+        }
+
+        &.twitter-share {
+          margin: 0 5px;
+          background-position: 0 -27px;
+        }
+
+        &.blog-share {
+          background-position: 0 -307px;
+        }
+      }
+    }
+  }
+
+  p.with-love {
+    color: $gray-color;
+    font-weight: 500;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+
+    > * {
+      margin: 18px;
+    }
+
+    ul.footer-links li {
+      display: block;
+      margin: 9px;
+    }
+
+    p.with-love {
+      font-size: 14px;
+    }
+  }
+}

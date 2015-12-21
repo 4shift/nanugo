@@ -1,0 +1,1426 @@
+#landing-page {
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  section {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-family: $default-font;
+  }
+
+  .hero {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 800px;
+    max-height: 1000px;
+    background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/hero-full-60b171c0e50f7a607ace87fa92d77b78.jpg') no-repeat top center $hero-background;
+    background-size: cover;
+    position: relative;
+
+    h1,
+    h3,
+    h4 {
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .appstore-buttons {
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin: 0 6px;
+      }
+    }
+
+    .masthead-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 65%;
+      @include transform(translate(-50%, -50%));
+      text-shadow: 0 1px 30px rgba(0, 0, 0, 0.4);
+
+      .mini-logo {
+        display: none !important;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 88px;
+        height: 88px;
+      }
+    }
+  }
+
+  .hero:before,
+  .hero:after {
+    content: " ";
+    display: table
+  }
+
+  .hero:after {
+    clear: both
+  }
+
+  .appstore-buttons {
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 6px;
+    }
+
+      .ios-app-store img,
+      .android-google-play img {
+        height: 44px;
+        width: auto;
+      }
+  }
+
+
+  @media(max-width:767px) {
+    h1 {
+      font-size: 24px;
+
+      .appstore-buttons {
+        margin-left: -30px;
+        margin-right: -30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media(max-width:991px) {
+    .hero {
+      min-height: 520px;
+      background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/hero-sm-0388957b5b4dd05043ab07c445bb6878.jpg') no-repeat top center $hero-background;
+
+      .masthead-wrapper {
+        width: 75%;
+      }
+    }
+  }
+  @media(max-width:1199px) {
+    .hero {
+      min-height: 640px;
+      background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/hero-md-1d3cb99ff12954c6cd857e69d7c76f68.jpg') no-repeat top center $hero-background;
+      background-size: cover;
+    }
+  }
+  @media(max-width:767px) {
+    .hero {
+      min-height: 460px;
+      background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/hero-xs-dc6ae25efe0a8a862d154165c3115b67.jpg') no-repeat top center $hero-background;
+      background-size: cover;
+
+      .masthead-wrapper {
+        width: 290px;
+      }
+    }
+  }
+  @media(max-width:1200px) {
+    .hero {
+      background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/hero-full-60b171c0e50f7a607ace87fa92d77b78.jpg') no-repeat top center $hero-background;
+      background-size: cover;
+
+      .masthead-wrapper {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  @media(min-width:992px) and (max-width:1199px) {
+    .hero .masthead-wrapper .mini-logo {
+      display: none !important
+    }
+    tr.hero .masthead-wrapper .mini-logo {
+      display: none !important
+    }
+    th.hero .masthead-wrapper .mini-logo,
+    td.hero .masthead-wrapper .mini-logo {
+      display: none !important
+    }
+  }
+  @media(min-width:1200px) {
+    .hero .masthead-wrapper .mini-logo {
+      display: none !important
+    }
+    tr.hero .masthead-wrapper .mini-logo {
+      display: none !important
+    }
+    th.hero .masthead-wrapper .mini-logo,
+    td.hero .masthead-wrapper .mini-logo {
+      display: none !important
+    }
+  }
+
+  tr.hero .masthead-wrapper .mini-logo {
+    display: none !important
+  }
+  th.hero .masthead-wrapper .mini-logo,
+  td.hero .masthead-wrapper .mini-logo {
+    display: none !important
+  }
+
+  @media(max-width:767px) {
+    .hero .masthead-wrapper .mini-logo {
+      display: block !important
+    }
+    tr.hero .masthead-wrapper .mini-logo {
+      display: table-row !important
+    }
+    th.hero .masthead-wrapper .mini-logo,
+    td.hero .masthead-wrapper .mini-logo {
+      display: table-cell !important
+    }
+  }
+
+  tr.hero .masthead-wrapper .mini-logo {
+    display: none !important
+  }
+  th.hero .masthead-wrapper .mini-logo,
+  td.hero .masthead-wrapper .mini-logo {
+    display: none !important
+  }
+
+  @media(min-width:768px) and (max-width:991px) {
+    .hero .masthead-wrapper .mini-logo {
+      display: block !important
+    }
+    tr.hero .masthead-wrapper .mini-logo {
+      display: table-row !important
+    }
+    th.hero .masthead-wrapper .mini-logo,
+    td.hero .masthead-wrapper .mini-logo {
+      display: table-cell !important
+    }
+  }
+  .hero ul {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .hero ul li {
+    display: inline-block;
+    margin: 0 6px
+  }
+  .hero h1,
+  .hero h3,
+  .hero h4 {
+    color: white
+  }
+  .hero h1 {
+    font-size: 54px
+  }
+  @media(max-width:1199px) {
+    .hero h1 {
+      font-size: 36px
+    }
+  }
+  @media(max-width:991px) {
+    .hero h1 {
+      font-size: 44px
+    }
+  }
+  @media(max-width:767px) {
+    .hero h1 {
+      font-size: 36px
+    }
+  }
+  @media(max-width:767px) {
+    .hero h3 {
+      font-size: 16px
+    }
+  }
+  .hero a.get-the-app,
+  .hero a.get-started {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    background-color: $main-color;
+    color: $low-black;
+    padding: 20px 0;
+    margin: 72px auto;
+    font-weight: 700;
+    text-shadow: none;
+    border-radius: $border-radius;
+  }
+  .hero a.get-the-app:hover,
+  .hero a.get-started:hover {
+    color: $reverse-color;
+  }
+  .hero a.get-the-app:active,
+  .hero a.get-started:active {
+    -webkit-transform: translate(0, 3px);
+    -ms-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+    background-color: #0598ea;
+    color: white
+  }
+  @media(max-width:991px) {
+    .hero a.get-the-app, .hero a.get-started {
+      margin-top: 0;
+      font-size: 16px;
+      padding: 12px 0;
+      width: 240px;
+      background-color: $main-color;
+    }
+  }
+  @media(max-width:767px) {
+    .hero a.get-the-app, .hero a.get-started {
+      width: 240px;
+      font-size: 14px;
+      padding: 12px 12px;
+      text-align: center;
+      background-color: $main-color;
+    }
+  }
+  @media(min-width:768px) and (max-width:991px) {
+    .hero .yerdle-quote, .hero .arrow-down {
+      display: none !important
+    }
+    tr.hero .yerdle-quote,
+    tr.hero .arrow-down {
+      display: none !important
+    }
+    th.hero .yerdle-quote,
+    th.hero .arrow-down,
+    td.hero .yerdle-quote,
+    td.hero .arrow-down {
+      display: none !important
+    }
+  }
+  @media(max-width:767px) {
+    .hero .yerdle-quote, .hero .arrow-down {
+      display: none !important
+    }
+    tr.hero .yerdle-quote,
+    tr.hero .arrow-down {
+      display: none !important
+    }
+    th.hero .yerdle-quote,
+    th.hero .arrow-down,
+    td.hero .yerdle-quote,
+    td.hero .arrow-down {
+      display: none !important
+    }
+  }
+  .hero .yerdle-quote {
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 2.5%;
+    font-size: 14px
+  }
+  .how-it-works {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  .how-it-works:before,
+  .how-it-works:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works:after {
+    clear: both
+  }
+  .how-it-works:before,
+  .how-it-works:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works:after {
+    clear: both
+  }
+  .how-it-works h1 {
+    margin: 60px auto;
+    text-align: center
+  }
+  @media(max-width:767px) {
+    .how-it-works h1 {
+      margin: 30px auto
+    }
+  }
+  .how-it-works h2 {
+    font-family: $default-font;
+    font-size: 24px
+  }
+  .how-it-works .wrapper {
+    margin-left: -15px;
+    margin-right: -15px
+  }
+  .how-it-works .wrapper:before,
+  .how-it-works .wrapper:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works .wrapper:after {
+    clear: both
+  }
+  .how-it-works .wrapper:before,
+  .how-it-works .wrapper:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works .wrapper:after {
+    clear: both
+  }
+  .how-it-works .wrapper article {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0
+  }
+  @media(min-width:768px) {
+    .how-it-works .wrapper article {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works .wrapper article {
+      float: left;
+      width: 33.33333333%
+    }
+  }
+  .how-it-works .wrapper article .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid
+  }
+  @media(min-width:1200px) {
+    .how-it-works .wrapper article .triangle {
+      margin-top: -45px;
+      border-width: 0 45px 45px 45px;
+      border-color: transparent transparent #fff transparent;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+  }
+  .how-it-works .wrapper article .image-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 280px;
+    background-position: center center;
+    background-repeat: no-repeat
+  }
+  @media(min-width:1200px) {
+    .how-it-works .wrapper article .image-container {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works .wrapper article .image-container {
+      min-height: 480px
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works .wrapper article .image-container {
+      min-height: 280px
+    }
+  }
+  .how-it-works .wrapper article aside {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 30px
+  }
+  @media(min-width:1200px) {
+    .how-it-works .wrapper article aside {
+      float: left;
+      width: 100%
+    }
+  }
+  .how-it-works .wrapper article aside h2 {
+    margin-top: 0
+  }
+  @media(min-width:1200px) {
+    .how-it-works .wrapper article aside {
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+    .how-it-works .wrapper article aside p {
+      font-size: 20px;
+      width: 95%;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works .wrapper article aside p {
+      font-size: 18px
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .wrapper article aside {
+      padding: 40px 60px
+    }
+    .how-it-works .wrapper article aside p {
+      font-size: 18px
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .post-a-pic .triangle {
+      position: absolute;
+      left: -24px;
+      border-width: 20px 25px 20px 0;
+      border-color: transparent #fff transparent transparent
+    }
+  }
+  @media(max-width:767px) {
+    .how-it-works .post-a-pic .triangle {
+      position: absolute;
+      top: -20px;
+      border-width: 0 18px 20px 18px;
+      border-color: transparent transparent #fff transparent
+    }
+  }
+  .how-it-works .post-a-pic .image-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step1_v3_tweaked-bb576f8d514adb15b6bfb1597e8149bd.jpg);
+    background-color: #936b9f;
+    background-size: cover
+  }
+  @media(min-width:768px) {
+    .how-it-works .post-a-pic .image-container {
+      float: left;
+      width: 50%
+    }
+  }
+  .how-it-works .post-a-pic aside {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  @media(min-width:768px) {
+    .how-it-works .post-a-pic aside {
+      float: left;
+      width: 50%
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .post-a-pic aside {
+      text-align: left
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .let-it-go .triangle {
+      position: absolute;
+      right: -24px;
+      border-width: 20px 0 20px 25px;
+      border-color: transparent transparent transparent #fff
+    }
+  }
+  @media(max-width:767px) {
+    .how-it-works .let-it-go .triangle {
+      position: absolute;
+      top: -20px;
+      border-width: 0 18px 20px 18px;
+      border-color: transparent transparent #fff transparent
+    }
+  }
+  .how-it-works .let-it-go .image-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step2-e33f67a522a21e36bb4b2672ecdc2ee5.jpg);
+    background-color: #f5a545;
+    background-size: cover
+  }
+  @media(min-width:768px) {
+    .how-it-works .let-it-go .image-container {
+      float: left;
+      width: 50%
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) and (min-width:768px) {
+    .how-it-works .let-it-go .image-container {
+      left: 50%
+    }
+  }
+  .how-it-works .let-it-go aside {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  @media(min-width:768px) {
+    .how-it-works .let-it-go aside {
+      float: left;
+      width: 50%
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .let-it-go aside {
+      text-align: right
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) and (min-width:768px) {
+    .how-it-works .let-it-go aside {
+      right: 50%
+    }
+  }
+  .how-it-works .shop-for-free {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  @media(min-width:768px) {
+    .how-it-works .shop-for-free {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .shop-for-free .triangle {
+      position: absolute;
+      left: 50%;
+      top: -24px;
+      border-width: 0 20px 25px 20px;
+      border-color: transparent transparent #fff transparent;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0)
+    }
+  }
+  @media(max-width:767px) {
+    .how-it-works .shop-for-free .triangle {
+      position: absolute;
+      top: -20px;
+      border-width: 0 18px 20px 18px;
+      border-color: transparent transparent #fff transparent
+    }
+  }
+  .how-it-works .shop-for-free .image-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3-9db6c43a28ab7b19066b33357e95bfea.jpg);
+    background-color: #f6e7d1;
+    background-size: cover
+  }
+  @media(min-width:768px) {
+    .how-it-works .shop-for-free .image-container {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .shop-for-free .image-container {
+      background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3_tablet-18eb238c32722e012798605fc3df5273.png);
+      background-color: #f6e7d1;
+      background-size: 80%;
+      height: 340px
+    }
+  }
+  .how-it-works .shop-for-free aside {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  @media(min-width:768px) {
+    .how-it-works .shop-for-free aside {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works .shop-for-free aside {
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+  }
+  .how-it-works-postings {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1920px;
+    background-color: white
+  }
+  .how-it-works-postings:before,
+  .how-it-works-postings:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works-postings:after {
+    clear: both
+  }
+  .how-it-works-postings:before,
+  .how-it-works-postings:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works-postings:after {
+    clear: both
+  }
+  .how-it-works-postings h1 {
+    margin: 60px auto;
+    text-align: center
+  }
+  .how-it-works-postings h2 {
+    font-family: $default-font;
+    font-size: 24px;
+    margin: .75em auto
+  }
+  .how-it-works-postings .wrapper {
+    margin-left: -15px;
+    margin-right: -15px
+  }
+  .how-it-works-postings .wrapper:before,
+  .how-it-works-postings .wrapper:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works-postings .wrapper:after {
+    clear: both
+  }
+  .how-it-works-postings .wrapper:before,
+  .how-it-works-postings .wrapper:after {
+    content: " ";
+    display: table
+  }
+  .how-it-works-postings .wrapper:after {
+    clear: both
+  }
+  .how-it-works-postings .wrapper article {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper article {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works-postings .wrapper article {
+      float: left;
+      width: 50%
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper article {
+      float: left;
+      width: 50%
+    }
+  }
+  .how-it-works-postings .wrapper article .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -45px;
+    border-width: 0 45px 45px 45px;
+    border-color: transparent transparent #fff transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .how-it-works-postings .wrapper article .image-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 480px
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper article .image-container {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works-postings .wrapper article .image-container {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper article .image-container {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(max-width:1199px) {
+    .how-it-works-postings .wrapper article .image-container {
+      min-height: 400px
+    }
+  }
+  @media(max-width:767px) {
+    .how-it-works-postings .wrapper article .image-container {
+      min-height: 240px
+    }
+  }
+  .how-it-works-postings .wrapper article .content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 30px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper article .content {
+      float: left;
+      width: 100%
+    }
+  }
+  .how-it-works-postings .wrapper article .content p {
+    font-size: 20px;
+    width: 95%;
+    max-width: 480px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: grey
+  }
+  @media(min-width:992px) {
+    .how-it-works-postings .wrapper article .content p {
+      font-size: 18px
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works-postings .wrapper article .content {
+      padding: 40px 60px
+    }
+    .how-it-works-postings .wrapper article .content p {
+      font-size: 18px
+    }
+  }
+  @media(max-width:767px) {
+    .how-it-works-postings .wrapper article .content p {
+      font-size: 16px
+    }
+  }
+  .how-it-works-postings .wrapper .post-a-pic .image-container {
+    background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step1_v3_tweaked-bb576f8d514adb15b6bfb1597e8149bd.jpg);
+    background-color: #936b9f;
+    background-size: cover
+  }
+  @media(max-width:767px) {
+    .how-it-works-postings .wrapper .post-a-pic .triangle {
+      margin-top: -45px;
+      border-width: 0 45px 45px 45px;
+      border-color: transparent transparent #fff transparent;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+  }
+  @media(max-width:767px) {
+    .how-it-works-postings .wrapper .let-it-go .triangle {
+      margin-top: -45px;
+      border-width: 0 45px 45px 45px;
+      border-color: transparent transparent #fff transparent;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+  }
+  .how-it-works-postings .wrapper .let-it-go .image-container {
+    background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step2-e33f67a522a21e36bb4b2672ecdc2ee5.jpg);
+    background-color: #f5a545;
+    background-size: cover
+  }
+  .how-it-works-postings .wrapper .shop-for-free .image-container {
+    background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3_phone-315759a1e3157ce7608d1b29d49f817e.jpg);
+    background-color: #f6e7d1;
+    background-size: cover
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works-postings .wrapper .shop-for-free .image-container {
+      background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3_tablet-18eb238c32722e012798605fc3df5273.png)
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper .shop-for-free .image-container {
+      background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3-9db6c43a28ab7b19066b33357e95bfea.jpg);
+      background-size: 100%
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone h2,
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone p,
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone span {
+    color: white
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone .image-container {
+    background-color: #2dd7aa;
+    background-size: cover;
+    padding: 12% 4%
+  }
+  @media(max-width:991px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .image-container {
+      min-height: 320px;
+      padding: 5% inherit
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: $border-radius;
+    background-color: white;
+    color: #2dd7aa;
+    width: 75%;
+    font-size: 22px;
+    padding: 2% 4%;
+    margin-top: 15px;
+    text-align: center
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+      float: left;
+      width: 66.66666667%
+    }
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+      margin-left: 16.66666667%
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+      float: left;
+      width: 66.66666667%
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+      margin-left: 16.66666667%
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+      float: left;
+      width: 100%
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+      margin-left: 0
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button span {
+    color: #2dd7aa
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .button {
+      padding: 1%;
+      font-size: 18px
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      float: left;
+      width: 33.33333333%
+    }
+  }
+  @media(min-width:992px) and (max-width:1199px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      display: none !important
+    }
+    tr.how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      display: none !important
+    }
+    th.how-it-works-postings .wrapper .yerdle-dollars.not-phone .img,
+    td.how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      display: none !important
+    }
+  }
+  @media(min-width:768px) and (max-width:991px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      display: none !important
+    }
+    tr.how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      display: none !important
+    }
+    th.how-it-works-postings .wrapper .yerdle-dollars.not-phone .img,
+    td.how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      display: none !important
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      float: left;
+      width: 33.33333333%
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img .yrd-symbol {
+    color: white;
+    font-size: 14em;
+    text-shadow: 5px 5px #52b296
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img {
+      text-align: center
+    }
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .img .yrd-symbol {
+      font-size: 10em;
+      display: block
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+      float: left;
+      width: 50%
+    }
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+      margin-left: 25%
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+      float: left;
+      width: 83.33333333%
+    }
+  }
+  @media(min-width:992px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+      margin-left: 8.33333333%
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+      float: left;
+      width: 50%
+    }
+  }
+  @media(min-width:1200px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+      margin-left: 8.33333333%
+    }
+  }
+  @media(min-width:768px) and (max-width:1199px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.not-phone .texts {
+      text-align: center
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone span {
+    color: grey;
+    font-size: 16px
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone .triangle {
+    margin-top: -45px;
+    border-width: 0 45px 45px 45px;
+    border-color: transparent transparent #fff transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #fff;
+    font-weight: 400;
+    border-width: 1px;
+    text-transform: none;
+    border-radius: 1.5px;
+    font-family: $default-font;
+    color: #fff;
+    background-color: #28affa;
+    border-color: #28affa;
+    text-align: center;
+    width: 240px;
+    padding: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    margin-top: 10px
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:hover,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:focus {
+    color: #fff;
+    text-decoration: none
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:active,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.active {
+    outline: 0;
+    background-image: none;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.disabled,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd[disabled],
+  fieldset[disabled] .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    box-shadow: none
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-link {
+    color: #28affa;
+    padding: 0
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-outline {
+    border: 1px solid;
+    border-color: #9b9b9b;
+    background-color: transparent;
+    padding: 9px 12px;
+    border-radius: $border-radius;
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-outline:hover {
+    color: #28affa;
+    border-color: #28affa
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-outline:active {
+    box-shadow: none
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-full-width {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-wrap {
+    white-space: normal
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:focus {
+    outline: 0
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-secondary {
+    background-color: #28affa;
+    border-color: #28affa;
+    margin: 0
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-secondary:hover {
+    background-color: #0188b5;
+    border-color: #0188b5
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-text {
+    color: #28affa;
+    padding: 4px 0
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-text:active {
+    box-shadow: none
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd img.logo {
+    height: 32px;
+    margin: 0 8px
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit {
+    margin: 10px 0 0 0;
+    padding: 0;
+    height: 64px;
+    max-width: 340px;
+    min-width: 105px;
+    width: 100%;
+    border: 2px solid;
+    border-radius: $border-radius;
+    font-size: 18px;
+    height: 3em;
+    line-height: 3em
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-blue,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-blue {
+    margin-top: 20px;
+    border-color: #28affa;
+    color: #28affa
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-blue:hover,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-blue:hover {
+    background-color: #ebf6fb
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-green-inverse,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-green-inverse {
+    border-color: white;
+    color: white
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-green-inverse:hover,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-green-inverse:hover {
+    color: #2dd7aa;
+    background-color: white
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-white,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-white {
+    border-color: white;
+    color: #28affa;
+    background-color: white
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:hover,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:focus,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:active,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.active,
+  .open .dropdown-toggle.how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd {
+    color: #fff;
+    background-color: #069ff4;
+    border-color: #0592e0
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:active,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.active,
+  .open .dropdown-toggle.how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd {
+    background-image: none
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.disabled,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd[disabled],
+  fieldset[disabled] .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.disabled:hover,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd[disabled]:hover,
+  fieldset[disabled] .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:hover,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.disabled:focus,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd[disabled]:focus,
+  fieldset[disabled] .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:focus,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.disabled:active,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd[disabled]:active,
+  fieldset[disabled] .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:active,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.disabled.active,
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd[disabled].active,
+  fieldset[disabled] .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.active {
+    background-color: #28affa;
+    border-color: #28affa
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd span {
+    color: #fff
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone .image-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #2dd7aa;
+    background-size: cover;
+    min-height: 320px
+  }
+  @media(min-width:768px) {
+    .how-it-works-postings .wrapper .yerdle-dollars.phone .image-container {
+      float: left;
+      width: 50%
+    }
+  }
+  .how-it-works-postings .wrapper .yerdle-dollars.phone .image-container .yrd-symbol {
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 12em;
+    padding: 50px 20px 20px;
+    margin-left: 30px;
+    text-shadow: 5px 5px #52b296
+  }
+  @media(max-width:767px) {
+    .postings-header h1 {
+      font-size: 24px;
+      width: 80%;
+      margin: auto auto
+    }
+  }
+  .postings h1 {
+    margin-top: 60px
+  }
+  .recently-featured-in {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fcfaf7;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    margin-bottom: 0
+  }
+  .recently-featured-in:before,
+  .recently-featured-in:after {
+    content: " ";
+    display: table
+  }
+  .recently-featured-in:after {
+    clear: both
+  }
+  .recently-featured-in:before,
+  .recently-featured-in:after {
+    content: " ";
+    display: table
+  }
+  .recently-featured-in:after {
+    clear: both
+  }
+  @media(max-width:767px) {
+    .recently-featured-in .fast-company, .recently-featured-in .business-insider, .recently-featured-in .new-york-times {
+      display: none !important
+    }
+    tr.recently-featured-in .fast-company,
+    tr.recently-featured-in .business-insider,
+    tr.recently-featured-in .new-york-times {
+      display: none !important
+    }
+    th.recently-featured-in .fast-company,
+    th.recently-featured-in .business-insider,
+    th.recently-featured-in .new-york-times,
+    td.recently-featured-in .fast-company,
+    td.recently-featured-in .business-insider,
+    td.recently-featured-in .new-york-times {
+      display: none !important
+    }
+  }
+  .recently-featured-in h3 {
+    text-align: center;
+    margin-bottom: 45px;
+    color: #a7a7a8
+  }
+  @media(max-width:767px) {
+    .recently-featured-in h3 {
+      font-size: 14px
+    }
+  }
+  .recently-featured-in ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 5%
+  }
+  .recently-featured-in ul li {
+    display: inline-block;
+    margin: 0 2%;
+    text-align: center
+  }
+  .recently-featured-in ul li a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    height: 28px;
+    width: auto
+  }
+  @media(max-width:1199px) {
+    .recently-featured-in ul li a img {
+      height: 20px
+    }
+  }
+  @media(max-width:991px) {
+    .recently-featured-in ul li a img {
+      height: 18px
+    }
+  }
+  .declutter {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    padding: 30px
+  }
+  .declutter:before,
+  .declutter:after {
+    content: " ";
+    display: table
+  }
+  .declutter:after {
+    clear: both
+  }
+  .declutter:before,
+  .declutter:after {
+    content: " ";
+    display: table
+  }
+  .declutter:after {
+    clear: both
+  }
+  @media(min-width:992px) {
+    .declutter {
+      background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/get-the-app-bg-5d9337d1b957b31ebc0cdabd2c9b6adc.jpg) no-repeat top left;
+      background-size: cover
+    }
+  }
+  @media(min-width:1200px) {
+    .declutter {
+      background-size: cover;
+      background-position: top right
+    }
+  }
+  .declutter img.desktop {
+    margin: 60px auto;
+    max-width: 640px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .declutter a.mobile {
+    margin-bottom: 30px
+  }
+  .declutter a.mobile .non-link {
+    color: #4b4948
+  }
+  .declutter img.mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+    height: auto
+  }
+}

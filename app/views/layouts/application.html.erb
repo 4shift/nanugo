@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nanugo</title>
+  <meta name="apple-itunes-app" content="TODO: 넣어야 합니다.">
+  <meta name="twitter:card" content="app">
+  <meta name="twitter:site" content="@NanuGO">
+  <meta name="twitter:description" content="NanuGO는 지금 나에게 필요없는 물건을 나누고 얻은 포인트로 내가 필요한 물건을 가질 수 있는 온라인 공유경제 시장입니다. 지금 NanuGO에 가입하고 내가 쓰지 않는 물건을 나눠보세요. 그 물건은 누군가에게 꼭 필요한 것이니까요~!">
+  <meta name="twitter:app:country" content="KO">
+  <meta name="twitter:app:name:iphone" content="NanuGO">
+  <meta name="twitter:app:id:iphone" content="TODO: 넣어야 합니다.">
+  <meta content="https://nanugo.co.kr" property="og:url">
+  <meta content="width=device-width, initial-scale=1" property="viewport">
+  <meta content="TODO: 넣어야 합니다." property="fb:app_id">
+  <meta content="company" property="og:type">
+  <meta content="nanugo.co.kr" property="og:site_name">
+  <meta content="NanuGO" property="og:title">
+  <meta content="TODO: 넣어야 합니다." property="og:image">
+  <meta content="NanuGO는 지금 나에게 필요없는 물건을 나누고 얻은 포인트로 내가 필요한 물건을 가질 수 있는 온라인 공유경제 시장입니다" property="og:description">
+  <meta content="NanuGO" name="title">
+  <meta content="NanuGO는 지금 나에게 필요없는 물건을 나누고 얻은 포인트로 내가 필요한 물건을 가질 수 있는 온라인 공유경제 시장입니다" name="description">
+  <meta content="nanugo, 나누고, 공유, 공유경제, 재활용, 나눔, 기부, reuse, give away, declutter, recycling, best deals, sharing, home organizing, clean, donate, purge" name="keywords">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="<%= yield :body_id %>" class="<%= controller_name %> <%= action_name %>" data-page="<%= body_data_page %>">
+  <div class="clip">
+    <%= render 'layouts/hamburger' %>
+    <div id="wrap" class="<%= yield :footer_class %>">
+      <%= render 'layouts/header' %>
+      <div id="page-content">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
+  <%= render 'layouts/google_analytics' %>
+	<%= yield :custom_script %>
+</body>
+</html>

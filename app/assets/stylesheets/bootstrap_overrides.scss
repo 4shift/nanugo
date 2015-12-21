@@ -1,0 +1,159 @@
+.navbar-fixed-top {
+  z-index: 7;
+}
+
+
+
+.nav-tabs > li {
+  width: 50%;
+  text-align: center;
+  background-color: #fff;
+}
+
+.nav-tabs > li > a {
+  margin-right: 0;
+  border-radius: 0;
+  border: 0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: #fce234;
+  border: none;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: transparent;
+}
+
+// bootstrap modal vertical middle 처리
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.input-lg {
+  border-radius: 2px;
+}
+
+// issues #33 해결
+.input-group-lg > .field_with_errors > .form-control {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 2px;
+}
+
+
+// Tooltip
+.tooltip-inner {
+  white-space: pre;
+  font-weight: normal;
+  max-width: none;
+  background: $cb-tooltip-bg-color;
+  padding:8px 16px;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: $cb-tooltip-bg-color;
+}
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: $cb-tooltip-bg-color;
+}
+
+@media screen and (min-width: 768px) {
+  // bootstrap modal vertical middle 처리 (모바일에서는 상단형태로 전환)
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+// form
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-control {
+  box-shadow: none;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  font-weight: 400;
+  color: #97a1aa;
+}
+
+.form-control:focus {
+  border: 1px solid #4bb1f7;
+  box-shadow: none;
+}
+
+.form-group-lg .form-control {
+  font-size: 15px;
+}
+
+// modal
+.modal {
+  text-align: center;
+}
+
+.modal-content {
+  border: 1px solid #7A858D;
+  box-shadow: none;
+  border-radius: 0;
+}
+.modal-header {
+  border: 0;
+
+  .close {
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+}
+.modal-title {
+  font-size: 18px;
+  color: $main-color;
+}
+
+.modal-footer {
+  border: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+// 버튼
+.btn-primary {
+  background-color: #4bb1f7;
+  border: 0;
+}
+
+.modal .btn {
+  border-radius: 0;
+}
+
+
+@media (min-width: 768px) {
+  .modal-sm {
+    width: 360px;
+  }
+}
+
+
+// btn
+.btn-lg {
+  font-size: 15px;
+  padding: 20px 30px;
+}
+
+
+
+// _dropwowns
+.dropdown-menu {
+  padding: 0;
+}
