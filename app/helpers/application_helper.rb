@@ -7,4 +7,16 @@ module ApplicationHelper
     [namespace, controller.controller_name, controller.action_name].compact.join(':')
   end
 
+  def resource_name
+    :user
+  end
+
+  def resource
+    @resource ||= User.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
+
 end

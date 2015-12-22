@@ -8,12 +8,12 @@
       <section class="social-connect">
         <ul>
           <li class="facebook">
-            <a href="/auth/facebook/">
+            <%= link_to omniauth_authorize_path(resource_name, :facebook) do %>
               <span>Facebook 계정으로 로그인</span>
-            </a>
+            <% end %>
           </li>
           <li class="google-plus">
-            <a href="/auth/gplus/">
+            <a href="/users/auth/gplus/">
               <span>Google+ 계정으로 로그인</span>
             </a>
           </li>
@@ -24,20 +24,20 @@
           <hr/>
           <span>또는</span>
         </div>
-        <form action="/sessions" accept-charset="UTF-8" method="post">
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :id => "login-box"}, :format => :json, :remote => true, authenticity_token: true) do |f| %>
           <div class="fields">
             <div class="form-group">
-              <input placeholder="Email Address" autocomplete="false" type="text" name="session[email]" id="session_email">
+              <%= f.email_field :email, placeholder: "Email Address", autocomplete: "off" %>
             </div>
             <div class="form-group">
-              <input placeholder="Password" type="password" autocomplete="false" name="session[password]" id="session_password">
-              <a class="forgot-password" href="/password_reset/new">잃어버렸나요?</a>
+              <%= f.password_field :password, placeholder: "Password", autocomplete: "off" %>
+              <%= link_to "잃어버렸나요?", new_user_password_path, class: "forgot-password" %>
             </div>
           </div>
           <div class="login">
-            <input type="submit" name="commit" value="로그인">
+            <%= f.submit "로그인" %>
           </div>
-        </form>
+        <% end %>
       </section>
       <section class="text-center">
         <span>아직 NanuGO 계정이 없나요? <a href="#" data-target="#signup-modal" data-toggle="modal"> 계정 만들기</a> </span>
