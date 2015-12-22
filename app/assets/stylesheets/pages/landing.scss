@@ -13,10 +13,8 @@
   }
 
   .hero {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin: 0 auto;
+    padding: 0 15px;
     min-height: 800px;
     max-height: 1000px;
     background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/hero-full-60b171c0e50f7a607ace87fa92d77b78.jpg') no-repeat top center $hero-background;
@@ -28,8 +26,6 @@
     h4 {
       text-align: center;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .appstore-buttons {
@@ -48,16 +44,6 @@
       width: 65%;
       @include transform(translate(-50%, -50%));
       text-shadow: 0 1px 30px rgba(0, 0, 0, 0.4);
-
-      .mini-logo {
-        display: none !important;
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 88px;
-        height: 88px;
-      }
     }
   }
 
@@ -138,81 +124,13 @@
     }
   }
 
-  @media(min-width:992px) and (max-width:1199px) {
-    .hero .masthead-wrapper .mini-logo {
-      display: none !important
-    }
-    tr.hero .masthead-wrapper .mini-logo {
-      display: none !important
-    }
-    th.hero .masthead-wrapper .mini-logo,
-    td.hero .masthead-wrapper .mini-logo {
-      display: none !important
-    }
-  }
-  @media(min-width:1200px) {
-    .hero .masthead-wrapper .mini-logo {
-      display: none !important
-    }
-    tr.hero .masthead-wrapper .mini-logo {
-      display: none !important
-    }
-    th.hero .masthead-wrapper .mini-logo,
-    td.hero .masthead-wrapper .mini-logo {
-      display: none !important
-    }
-  }
-
-  tr.hero .masthead-wrapper .mini-logo {
-    display: none !important
-  }
-  th.hero .masthead-wrapper .mini-logo,
-  td.hero .masthead-wrapper .mini-logo {
-    display: none !important
-  }
-
-  @media(max-width:767px) {
-    .hero .masthead-wrapper .mini-logo {
-      display: block !important
-    }
-    tr.hero .masthead-wrapper .mini-logo {
-      display: table-row !important
-    }
-    th.hero .masthead-wrapper .mini-logo,
-    td.hero .masthead-wrapper .mini-logo {
-      display: table-cell !important
-    }
-  }
-
-  tr.hero .masthead-wrapper .mini-logo {
-    display: none !important
-  }
-  th.hero .masthead-wrapper .mini-logo,
-  td.hero .masthead-wrapper .mini-logo {
-    display: none !important
-  }
-
-  @media(min-width:768px) and (max-width:991px) {
-    .hero .masthead-wrapper .mini-logo {
-      display: block !important
-    }
-    tr.hero .masthead-wrapper .mini-logo {
-      display: table-row !important
-    }
-    th.hero .masthead-wrapper .mini-logo,
-    td.hero .masthead-wrapper .mini-logo {
-      display: table-cell !important
-    }
-  }
   .hero ul {
     text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto
   }
   .hero ul li {
     display: inline-block;
-    margin: 0 6px
+    margin: 0 6px;
   }
   .hero h1,
   .hero h3,
@@ -276,7 +194,7 @@
       font-size: 16px;
       padding: 12px 0;
       width: 240px;
-      background-color: $main-color;
+      background-color: $main-bg-color;
     }
   }
   @media(max-width:767px) {
@@ -285,7 +203,7 @@
       font-size: 14px;
       padding: 12px 12px;
       text-align: center;
-      background-color: $main-color;
+      background-color: $main-bg-color;
     }
   }
   @media(min-width:768px) and (max-width:991px) {
@@ -1071,7 +989,7 @@
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd {
     display: inline-block;
     padding: 6px 12px;
-    margin-bottom: 0;
+    margin: 10px auto 0;
     font-size: 16px;
     line-height: 1.5;
     vertical-align: middle;
@@ -1086,21 +1004,14 @@
     user-select: none;
     color: #fff;
     font-weight: 400;
-    border-width: 1px;
     text-transform: none;
     border-radius: 1.5px;
     font-family: $default-font;
-    color: #fff;
     background-color: #28affa;
     border-color: #28affa;
     text-align: center;
     width: 240px;
     padding: 12px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 18px;
-    margin-top: 10px
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:focus {
     outline: thin dotted #333;
@@ -1286,23 +1197,10 @@
     margin-top: 60px
   }
   .recently-featured-in {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: #fcfaf7;
     position: relative;
-    padding-top: 30px;
-    padding-bottom: 45px;
-    margin-bottom: 0
-  }
-  .recently-featured-in:before,
-  .recently-featured-in:after {
-    content: " ";
-    display: table
-  }
-  .recently-featured-in:after {
-    clear: both
+    margin: 0 auto;
+    padding: 30px 15px 45px 15px;
+    background-color: #fcfaf7;
   }
   .recently-featured-in:before,
   .recently-featured-in:after {
@@ -1313,20 +1211,9 @@
     clear: both
   }
   @media(max-width:767px) {
-    .recently-featured-in .fast-company, .recently-featured-in .business-insider, .recently-featured-in .new-york-times {
-      display: none !important
-    }
-    tr.recently-featured-in .fast-company,
-    tr.recently-featured-in .business-insider,
-    tr.recently-featured-in .new-york-times {
-      display: none !important
-    }
-    th.recently-featured-in .fast-company,
-    th.recently-featured-in .business-insider,
-    th.recently-featured-in .new-york-times,
-    td.recently-featured-in .fast-company,
-    td.recently-featured-in .business-insider,
-    td.recently-featured-in .new-york-times {
+    .recently-featured-in .fast-company,
+    .recently-featured-in .business-insider,
+    .recently-featured-in .new-york-times {
       display: none !important
     }
   }
@@ -1368,33 +1255,22 @@
     }
   }
   .declutter {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin: 0 auto;
+    padding: 30px 15px;
     text-align: center;
-    padding: 30px
   }
   .declutter:before,
   .declutter:after {
     content: " ";
-    display: table
+    display: table;
   }
   .declutter:after {
-    clear: both
-  }
-  .declutter:before,
-  .declutter:after {
-    content: " ";
-    display: table
-  }
-  .declutter:after {
-    clear: both
+    clear: both;
   }
   @media(min-width:992px) {
     .declutter {
-      background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/get-the-app-bg-5d9337d1b957b31ebc0cdabd2c9b6adc.jpg) no-repeat top left;
-      background-size: cover
+      background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/get-the-app-bg-5d9337d1b957b31ebc0cdabd2c9b6adc.jpg') no-repeat top left;
+      background-size: cover;
     }
   }
   @media(min-width:1200px) {
@@ -1407,8 +1283,6 @@
     margin: 60px auto;
     max-width: 640px;
     display: block;
-    margin-left: auto;
-    margin-right: auto
   }
   .declutter a.mobile {
     margin-bottom: 30px

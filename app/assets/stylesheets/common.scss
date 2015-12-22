@@ -2,6 +2,24 @@ body {
   font-family: $default-font;
 }
 
+.mobile {
+  display: none !important;
+}
+
+.desktop {
+  display: block !important;
+}
+
+@media(max-width:767px) {
+  .mobile {
+    display: block !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+}
+
 #wrap {
     overflow: hidden
 }
