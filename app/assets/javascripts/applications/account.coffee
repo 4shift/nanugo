@@ -10,8 +10,8 @@ $ ->
       $("#signup-modal").modal("toggle")
       $("#login-modal").modal("toggle")
 
-    $(document)
-      .on "ajax:success", $("#login-box"), (e, data, status, xhr) ->
+    $("#login-box")
+      .on "ajax:success", (e, data, status, xhr) ->
         window.location.reload()
       .on "ajax:error", (e, xhr, status, error) ->
         $("#js-error-messages").empty()
@@ -20,9 +20,8 @@ $ ->
           else "There are service errors. please, retry later."
         $("#js-error-messages").append("<p>" + error_message + "</p>")
 
-    $(document)
-      .on "ajax:success", $("#signup-box"), (e, data, status, xhr) ->
-        alert('aldjflkjdf')
+    $("#signup-box")
+      .on "ajax:success", (e, data, status, xhr) ->
         window.location.reload()
       .on "ajax:error", (e, xhr, status, error) ->
         $("#js-error-messages").empty()
