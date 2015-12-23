@@ -23,7 +23,7 @@ class ConfirmationsController < Devise::ConfirmationsController
 
     if !@confirmable.errors.empty?
       self.resource = @confirmable
-      render 'devise/confirmations/new' #Change this if you don't have the views on default path
+      render 'devise/confirmations/new'
     end
   end
 
@@ -38,7 +38,7 @@ class ConfirmationsController < Devise::ConfirmationsController
     end
     unless @confirmable.errors.empty?
       self.resource = @confirmable
-      render 'devise/confirmations/new' #Change this if you don't have the views on default path
+      render 'devise/confirmations/new'
     end
   end
 
@@ -55,7 +55,7 @@ class ConfirmationsController < Devise::ConfirmationsController
     @confirmation_token = params[:confirmation_token]
     @requires_password = true
     self.resource = @confirmable
-    render 'devise/confirmations/show' #Change this if you don't have the views on default path
+    render 'devise/confirmations/show'
   end
 
   def do_confirm

@@ -21,8 +21,23 @@ body {
 }
 
 #wrap {
-    overflow: hidden
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  background-color: white;
+  margin: 0 auto -207px;
+  padding-bottom: 207px;
 }
+
+header > h1,
+header > h2,
+header > h3,
+header > h4,
+header > h5,
+header > h6 {
+  text-align: center;
+}
+
 #aanding-page {
     font-weight: 300;
     max-width: 1024px;
@@ -41,7 +56,7 @@ body {
 }
 #aanding-page .landing-callout h1 {
     font-size: 24px;
-    argin: 10px 0
+    margin: 10px 0
 }
 @media(max-width:991px) {
     #aanding-page .landing-callout h1 {

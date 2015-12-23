@@ -21,6 +21,8 @@
 #  avatar                 :string
 #
 
+require 'carrierwave/orm/activerecord'
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -29,10 +31,14 @@ class User < ActiveRecord::Base
          :confirmable, :omniauthable, omniauth_providers: [:facebook]
 
   after_create :update_access_token!
+  after_create :give_thanks_point
 
   has_many :address, dependent: :destroy
   has_and_belongs_to_many :roles
 
+  mount_uploader :avatar, AvatarUploader
+
+  validate :avatar_size_validation
 
   def password_required?
     super if confirmed?
@@ -53,6 +59,7 @@ class User < ActiveRecord::Base
     p[:password_confirmation] = params[:password_confirmation]
     update_attributes(p)
   end
+
   # new function to return whether a password has been set
   def has_no_password?
     self.encrypted_password.blank?
@@ -113,5 +120,14 @@ class User < ActiveRecord::Base
   def update_access_token!
     self.access_token = "#{self.id}:#{Devise.friendly_token}"
     save
+  end
+
+  def give_thanks_point
+    self.point = ENV["SIGNUP_POINT"].to_i
+    save
+  end
+
+  def avatar_size_validation
+    errors[:avatar] << "사용자 이미지 파일은 최대 2MB를 넘을 수 없습니다." if avatar.size > 2.megabytes
   end
 end

@@ -11,6 +11,18 @@
   clear: both
 }
 
+#login .hero,
+#signup .hero {
+  margin: 0 auto;
+  padding: 0 15px;
+  text-shadow: none;
+  height: 100%;
+  background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/objects_layout-ee621e50b7c24fd0b53bfa9306f4f3ca.jpg') no-repeat top center #f6e7d1;
+  background-size: cover;
+  position: relative;
+  min-height: 620px;
+}
+
 #login h1,
 #signup h1 {
   font-size: 32px;

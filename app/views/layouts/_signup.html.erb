@@ -24,7 +24,7 @@
         <%= form_for(resource, :as => resource_name, :url => user_registration_path, :html => { :id => "signup-box"}, :format => :json, :remote => true, authenticity_token: true) do |f| %>
           <div class="fields">
             <div class="form-group">
-              <%= f.email_field :email, placeholder: "Email Address", autocomplete: "off" %>
+              <%= f.email_field :email, placeholder: "Email Address", autofocus: true, autocomplete: "off" %>
             </div>
           </div>
           <div class="signup">
