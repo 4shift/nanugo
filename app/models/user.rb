@@ -28,6 +28,8 @@ class User < ActiveRecord::Base
          :recoverable, :trackable, :validatable,
          :confirmable, :omniauthable, omniauth_providers: [:facebook]
 
+  after_create :update_access_token!
+
   has_many :address, dependent: :destroy
   has_and_belongs_to_many :roles
 
@@ -57,18 +59,6 @@ class User < ActiveRecord::Base
       end
     end
 
-    def filter(filter_name)
-      case filter_name
-      when "admins"; self.admins
-      when "authors"; self.authors
-      when "inactive"; self.inactive
-      when "members"; self.members
-      when "nonmembers"; self.nonmembers
-      else
-        self.active
-      end
-    end
-
     def from_omniauth(auth)
       created = false
       if member = User.find_by_email(auth.info.email)
@@ -89,13 +79,12 @@ class User < ActiveRecord::Base
       [member, created]
     end
 
-    def new_with_session(params, session)
-      super.tap do |user|
-        if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-          user.email = data["email"] if user.email.blank?
-          user.username = data["name"] if user.username.blank?
-        end
-      end
-    end
+  end
+
+  private
+
+  def update_access_token!
+    self.access_token = "#{self.id}:#{Devise.friendly_token}"
+    save
   end
 end
