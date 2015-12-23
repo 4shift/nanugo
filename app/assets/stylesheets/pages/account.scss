@@ -361,7 +361,7 @@ fieldset[disabled] #signup .signup input {
 #login .signup input.btn-outline:hover,
 #signup .signup input.btn-outline:hover {
   color: $main-color;
-  border-color: $main-color;
+  border-color: $button-border-color;
 }
 
 #login .login input.btn-outline:active,
@@ -399,7 +399,7 @@ fieldset[disabled] #signup .signup input {
 #login .signup input.btn-secondary,
 #signup .signup input.btn-secondary {
   background-color: $main-color;
-  border-color: $main-color;
+  border-color: $button-border-color;
   margin: 0;
 }
 
@@ -407,8 +407,8 @@ fieldset[disabled] #signup .signup input {
 #signup .login input.btn-secondary:hover,
 #login .signup input.btn-secondary:hover,
 #signup .signup input.btn-secondary:hover {
-  background-color: #0188b5;
-  border-color: #0188b5;
+  background-color: $main-color;
+  border-color: $button-border-color;
 }
 
 #login .login input.btn-text,
@@ -464,7 +464,7 @@ fieldset[disabled] #signup .signup input {
 #login .signup input.btn-download-presskit.btn-blue,
 #signup .signup input.btn-download-presskit.btn-blue {
   margin-top: 20px;
-  border-color: $main-color;
+  border-color: $button-border-color;
   color: $main-color;
 }
 
@@ -533,8 +533,8 @@ fieldset[disabled] #signup .signup input {
 .open .dropdown-toggle#login .signup input,
 .open .dropdown-toggle#signup .signup input {
   color: #fff;
-  background-color: #069ff4;
-  border-color: #0592e0;
+  background-color: $main-color;
+  border-color: $button-border-color;
 }
 
 #login .login input:active,
@@ -611,7 +611,7 @@ fieldset[disabled] #signup .login input.active,
 fieldset[disabled] #login .signup input.active,
 fieldset[disabled] #signup .signup input.active {
   background-color: $main-color;
-  border-color: $main-color;
+  border-color: $button-border-color;
 }
 
 @media(max-width:991px) {

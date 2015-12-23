@@ -407,7 +407,7 @@ body {
 #how-it-works .how-it-works-affix>ul li a:hover,
 #how-it-works .how-it-works-affix>ul ul a:hover {
     background-color: #fff;
-    color: #28affa
+    color: $main-color
 }
 #how-it-works .how-it-works-affix>ul li a {
     padding: 4px 10px
@@ -432,14 +432,14 @@ body {
 #how-it-works ul.how-it-works-nav>.active>a,
 #how-it-works ul.how-it-works-nav>.active>.secondary-list>.active>a {
     font-weight: 500;
-    color: #28affa
+    color: $main-color
 }
 #how-it-works ul.how-it-works-nav .secondary-list {
     display: none
 }
 #how-it-works ul.how-it-works-nav>.active .secondary-list {
     display: block !important;
-    color: #28affa
+    color: $main-color
 }
 #how-it-works .back-to-top {
     margin-top: 40px
@@ -697,8 +697,8 @@ body {
     border-radius: 1.5px;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     text-align: center;
     display: block;
     margin-left: auto;
@@ -733,7 +733,7 @@ fieldset[disabled] #unshopping-challenge a.take-the-challenge {
     box-shadow: none
 }
 #unshopping-challenge a.take-the-challenge.btn-link {
-    color: #28affa;
+    color: $main-color;
     padding: 0
 }
 #unshopping-challenge a.take-the-challenge.btn-outline {
@@ -744,8 +744,8 @@ fieldset[disabled] #unshopping-challenge a.take-the-challenge {
     border-radius: 2px
 }
 #unshopping-challenge a.take-the-challenge.btn-outline:hover {
-    color: #28affa;
-    border-color: #28affa
+    color: $main-color;
+    border-color: $main-color
 }
 #unshopping-challenge a.take-the-challenge.btn-outline:active {
     box-shadow: none
@@ -762,8 +762,8 @@ fieldset[disabled] #unshopping-challenge a.take-the-challenge {
     outline: 0
 }
 #unshopping-challenge a.take-the-challenge.btn-secondary {
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     margin: 0
 }
 #unshopping-challenge a.take-the-challenge.btn-secondary:hover {
@@ -771,7 +771,7 @@ fieldset[disabled] #unshopping-challenge a.take-the-challenge {
     border-color: #0188b5
 }
 #unshopping-challenge a.take-the-challenge.btn-text {
-    color: #28affa;
+    color: $main-color;
     padding: 4px 0
 }
 #unshopping-challenge a.take-the-challenge.btn-text:active {
@@ -798,8 +798,8 @@ fieldset[disabled] #unshopping-challenge a.take-the-challenge {
 #unshopping-challenge a.take-the-challenge.btn-get-the-app.btn-blue,
 #unshopping-challenge a.take-the-challenge.btn-download-presskit.btn-blue {
     margin-top: 20px;
-    border-color: #28affa;
-    color: #28affa
+    border-color: $main-color;
+    color: $main-color
 }
 #unshopping-challenge a.take-the-challenge.btn-get-the-app.btn-blue:hover,
 #unshopping-challenge a.take-the-challenge.btn-download-presskit.btn-blue:hover {
@@ -818,7 +818,7 @@ fieldset[disabled] #unshopping-challenge a.take-the-challenge {
 #unshopping-challenge a.take-the-challenge.btn-get-the-app.btn-white,
 #unshopping-challenge a.take-the-challenge.btn-download-presskit.btn-white {
     border-color: white;
-    color: #28affa;
+    color: $main-color;
     background-color: white
 }
 #unshopping-challenge a.take-the-challenge:hover,
@@ -850,8 +850,8 @@ fieldset[disabled] #unshopping-challenge a.take-the-challenge:active,
 #unshopping-challenge a.take-the-challenge.disabled.active,
 #unshopping-challenge a.take-the-challenge[disabled].active,
 fieldset[disabled] #unshopping-challenge a.take-the-challenge.active {
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
 }
 @media(max-width:767px) {
     #unshopping-challenge a.take-the-challenge {
@@ -1281,7 +1281,7 @@ td#unshopping-challenge .landing-hero .yerd-phone {
 }
 #unshopping-challenge section.learn-more .the-goods,
 #unshopping-challenge section.learn-more .the-goods .img-container {
-    background: #28affa
+    background: $main-color
 }
 #unshopping-challenge section.learn-more .the-gravy,
 #unshopping-challenge section.learn-more .the-gravy .img-container {
@@ -1522,7 +1522,7 @@ td#unshopping-challenge .landing-hero .yerd-phone {
     display: inline-block
 }
 #challenge-confirmation .sharing-buttons h2 {
-    color: #28affa;
+    color: $main-color;
     margin-top: 30px
 }
 #challenge-confirmation .sharing-buttons .share li {
@@ -2426,7 +2426,7 @@ label {
     }
 }
 .gift a#pre-gift:hover {
-    color: #28affa
+    color: $main-color
 }
 .gift .giver-pic {
     border-radius: 50%;
@@ -3635,7 +3635,7 @@ label {
         overflow: hidden
     }
     #shipping-label .content.visible-print .link {
-        color: #28affa !important
+        color: $main-color !important
     }
     #shipping-label .content.visible-print .cutline {
         width: 100%;
@@ -4083,7 +4083,7 @@ footer.footer,
     color: #9b9b9b
 }
 #hamburger nav ul li a:hover {
-    color: #28affa
+    color: $main-color
 }
 #hamburger nav ul li img.img-avatar {
     width: 27px;
@@ -4540,8 +4540,8 @@ i {
     border-radius: 1.5px;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     text-align: center;
     display: block;
     padding: 10px;
@@ -4575,7 +4575,7 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite {
     box-shadow: none
 }
 #referrals .invite-sharing a.login-invite.btn-link {
-    color: #28affa;
+    color: $main-color;
     padding: 0
 }
 #referrals .invite-sharing a.login-invite.btn-outline {
@@ -4586,8 +4586,8 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite {
     border-radius: 2px
 }
 #referrals .invite-sharing a.login-invite.btn-outline:hover {
-    color: #28affa;
-    border-color: #28affa
+    color: $main-color;
+    border-color: $main-color
 }
 #referrals .invite-sharing a.login-invite.btn-outline:active {
     box-shadow: none
@@ -4604,8 +4604,8 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite {
     outline: 0
 }
 #referrals .invite-sharing a.login-invite.btn-secondary {
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     margin: 0
 }
 #referrals .invite-sharing a.login-invite.btn-secondary:hover {
@@ -4613,7 +4613,7 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite {
     border-color: #0188b5
 }
 #referrals .invite-sharing a.login-invite.btn-text {
-    color: #28affa;
+    color: $main-color;
     padding: 4px 0
 }
 #referrals .invite-sharing a.login-invite.btn-text:active {
@@ -4640,8 +4640,8 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite {
 #referrals .invite-sharing a.login-invite.btn-get-the-app.btn-blue,
 #referrals .invite-sharing a.login-invite.btn-download-presskit.btn-blue {
     margin-top: 20px;
-    border-color: #28affa;
-    color: #28affa
+    border-color: $main-color;
+    color: $main-color
 }
 #referrals .invite-sharing a.login-invite.btn-get-the-app.btn-blue:hover,
 #referrals .invite-sharing a.login-invite.btn-download-presskit.btn-blue:hover {
@@ -4660,7 +4660,7 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite {
 #referrals .invite-sharing a.login-invite.btn-get-the-app.btn-white,
 #referrals .invite-sharing a.login-invite.btn-download-presskit.btn-white {
     border-color: white;
-    color: #28affa;
+    color: $main-color;
     background-color: white
 }
 #referrals .invite-sharing a.login-invite:hover,
@@ -4692,8 +4692,8 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite:active,
 #referrals .invite-sharing a.login-invite.disabled.active,
 #referrals .invite-sharing a.login-invite[disabled].active,
 fieldset[disabled] #referrals .invite-sharing a.login-invite.active {
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
 }
 @media(max-width:767px) {
     #referrals .invite-sharing a.login-invite {
@@ -4743,8 +4743,8 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite.active {
 #referrals .invite-sharing #copy-referral-link {
     float: left;
     padding: 3px 5px;
-    color: #28affa;
-    border-color: #28affa;
+    color: $main-color;
+    border-color: $main-color;
     font-size: 12px;
     margin-left: 24px
 }
@@ -4913,8 +4913,8 @@ fieldset[disabled] #referrals .invite-sharing a.login-invite.active {
     border-radius: 1.5px;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
 }
 #settings input[type="submit"]:focus {
     outline: thin dotted #333;
@@ -4942,7 +4942,7 @@ fieldset[disabled] #settings input[type="submit"] {
     box-shadow: none
 }
 #settings input[type="submit"].btn-link {
-    color: #28affa;
+    color: $main-color;
     padding: 0
 }
 #settings input[type="submit"].btn-outline {
@@ -4953,8 +4953,8 @@ fieldset[disabled] #settings input[type="submit"] {
     border-radius: 2px
 }
 #settings input[type="submit"].btn-outline:hover {
-    color: #28affa;
-    border-color: #28affa
+    color: $main-color;
+    border-color: $main-color
 }
 #settings input[type="submit"].btn-outline:active {
     box-shadow: none
@@ -4971,8 +4971,8 @@ fieldset[disabled] #settings input[type="submit"] {
     outline: 0
 }
 #settings input[type="submit"].btn-secondary {
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     margin: 0
 }
 #settings input[type="submit"].btn-secondary:hover {
@@ -4980,7 +4980,7 @@ fieldset[disabled] #settings input[type="submit"] {
     border-color: #0188b5
 }
 #settings input[type="submit"].btn-text {
-    color: #28affa;
+    color: $main-color;
     padding: 4px 0
 }
 #settings input[type="submit"].btn-text:active {
@@ -5007,8 +5007,8 @@ fieldset[disabled] #settings input[type="submit"] {
 #settings input[type="submit"].btn-get-the-app.btn-blue,
 #settings input[type="submit"].btn-download-presskit.btn-blue {
     margin-top: 20px;
-    border-color: #28affa;
-    color: #28affa
+    border-color: $main-color;
+    color: $main-color
 }
 #settings input[type="submit"].btn-get-the-app.btn-blue:hover,
 #settings input[type="submit"].btn-download-presskit.btn-blue:hover {
@@ -5027,7 +5027,7 @@ fieldset[disabled] #settings input[type="submit"] {
 #settings input[type="submit"].btn-get-the-app.btn-white,
 #settings input[type="submit"].btn-download-presskit.btn-white {
     border-color: white;
-    color: #28affa;
+    color: $main-color;
     background-color: white
 }
 #settings input[type="submit"]:hover,
@@ -5059,8 +5059,8 @@ fieldset[disabled] #settings input[type="submit"]:active,
 #settings input[type="submit"].disabled.active,
 #settings input[type="submit"][disabled].active,
 fieldset[disabled] #settings input[type="submit"].active {
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
 }
 #settings .multiple input,
 #settings .multiple select {
@@ -5376,7 +5376,7 @@ textarea#settings .multiple select {
     right: 10px;
     padding: 7px 3px;
     border-radius: 0 0 18px 18px;
-    background-color: #28affa;
+    background-color: $main-color;
     color: white;
     display: -webkit-box;
     display: -webkit-flex;
@@ -5591,9 +5591,9 @@ textarea#settings .multiple select {
 }
 .post-card {
     position: relative;
-    border: 2px dashed #28affa;
+    border: 2px dashed $main-color;
     border-radius: 3px;
-    color: #28affa;
+    color: $main-color;
     font-size: 2em;
     line-height: 130%;
     padding-top: 120px;
@@ -5616,7 +5616,7 @@ textarea#settings .multiple select {
     color: #2dd7aa
 }
 .alert-info .alert-link {
-    color: #28affa
+    color: $main-color
 }
 .alert-danger .alert-link {
     color: #f05f55
@@ -6027,7 +6027,7 @@ textarea#settings .multiple select {
 .item-detail .get-it-button-container .row.secondary-buttons div[class^="col-"] .btn {
     border: 0;
     background: 0;
-    color: #28affa;
+    color: $main-color;
     font-size: 14px;
     font-weight: 400
 }
@@ -6158,7 +6158,7 @@ textarea#settings .multiple select {
     color: #ddd
 }
 .item-detail ul.delivery_methods li i.active {
-    color: #28affa
+    color: $main-color
 }
 .related h3 {
     text-transform: uppercase;
@@ -6463,8 +6463,8 @@ textarea#settings .multiple select {
 }
 .claiming-delivery-method .fulfillment_options .fulfillment_option a {
     color: #fff;
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -6499,8 +6499,8 @@ fieldset[disabled] .claiming-delivery-method .fulfillment_options .fulfillment_o
 .claiming-delivery-method .fulfillment_options .fulfillment_option a.disabled.active,
 .claiming-delivery-method .fulfillment_options .fulfillment_option a[disabled].active,
 fieldset[disabled] .claiming-delivery-method .fulfillment_options .fulfillment_option a.active {
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
 }
 .claiming-delivery-method .fulfillment_options .fulfillment_option h4 {
     width: 100%;
@@ -6745,8 +6745,8 @@ textarea.payment_method .multiple select {
     border-radius: 1.5px;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     width: 100%;
     margin-left: 0;
     margin-right: 0
@@ -6786,7 +6786,7 @@ fieldset[disabled] .payment_method .submit {
 }
 .address .submit.btn-link,
 .payment_method .submit.btn-link {
-    color: #28affa;
+    color: $main-color;
     padding: 0
 }
 .address .submit.btn-outline,
@@ -6799,8 +6799,8 @@ fieldset[disabled] .payment_method .submit {
 }
 .address .submit.btn-outline:hover,
 .payment_method .submit.btn-outline:hover {
-    color: #28affa;
-    border-color: #28affa
+    color: $main-color;
+    border-color: $main-color
 }
 .address .submit.btn-outline:active,
 .payment_method .submit.btn-outline:active {
@@ -6822,8 +6822,8 @@ fieldset[disabled] .payment_method .submit {
 }
 .address .submit.btn-secondary,
 .payment_method .submit.btn-secondary {
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     margin: 0
 }
 .address .submit.btn-secondary:hover,
@@ -6833,7 +6833,7 @@ fieldset[disabled] .payment_method .submit {
 }
 .address .submit.btn-text,
 .payment_method .submit.btn-text {
-    color: #28affa;
+    color: $main-color;
     padding: 4px 0
 }
 .address .submit.btn-text:active,
@@ -6866,8 +6866,8 @@ fieldset[disabled] .payment_method .submit {
 .address .submit.btn-download-presskit.btn-blue,
 .payment_method .submit.btn-download-presskit.btn-blue {
     margin-top: 20px;
-    border-color: #28affa;
-    color: #28affa
+    border-color: $main-color;
+    color: $main-color
 }
 .address .submit.btn-get-the-app.btn-blue:hover,
 .payment_method .submit.btn-get-the-app.btn-blue:hover,
@@ -6894,7 +6894,7 @@ fieldset[disabled] .payment_method .submit {
 .address .submit.btn-download-presskit.btn-white,
 .payment_method .submit.btn-download-presskit.btn-white {
     border-color: white;
-    color: #28affa;
+    color: $main-color;
     background-color: white
 }
 .address .submit:hover,
@@ -6949,8 +6949,8 @@ fieldset[disabled] .payment_method .submit:active,
 .payment_method .submit[disabled].active,
 fieldset[disabled] .address .submit.active,
 fieldset[disabled] .payment_method .submit.active {
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
 }
 .address .submit input,
 .payment_method .submit input {
@@ -7015,7 +7015,7 @@ fieldset[disabled] .payment_method .submit input {
 }
 .address .submit input.btn-link,
 .payment_method .submit input.btn-link {
-    color: #28affa;
+    color: $main-color;
     padding: 0
 }
 .address .submit input.btn-outline,
@@ -7028,8 +7028,8 @@ fieldset[disabled] .payment_method .submit input {
 }
 .address .submit input.btn-outline:hover,
 .payment_method .submit input.btn-outline:hover {
-    color: #28affa;
-    border-color: #28affa
+    color: $main-color;
+    border-color: $main-color
 }
 .address .submit input.btn-outline:active,
 .payment_method .submit input.btn-outline:active {
@@ -7051,8 +7051,8 @@ fieldset[disabled] .payment_method .submit input {
 }
 .address .submit input.btn-secondary,
 .payment_method .submit input.btn-secondary {
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     margin: 0
 }
 .address .submit input.btn-secondary:hover,
@@ -7062,7 +7062,7 @@ fieldset[disabled] .payment_method .submit input {
 }
 .address .submit input.btn-text,
 .payment_method .submit input.btn-text {
-    color: #28affa;
+    color: $main-color;
     padding: 4px 0
 }
 .address .submit input.btn-text:active,
@@ -7095,8 +7095,8 @@ fieldset[disabled] .payment_method .submit input {
 .address .submit input.btn-download-presskit.btn-blue,
 .payment_method .submit input.btn-download-presskit.btn-blue {
     margin-top: 20px;
-    border-color: #28affa;
-    color: #28affa
+    border-color: $main-color;
+    color: $main-color
 }
 .address .submit input.btn-get-the-app.btn-blue:hover,
 .payment_method .submit input.btn-get-the-app.btn-blue:hover,
@@ -7123,7 +7123,7 @@ fieldset[disabled] .payment_method .submit input {
 .address .submit input.btn-download-presskit.btn-white,
 .payment_method .submit input.btn-download-presskit.btn-white {
     border-color: white;
-    color: #28affa;
+    color: $main-color;
     background-color: white
 }
 .claiming .item_details .item_image {
@@ -7350,8 +7350,8 @@ fieldset[disabled] .payment_method .submit input {
     border-radius: 1.5px;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     width: 100%;
     margin-left: 0;
     margin-right: 0
@@ -7382,7 +7382,7 @@ fieldset[disabled] .claiming #checkout-button {
     box-shadow: none
 }
 .claiming #checkout-button.btn-link {
-    color: #28affa;
+    color: $main-color;
     padding: 0
 }
 .claiming #checkout-button.btn-outline {
@@ -7393,8 +7393,8 @@ fieldset[disabled] .claiming #checkout-button {
     border-radius: 2px
 }
 .claiming #checkout-button.btn-outline:hover {
-    color: #28affa;
-    border-color: #28affa
+    color: $main-color;
+    border-color: $main-color
 }
 .claiming #checkout-button.btn-outline:active {
     box-shadow: none
@@ -7411,8 +7411,8 @@ fieldset[disabled] .claiming #checkout-button {
     outline: 0
 }
 .claiming #checkout-button.btn-secondary {
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     margin: 0
 }
 .claiming #checkout-button.btn-secondary:hover {
@@ -7420,7 +7420,7 @@ fieldset[disabled] .claiming #checkout-button {
     border-color: #0188b5
 }
 .claiming #checkout-button.btn-text {
-    color: #28affa;
+    color: $main-color;
     padding: 4px 0
 }
 .claiming #checkout-button.btn-text:active {
@@ -7447,8 +7447,8 @@ fieldset[disabled] .claiming #checkout-button {
 .claiming #checkout-button.btn-get-the-app.btn-blue,
 .claiming #checkout-button.btn-download-presskit.btn-blue {
     margin-top: 20px;
-    border-color: #28affa;
-    color: #28affa
+    border-color: $main-color;
+    color: $main-color
 }
 .claiming #checkout-button.btn-get-the-app.btn-blue:hover,
 .claiming #checkout-button.btn-download-presskit.btn-blue:hover {
@@ -7467,7 +7467,7 @@ fieldset[disabled] .claiming #checkout-button {
 .claiming #checkout-button.btn-get-the-app.btn-white,
 .claiming #checkout-button.btn-download-presskit.btn-white {
     border-color: white;
-    color: #28affa;
+    color: $main-color;
     background-color: white
 }
 .claiming #checkout-button:hover,
@@ -7499,8 +7499,8 @@ fieldset[disabled] .claiming #checkout-button:active,
 .claiming #checkout-button.disabled.active,
 .claiming #checkout-button[disabled].active,
 fieldset[disabled] .claiming #checkout-button.active {
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
 }
 .spinner {
     padding-top: 72px;
@@ -7667,7 +7667,7 @@ form.search input {
 .nav.nav-tabs>li.active>a {
     background: 0;
     border: 0;
-    border-bottom: 4.5px solid #28affa
+    border-bottom: 4.5px solid $main-color
 }
 .see-my-wishes {
     padding-bottom: 108px
@@ -7871,7 +7871,7 @@ form.search input {
 }
 #wish-modal .modal-content i.logo {
     font-size: 72px;
-    color: #28affa;
+    color: $main-color;
     margin-bottom: 0
 }
 #wish-modal .modal-content .modal-body {
@@ -7882,10 +7882,10 @@ form.search input {
     display: inline-block;
     margin: .35em;
     padding: .35em .8em;
-    border: 1px solid #28affa;
+    border: 1px solid $main-color;
     border-radius: 2px;
     background-color: white;
-    color: #28affa
+    color: $main-color
 }
 #wish-modal .modal-content .wish-words .wish-word i.icon-close {
     font-size: .72em;
@@ -7893,8 +7893,8 @@ form.search input {
     cursor: hand
 }
 #wish-modal .modal-content .btn-outline {
-    color: #28affa;
-    border: 1px solid #28affa
+    color: $main-color;
+    border: 1px solid $main-color
 }
 #wish-modal .modal-content .appstore-buttons {
     margin: 27px

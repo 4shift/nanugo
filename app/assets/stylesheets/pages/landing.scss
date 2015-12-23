@@ -1007,8 +1007,8 @@
     text-transform: none;
     border-radius: 1.5px;
     font-family: $default-font;
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     text-align: center;
     width: 240px;
     padding: 12px;
@@ -1039,7 +1039,7 @@
     box-shadow: none
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-link {
-    color: #28affa;
+    color: $main-color;
     padding: 0
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-outline {
@@ -1050,8 +1050,8 @@
     border-radius: $border-radius;
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-outline:hover {
-    color: #28affa;
-    border-color: #28affa
+    color: $main-color;
+    border-color: $main-color
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-outline:active {
     box-shadow: none
@@ -1068,8 +1068,8 @@
     outline: 0
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-secondary {
-    background-color: #28affa;
-    border-color: #28affa;
+    background-color: $main-color;
+    border-color: $main-color;
     margin: 0
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-secondary:hover {
@@ -1077,7 +1077,7 @@
     border-color: #0188b5
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-text {
-    color: #28affa;
+    color: $main-color;
     padding: 4px 0
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-text:active {
@@ -1104,8 +1104,8 @@
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-blue,
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-blue {
     margin-top: 20px;
-    border-color: #28affa;
-    color: #28affa
+    border-color: $main-color;
+    color: $main-color
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-blue:hover,
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-blue:hover {
@@ -1124,7 +1124,7 @@
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-get-the-app.btn-white,
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.btn-download-presskit.btn-white {
     border-color: white;
-    color: #28affa;
+    color: $main-color;
     background-color: white
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd:hover,
@@ -1156,8 +1156,8 @@
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.disabled.active,
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd[disabled].active,
   fieldset[disabled] .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd.active {
-    background-color: #28affa;
-    border-color: #28affa
+    background-color: $main-color;
+    border-color: $main-color
   }
   .how-it-works-postings .wrapper .yerdle-dollars.phone a.earn-yrd span {
     color: #fff

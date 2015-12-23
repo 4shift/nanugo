@@ -4,6 +4,16 @@
 
 $ ->
   handleProgress = ->
+    current = 0
+    list = $('.page-dots')
+    dots = $('.page-dots > li')
+
+    interval = setInterval(( ->
+      dots.removeClass('current')
+      list.children('li').eq(current).addClass("current")
+      current = if current == list.children('li').length - 1 then 0 else current + 1
+    ), 500)
+
     $(document)
       .on "ajax:beforeSend", $('a[data-remote=true]'), (e, xhr, settings) ->
         $(".progress-area").removeClass("hidden")

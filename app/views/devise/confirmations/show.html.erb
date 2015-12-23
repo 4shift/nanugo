@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 login-flow">
+      <div class="box">
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-10">
+            <h3 style="margin-bottom: 10px">NanuGO 계정 활성화</h3>
+          </div>
+        </div>
+        <div class="row">
+          <%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'patch'}, :id => 'activation-form', :class => 'new_user' do |f| %>
+            <%= hidden_field_tag :confirmation_token, @confirmation_token %>
+            <div class="col-sm-offset-1 col-sm-2">
+              <div class="photo-upload">
+                <div class="preview">
+                  <img width="120" height="120" class="joiner-picture img-responsive" src="https://res.cloudinary.com/yerdle/image/upload/c_fill,h_120,w_120/avatar_cebggm.png" alt="Avatar cebggm">
+                </div>
+                <label for="user_picture_url_raw">
+                  <i class="fa fa-cloud-upload"></i> 이미지 업로드
+                </label>
+                <input accept="image/*" class="transparent-image-upload cloudinary-fileupload" type="file" name="file">
+              </div>
+              <input type="hidden" value="https://res.cloudinary.com/yerdle/image/upload/avatar_cebggm.png" name="user[picture_url]" id="user_picture_url">
+            </div>
+            <div class="col-sm-8">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <%= f.label :username, class: 'control-label' %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <%= f.text_field :username, class: 'form-control' %>
+                  </div>
+                  <div class="col-sm-4"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <%= f.label :email, class: 'control-label' %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <%= f.email_field :email, class: 'form-control', disabled: true %>
+                  </div>
+                  <div class="col-sm-4"></div>
+                </div>
+              </div>
+              <% if @requires_password %>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <%= f.label :password, class: 'control-label' %>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <%= f.password_field :password, class: 'form-control' %>
+                    </div>
+                    <div class="col-sm-4"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <%= f.label :password_confirmation, class: 'control-label' %>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <%= f.password_field :password_confirmation, class: 'form-control' %>
+                    </div>
+                    <div class="col-sm-4"></div>
+                  </div>
+                </div>
+              <% end %>
+              <br>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <%= f.submit "가입하기", class: 'btn btn-primary col-xs-12' %>
+                    <div class="disclaimer">가입하기 버튼을 누르면 NanuGO의 <a href="/pages/terms">이용약관</a>에 동의합니다.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

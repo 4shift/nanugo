@@ -33,6 +33,35 @@ class User < ActiveRecord::Base
   has_many :address, dependent: :destroy
   has_and_belongs_to_many :roles
 
+
+  def password_required?
+    super if confirmed?
+  end
+
+  def password_match?
+    self.errors[:password] << "비밀번호를 입력해야 합니다." if password.blank?
+    self.errors[:password_confirmation] << "비밀번호 확인을 입력해야 합니다." if password_confirmation.blank?
+    self.errors[:password_confirmation] << "비밀번호와 확인코드가 일치하지 않습니다." if password != password_confirmation
+    password == password_confirmation && !password.blank?
+  end
+
+  # new function to set the password without knowing the current password used in our confirmation controller.
+  def attempt_set_password(params)
+    p = {}
+    p[:username] = params[:username]
+    p[:password] = params[:password]
+    p[:password_confirmation] = params[:password_confirmation]
+    update_attributes(p)
+  end
+  # new function to return whether a password has been set
+  def has_no_password?
+    self.encrypted_password.blank?
+  end
+
+  def only_if_unconfirmed
+    pending_any_confirmation {yield}
+  end
+
   class << self
     def find_by_confirmation_token(confirmation_token)
       original_token = confirmation_token
@@ -60,7 +89,6 @@ class User < ActiveRecord::Base
     end
 
     def from_omniauth(auth)
-      created = false
       if member = User.find_by_email(auth.info.email)
         member.provider = auth.provider
         member.uid = auth.uid
@@ -74,9 +102,8 @@ class User < ActiveRecord::Base
         member.password = Devise.friendly_token[0,20] + rand(5..30).to_s
         member.skip_confirmation!
         member.save
-        created = true
       end
-      [member, created]
+      member
     end
 
   end
