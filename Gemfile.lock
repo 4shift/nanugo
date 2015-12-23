@@ -20,8 +20,6 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active_model_serializers (0.8.3)
-      activemodel (>= 3.0)
     activejob (4.2.3)
       activesupport (= 4.2.3)
       globalid (>= 0.3.0)
@@ -221,9 +219,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.3)
       sprockets-rails
-    rails-api (0.4.0)
-      actionpack (>= 3.2.11)
-      railties (>= 3.2.11)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -326,7 +321,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers (~> 0.8.3)
   animate-rails
   annotate (~> 2.6.0.beta2)
   better_errors
@@ -359,7 +353,6 @@ DEPENDENCIES
   quiet_assets
   rack-cors
   rails (= 4.2.3)
-  rails-api (~> 0.4.0)
   rails_admin (~> 0.8.1)
   remotipart (~> 1.2)
   sass-rails (~> 5.0)
