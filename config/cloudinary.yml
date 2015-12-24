@@ -1,0 +1,20 @@
+development:
+  cloud_name: dctb9ebps
+  api_key: 864863422983684
+  api_secret: NlPXGRK_NuiqhO4Zgk-8UX5Gbww
+  enhance_image_tag: true
+  static_image_support: false
+
+production:
+  cloud_name: dctb9ebps
+  api_key: 864863422983684
+  api_secret: NlPXGRK_NuiqhO4Zgk-8UX5Gbww
+  enhance_image_tag: true
+  static_image_support: true
+
+test:
+  cloud_name: my_cloud_name
+  api_key: my_api_key
+  api_secret: my_api_secret
+  enhance_image_tag: true
+  static_image_support: false

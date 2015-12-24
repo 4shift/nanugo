@@ -1,0 +1,231 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#post-item h2 {
+    margin-bottom: 0
+}
+#post-item .photo-upload-container {
+    position: relative;
+    width: 100%
+}
+#post-item .photo-upload-container .dummy {
+    padding-top: 100%
+}
+#post-item .photo-upload-container .photo-container-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+#post-item .photo-upload-container.empty .photo-container {
+    width: 100%;
+    height: 100%
+}
+#post-item .photo-container {
+    display: inline-block;
+    position: relative;
+    width: calc(50% - 2px);
+    height: calc(50% - 2px);
+    margin: 0 auto;
+    padding: 0;
+    text-align: center
+}
+#post-item .photo-container .photo-upload {
+    background: transparent;
+    border: 2px dashed #a7a7a8;
+    border-radius: 2px;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%
+}
+#post-item .photo-container .photo-upload .select-photo-text,
+#post-item .photo-container .photo-upload .error,
+#post-item .photo-container .photo-upload .spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 9px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+#post-item .photo-container .photo-upload .select-photo-text p:last-child,
+#post-item .photo-container .photo-upload .error p:last-child,
+#post-item .photo-container .photo-upload .spinner p:last-child {
+    margin-bottom: 0
+}
+#post-item .photo-container .photo-upload i.fa {
+    font-size: 90px
+}
+#post-item .photo-container .photo-upload .error i.fa {
+    font-size: 63px
+}
+#post-item .photo-container .photo-upload .preview {
+    position: relative
+}
+#post-item .photo-container .photo-upload .remove-button {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.27);
+    color: #a7a7a8;
+    border: 1px solid #a7a7a8;
+    box-shadow: 0 2px 9px #4b4948;
+    border-radius: 50%;
+    cursor: pointer
+}
+#post-item .photo-container .photo-upload .remove-button:hover {
+    color: #4b4948;
+    border-color: #4b4948
+}
+#post-item .photo-container .photo-upload:hover {
+    color: #6c6c6c
+}
+#post-item .photo-container .photo-upload.photo {
+    border: none !important
+}
+#post-item .photo-container .photo-upload.photo:hover .remove-button {
+    display: block
+}
+#post-item .form-group>label {
+    font-size: 13px;
+    font-weight: 600
+}
+#post-item input[type=text],
+#post-item input[type=number],
+#post-item textarea {
+    border: 1px solid #eaeaea;
+    border-radius: 4px
+}
+#post-item select {
+    border: 1px solid #eaeaea;
+    border-radius: 4px
+}
+#post-item select.prompt {
+    color: #999
+}
+#post-item .invalid {
+    border: 1px solid #f8b7b3 !important;
+    border-radius: 4px;
+    background: #fef9f9 !important
+}
+#post-item textarea {
+    resize: vertical
+}
+#post-item .help-block {
+    color: #a7a7a8;
+    font-size: 13px
+}
+#post-item .help-block.info-text {
+    font-size: 12px
+}
+#post-item .help-block.info-text .fa {
+    padding-right: 2px
+}
+#post-item .help-block.map-help {
+    margin-top: 0;
+    margin-bottom: 3px
+}
+#post-item .credits-field-holder {
+    font-size: 13px;
+    color: #4b4948
+}
+#post-item .radio>label,
+#post-item .radio-inline>label,
+#post-item .checkbox>label,
+#post-item .checkbox-inline>label,
+#post-item .radio>label input,
+#post-item .radio-inline>label input,
+#post-item .checkbox>label input,
+#post-item .checkbox-inline>label input {
+    cursor: pointer
+}
+#post-item .radio>label,
+#post-item .radio-inline>label,
+#post-item .checkbox>label,
+#post-item .checkbox-inline>label {
+    font-size: 13px;
+    color: #4b4948
+}
+#post-item .radio.user-shipping,
+#post-item .radio-inline.user-shipping,
+#post-item .checkbox.user-shipping,
+#post-item .checkbox-inline.user-shipping {
+    margin-left: 20px
+}
+#post-item .credits-input {
+    display: inline;
+    width: 90px
+}
+#post-item .submit-btn {
+    margin-top: 20px
+}
+#post-item .fa-map-marker {
+    color: #f75c50;
+    padding: 0 2px
+}
+#post-item .map {
+    border: 1px solid #eaeaea;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    height: 160px;
+    width: 100%
+}
+@media(min-width:767px) {
+    #post-item .map {
+        height: 253px
+    }
+}
+@media(min-width:991px) {
+    #post-item .map {
+        height: 201px
+    }
+}
+@media(min-width:1199px) {
+    #post-item .map {
+        height: 268px
+    }
+}
+#post-item .geocomplete {
+    border-radius: 0 0 4px 4px !important
+}
+#post-item .pac-container {
+    border: 1px solid #eaeaea;
+    border-top: 0;
+    margin-top: -1px;
+    box-shadow: none
+}
+#post-item .pac-container .pac-item {
+    cursor: pointer;
+    padding: 3px 6px
+}
+#post-item .pac-container .pac-item,
+#post-item .pac-container .pac-item .pac-item-query {
+    font-size: 13px
+}
+#post-item .pac-container:after {
+    display: none
+}
+#post-item #categories {
+    padding-left: 25px
+}

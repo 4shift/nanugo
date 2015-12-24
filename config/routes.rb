@@ -7,6 +7,17 @@ Rails.application.routes.draw do
                                     confirmations: :confirmations,
                                     omniauth_callbacks: :omniauth_callbacks }
 
+  resources :items, except: [:index, :new]
+  get '/postings' => 'items#index'
+  get '/post' => 'items#new'
+  resources :namespace, path: '/', constraints: { id: /[a-zA-Z.0-9_\-]+/ }, only: [] do
+    resources :uploads, only: [:create] do
+      collection do
+        get ":secret/:filename", action: :show, as: :show, constraints: { filename: /[^\/]+/ }
+      end
+    end
+  end
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: "pages#home"
 end

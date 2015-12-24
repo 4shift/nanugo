@@ -30,6 +30,7 @@ gem 'remotipart', '~> 1.2'
 gem 'rails_admin', '~> 0.8.1'
 gem 'request_store'
 gem 'settingslogic'
+gem 'cloudinary'
 
 gem 'sidekiq', '~> 3.3'
 gem 'sinatra', require: false

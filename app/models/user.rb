@@ -69,6 +69,10 @@ class User < ActiveRecord::Base
     pending_any_confirmation {yield}
   end
 
+  def has_role?(role)
+    roles.include?(role)
+  end
+
   class << self
     def find_by_confirmation_token(confirmation_token)
       original_token = confirmation_token

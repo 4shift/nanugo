@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223121317) do
+ActiveRecord::Schema.define(version: 20151224122856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,19 +48,33 @@ ActiveRecord::Schema.define(version: 20151223121317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "category_id"
-    t.text     "desc"
-    t.integer  "condition_id"
-    t.decimal  "price"
-    t.integer  "delivery"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+  create_table "fulfillment_options", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
-  add_index "posts", ["condition_id"], name: "index_posts_on_condition_id", using: :btree
+  create_table "fulfillment_options_items", id: false, force: :cascade do |t|
+    t.integer "item_id",               null: false
+    t.integer "fulfillment_option_id", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "title",                  default: "", null: false
+    t.integer  "category_id"
+    t.string   "desc"
+    t.integer  "condition",              default: 0,  null: false
+    t.integer  "price",        limit: 8, default: 0,  null: false
+    t.string   "first_image"
+    t.string   "second_image"
+    t.string   "third_image"
+    t.string   "fourth_image"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "position",               default: "", null: false
+  end
+
+  add_index "items", ["category_id"], name: "index_items_on_category_id", using: :btree
 
   create_table "provinces", force: :cascade do |t|
     t.string   "name"
@@ -115,6 +129,5 @@ ActiveRecord::Schema.define(version: 20151223121317) do
   add_foreign_key "addresses", "countries"
   add_foreign_key "addresses", "provinces"
   add_foreign_key "addresses", "users"
-  add_foreign_key "posts", "categories"
-  add_foreign_key "posts", "conditions"
+  add_foreign_key "items", "categories"
 end
