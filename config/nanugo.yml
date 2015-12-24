@@ -1,0 +1,44 @@
+production: &base
+  nanugo:
+    host: nanugo.co.kr
+    port: 443
+    https: true
+
+  outgoing_emails:
+    enabled: true
+    from: webmaster@nanugo.co.kr
+    display_name: 4shift.com
+    reply_to: noreply@nanugo.co.kr
+
+    delivery_method: :sendmail
+    sendmail_settings:
+      location: /usr/sbin/sendmail
+      arguments: '-i -t'
+
+    smtp_settings:
+      address: localhost
+      port: 25
+
+  gravatar:
+    enabled: true
+
+  sms:
+    api_server: https://api.bluehouselab.com/smscenter/v1.0/sendsms
+    app_id: clebee_sms
+    api_key: a8bbe02c762711e59e190cc47a1fcfae
+
+development:
+  <<: *base
+  nanugo:
+    host: localhost
+    port: 3000
+
+test:
+  <<: *base
+
+staging:
+  <<: *base
+  nanugo:
+    host: staging.nanugo.co.kr
+    port: 443
+    https: true

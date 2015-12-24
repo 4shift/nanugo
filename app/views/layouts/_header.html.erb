@@ -45,7 +45,7 @@
         </li>
         <li class="dropdown user-details hidden-xs">
           <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <img src="//res.cloudinary.com/yerdle/image/upload/w_50,h_50,c_limit,q_80,e_sharpen:20,f_auto/avatar_cebggm.png" width="35" height="35">
+            <%= image_tag avatar_icon(current_user, 40) %>
             <span class="hidden-xs"><%= current_user.username %>&nbsp;</span>
             <span class="caret"></span>
           </a>
