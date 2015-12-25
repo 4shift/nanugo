@@ -1,39 +1,306 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @item.category %>
-</p>
-
-<p>
-  <strong>Desc:</strong>
-  <%= @item.desc %>
-</p>
-
-<p>
-  <strong>Condition:</strong>
-  <%= @item.condition %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
-
-<p>
-  <strong>Method:</strong>
-  <%= @item.method %>
-</p>
-
-<p>
-  <strong>Image1</strong>
-  <%= image_tag @item.first_image %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<div class="container item-detail">
+  <section>
+    <div class="item-container">
+      <div class="breadcrumb">
+        <a href="/postings/women">Women</a>&nbsp;/&nbsp;
+        <a href="/postings/women/accessories">Accessories</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="item-container">
+      <div class="item-photos-container">
+        <div class="image-container">
+          <%= image_tag @item.first_image, id: "item-photo-main", alt: "NanuGO Free Item" %>
+        </div>
+        <% unless @item.second_image.blank? %>
+          <ul class="list-inline thumbnails">
+            <li class="thumbnail">
+              <%= image_tag @item.first_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+            </li>
+            <% unless @item.second_image.blank? %>
+              <li class="thumbnail">
+                <%= image_tag @item.second_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+              </li>
+            <% end %>
+            <% unless @item.third_image.blank? %>
+              <li class="thumbnail">
+                <%= image_tag @item.third_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+              </li>
+            <% end %>
+            <% unless @item.fourth_image.blank? %>
+              <li class="thumbnail">
+                <%= image_tag @item.fourth_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+      <div class="item-details-container">
+        <section class="item-title-and-price">
+          <div class="title">
+            <h2><%= @item.title %></h2>
+          </div>
+          <div class="item-price">
+            <h2>
+              <i class="yrd-symbol"></i>
+              <%= @item.price.to_s %>
+            </h2>
+          </div>
+        </section>
+        <section class="item-hearts">
+          <a class="hearts-btn " data-posting-id="<%= @item.id %>">
+            <span class="heart">
+              <i class="icon-heart icon-heart-hollow">&nbsp;</i>
+            </span>
+            <span class="hearts-count">5</span>
+          </a>
+        </section>
+        <section class="sharing-buttons">
+          <ul class="share">
+            <li>
+              <a class="facebook-share">
+                <img src="//d12azzhof0chfb.cloudfront.net/assets/sharing/Facebook-0bdb72a972ac9c3002975cdbbca6ae0e.png">
+              </a>
+            </li>
+            <li>
+              <a class="twitter-share">
+                <img src="//d12azzhof0chfb.cloudfront.net/assets/sharing/Twitter-9bbd3d272ffdfa1e1d5b727ca14804c4.png">
+              </a>
+            </li>
+            <li>
+              <a class="email-share">
+                <img src="//d12azzhof0chfb.cloudfront.net/assets/sharing/Email-14a9cd6bd62fbb02f0a974fd4ad740e2.png">
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="item-description">
+          <p><%= @item.desc %></p>
+        </section>
+        <section class="poster-and-item-condition">
+          <div class="condition-container">
+            <h6 class="condition-header">Condition</h6>
+            <div class="condition"><%= @item.condition %></div>
+            <a class="flag">이 제품을 신고</a>
+          </div>
+          <div class="poster-container">
+            <h6 class="poster-header">From</h6>
+            <div class="poster">
+              <%= link_to user_path(@item.user.id) do %>
+                <div class="poster-photo">
+                  <div class="profile-pic-wrapper">
+                    <img class="star" src="//d12azzhof0chfb.cloudfront.net/assets/badge/pro-ab68d1d8d707d62bf21719fa226e698f.png">
+                    <%= image_tag avatar_icon(@item.user, 120), class: "img-circle" %>
+                  </div>
+                </div>
+              <% end %>
+              <div class="poster-name-and-location">
+                <h5 class="name">
+                  <%= link_to @item.user.username, user_path(@item.user) %>
+                </h5>
+                <p class="location"></p>
+                <div><%= @item.user.location %></div>
+                <p></p>
+                <div class="reviews">
+                  <div class="positive">
+                    <i class="icon-thumbs-up"></i>
+                    9
+                  </div>
+                  <div class="negative">
+                    <i class="icon-thumbs-down"></i>
+                    0
+                  </div>
+                </div>
+                <a class="btn btn-text" href="mailto:reply+9a2e3a5f772d74d505ab39d73b7ef192@yerdle.com?body=Hi%20Rebecca%2C%20I%20had%20a%20quick%20question%20about%20your%20Black%20Statement%20Necklace%21.%0A%0A%0Ahttp%3A%2F%2Fyrdl.us%2FGtMLb&amp;subject=Question%20via%20Yerdle%20about%3A%20Black%20Statement%20Necklace%21">
+                  <small>
+                    <i class="icon-contact_icon"></i>
+                    Contact
+                  </small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="delivery-icons">
+          <ul class="delivery_methods text-center">
+            <li>
+              <div class="delivery-method">
+                <i class="icon-truck active"></i>
+                <h6>Free Shipping</h6>
+                <span>
+                  <i class="fa fa-check"></i>
+                  Yes
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="delivery-method">
+                <i class="icon-pickup"></i>
+                <h6>Pickup</h6>
+                <span>No</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="get-it-button-container">
+          <a class="btn btn-primary btn-full-width get-it" href="https://yerdle.com/postings/959920/claimings/new">Get it</a>
+        </section>
+      </div>
+    </div>
+  </section>
+  <div class="container related">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>People Also Like</h3>
+        <p class="small">Because there's always more.</p>
+        <div class="card-scroller">
+          <a class="card gift-card" href="https://yerdle.com/gifts/cream-knit-infinity-scarf">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/pu3eqkbb7mpq0nriytqe.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Cream Knit Infinity Scarf</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                5
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/purple-wallet-with-silver-inside">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/f2073o4imayj5cwpipsb.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Purple Wallet With Silver Inside</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                15
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/snapback-caledonia-wi">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/nvogtdjdrqfx4q8vnyrd.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">SnapBack</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                5
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/lei-very-nice-poly-rayon-gray-aqua-scarf">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/geqefry4wsga9io7fe6z.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">LEI Very Nice Poly Rayon Gray Aqua Scarf</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                13
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/scarf-shawl-spring-tx">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/hsasusd1jfqf7dh2a8l8.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Scarf/shawl</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                5
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/movie-prop-purple-gloves-nerd-vs-geek">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/ahvr9quxxiplduag67kk.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">LAST DAY Purple Knit Winter Gloves</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                1
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/assorted-juniors-belts">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/orxlpcwq77ktu1ljpnbp.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Belt Bundle</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                5
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/brighton-ladies-belt-m">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/urzmdoqephsl9rs0l4v4.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Brighton Ladies Belt M</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                40
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/small-perfume-samples">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/cx6tur1gzkenp1elsecm.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Small Perfume Samples</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                7
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/vintage-victorian-hand-lace-mirror">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/jltzgat7wzai5wsguekl.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Vintage Victorian Hand Lace Mirror</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                35
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/vtg-keychain-vicious-power-hungry-bitch">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/sw3psue65jqqmeazmuc5.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">VTG  Keychain Vicious Power Hungry B*tch</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                20
+              </h4>
+            </section>
+          </a>
+          <a class="card gift-card" href="https://yerdle.com/gifts/big-pink-brooch">
+            <div class="image">
+              <img alt="Yerdle free item" src="https://res.cloudinary.com/yerdle/image/upload/w_640,h_640,q_65,e_sharpen:20/ldnlh46rk1pguuzrtzev.jpg">
+            </div>
+            <section class="details">
+              <h4 class="title">Big Pink brooch</h4>
+              <h4 class="price-container">
+                <i class="yrd-symbol"></i>
+                15
+              </h4>
+            </section>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

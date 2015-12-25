@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
   after_create :give_thanks_point
 
   has_and_belongs_to_many :roles
+  has_many :items
 
   mount_uploader :avatar, AvatarUploader
 

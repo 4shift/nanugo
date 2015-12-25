@@ -221,7 +221,8 @@
     </div>
   </div>
   <div class="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 text-center">
-    <button class="btn btn-primary btn-full-width btn-lg submit-btn" type="submit">물건을 올립니다</button>
+    <%= f.hidden_field :user, value: current_user.id %>
+    <%= f.submit "물건을 올립니다", class: "btn btn-primary btn-full-width btn-lg submit-btn" %>
   </div>
 <% end %>
 

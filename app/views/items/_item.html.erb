@@ -1,0 +1,17 @@
+<%= link_to item_path(item), class: "card posting-container item-container posting" do %>
+  <div class="image">
+    <%= image_tag item.first_image %>
+    <div class="status">
+      <i class="icon-just_in_tag"></i>
+      <span>Just in</span>
+    </div>
+  </div>
+  <section class="details">
+    <h4 class="title"><%= item.desc %></h4>
+    <h4 class="price-container">
+      <i class="yrd-symbol"></i>
+      <span class="price"><%= item.price.to_s %></span>
+    </h4>
+  </section>
+  <div class="badge hidden"></div>
+<% end %>

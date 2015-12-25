@@ -1,39 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Category</th>
-      <th>Desc</th>
-      <th>Condition</th>
-      <th>Price</th>
-      <th>Method</th>
-      <th>Images</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.title %></td>
-        <td><%= item.category %></td>
-        <td><%= item.desc %></td>
-        <td><%= item.condition %></td>
-        <td><%= item.price %></td>
-        <td><%= item.method %></td>
-        <td><%= item.images %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', post_path %>
+<div class="postings">
+  <div class="container">
+    <ul class="nav nav-tabs" id="tabs">
+      <li class="active" role="presentation">
+        <a data-toggle="tab" href="#trending">Now Trending</a>
+      </li>
+      <li role="presentation">
+        <a data-toggle="tab" href="#shop">Categories</a>
+      </li>
+    </ul>
+    <a class="posting-template hidden card posting-container item-container">
+      <div class="image">
+        <img>
+        <div class="status hidden"></div>
+      </div>
+      <section class="details">
+        <h4 class="title"></h4>
+        <h4 class="price-container">
+          <i class="yrd-symbol"></i>
+          <span class="price"></span>
+        </h4>
+      </section>
+      <div class="badge hidden"></div>
+    </a>
+    <a class="wish-template hidden card wish-container item-container">
+      <div class="image">
+        <img>
+        <div class="btn btn-primary btn-wish">Make a Wish</div>
+      </div>
+      <section class="details">
+        <h4 class="title"></h4>
+        <h5 class="description"></h5>
+      </section>
+    </a>
+    <div class="tab-content">
+      <div class="tab-pane active" id="trending">
+        <div class="results">
+          <div class="card-holder" id="infinite-container">
+            <%= render @items %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

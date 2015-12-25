@@ -7,6 +7,7 @@ Rails.application.routes.draw do
                                     confirmations: :confirmations,
                                     omniauth_callbacks: :omniauth_callbacks }
 
+  resources :users
   resources :items, except: [:index, :new]
   get '/postings' => 'items#index'
   get '/post' => 'items#new'
