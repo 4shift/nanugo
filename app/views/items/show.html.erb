@@ -31,8 +31,8 @@
 </p>
 
 <p>
-  <strong>Image1,:</strong>
-  <%= @item.images %>
+  <strong>Image1</strong>
+  <%= image_tag @item.first_image %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |

@@ -33,7 +33,6 @@ class User < ActiveRecord::Base
   after_create :update_access_token!
   after_create :give_thanks_point
 
-  has_many :address, dependent: :destroy
   has_and_belongs_to_many :roles
 
   mount_uploader :avatar, AvatarUploader

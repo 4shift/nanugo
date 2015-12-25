@@ -16,36 +16,11 @@ ActiveRecord::Schema.define(version: 20151224122856) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "addresses", force: :cascade do |t|
-    t.integer  "country_id"
-    t.integer  "province_id"
-    t.string   "detail"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "addresses", ["country_id"], name: "index_addresses_on_country_id", using: :btree
-  add_index "addresses", ["province_id"], name: "index_addresses_on_province_id", using: :btree
-  add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
-
   create_table "categories", force: :cascade do |t|
     t.integer  "category_id"
     t.string   "name",        null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "conditions", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "countries", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "fulfillment_options", force: :cascade do |t|
@@ -69,18 +44,14 @@ ActiveRecord::Schema.define(version: 20151224122856) do
     t.string   "second_image"
     t.string   "third_image"
     t.string   "fourth_image"
+    t.string   "location"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "position",               default: "", null: false
   end
 
   add_index "items", ["category_id"], name: "index_items_on_category_id", using: :btree
-
-  create_table "provinces", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -117,6 +88,9 @@ ActiveRecord::Schema.define(version: 20151224122856) do
     t.string   "provider"
     t.string   "uid"
     t.string   "avatar"
+    t.string   "location"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "access_token"
     t.integer  "point",                  limit: 8, default: 0,  null: false
   end
@@ -126,8 +100,5 @@ ActiveRecord::Schema.define(version: 20151224122856) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
-  add_foreign_key "addresses", "countries"
-  add_foreign_key "addresses", "provinces"
-  add_foreign_key "addresses", "users"
   add_foreign_key "items", "categories"
 end

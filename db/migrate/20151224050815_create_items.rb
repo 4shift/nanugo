@@ -10,6 +10,9 @@ class CreateItems < ActiveRecord::Migration
       t.string :second_image
       t.string :third_image
       t.string :fourth_image
+      t.string :location
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps null: false
     end

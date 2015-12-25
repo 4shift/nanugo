@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+fulfillment_options = FulfillmentOption.create([{name: "직접전달"}, {name: "택배배송"}])

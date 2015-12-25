@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.0'
+gem 'font-awesome-sass', '~> 4.3.0'
 gem "fastclick-rails"
 gem "animate-rails"
 gem 'ionicons-rails'
