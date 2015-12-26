@@ -1,10 +1,15 @@
 <div class="container item-detail">
   <section>
     <div class="item-container">
-      <div class="breadcrumb">
-        <a href="/postings/women">Women</a>&nbsp;/&nbsp;
-        <a href="/postings/women/accessories">Accessories</a>
-      </div>
+      <% unless @item.department.blank? %>
+        <div class="breadcrumb">
+          <%= link_to "#{@item.department}", "/postings/#{parameterlize(@item.department)}" %>
+          <% unless @item.subcategory.blank? %>
+            &nbsp; / &nbsp;
+            <%= make_subcategory_link(@item.subcategory) %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </section>
   <section>
@@ -16,21 +21,21 @@
         <% unless @item.second_image.blank? %>
           <ul class="list-inline thumbnails">
             <li class="thumbnail">
-              <%= image_tag @item.first_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+              <%= image_tag @item.first_image, class: "img-responsive item-photo-thumbnail" %>
             </li>
             <% unless @item.second_image.blank? %>
               <li class="thumbnail">
-                <%= image_tag @item.second_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+                <%= image_tag @item.second_image, class: "img-responsive item-photo-thumbnail" %>
               </li>
             <% end %>
             <% unless @item.third_image.blank? %>
               <li class="thumbnail">
-                <%= image_tag @item.third_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+                <%= image_tag @item.third_image, class: "img-responsive item-photo-thumbnail" %>
               </li>
             <% end %>
             <% unless @item.fourth_image.blank? %>
               <li class="thumbnail">
-                <%= image_tag @item.fourth_image, class: "img-responsive img-thumbnail item-photo-thumbnail" %>
+                <%= image_tag @item.fourth_image, class: "img-responsive item-photo-thumbnail" %>
               </li>
             <% end %>
           </ul>
@@ -87,7 +92,7 @@
           <div class="poster-container">
             <h6 class="poster-header">From</h6>
             <div class="poster">
-              <%= link_to user_path(@item.user.id) do %>
+              <%= link_to user_path(@item.user) do %>
                 <div class="poster-photo">
                   <div class="profile-pic-wrapper">
                     <img class="star" src="//d12azzhof0chfb.cloudfront.net/assets/badge/pro-ab68d1d8d707d62bf21719fa226e698f.png">
@@ -100,7 +105,7 @@
                   <%= link_to @item.user.username, user_path(@item.user) %>
                 </h5>
                 <p class="location"></p>
-                <div><%= @item.user.location %></div>
+                <div><%= @item.location %></div>
                 <p></p>
                 <div class="reviews">
                   <div class="positive">
@@ -304,3 +309,26 @@
     </div>
   </div>
 </div>
+
+<script>
+$(function(){
+  // THUMBNAIL IMAGE SWAP
+  $('.item-photo-thumbnail').click(function(e) {
+    $('#item-photo-main').attr('src', e.target.src)
+  })
+
+  // FLAG
+  $('.flag').click(function(e) {
+    $('#flag-modal').modal('show')
+  })
+  $('#flag-modal .btn-primary').click(function(e) {
+    Y.flag("683de78a1f3cee1a", $('#flag-modal input').val()).then(function() {
+      $('#flag-modal').modal('hide')
+      $('.flag').html('Thank you').off('click').css({cursor: 'inherit'})
+    })
+  })
+
+  // yrd tutorial popup
+  $('[data-toggle="popover"]').popover();
+})
+</script>

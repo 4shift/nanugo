@@ -2,8 +2,11 @@ class CreateItems < ActiveRecord::Migration
   def change
     create_table :items do |t|
       t.string :title, default: '', null: false
-      t.references :category, index: true, foreign_key: true
       t.string :desc
+      t.string :department
+      t.string :subcategory
+      t.string :size_type
+      t.string :structured_size
       t.integer :condition, default: 0, null: false
       t.integer :price, :limit => 5, default: 0, null: false
       t.string :first_image
@@ -16,5 +19,8 @@ class CreateItems < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :items, :department
+    add_index :items, :subcategory
   end
 end

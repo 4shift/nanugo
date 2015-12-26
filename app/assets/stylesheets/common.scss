@@ -32,6 +32,10 @@ body {
   padding-bottom: 207px;
 }
 
+.btn.btn-full-width {
+  width: 100%;
+}
+
 header > h1,
 header > h2,
 header > h3,
@@ -2862,9 +2866,6 @@ label {
 }
 .modal .btn {
     vertical-align: top
-}
-.modal form {
-    display: inline-block
 }
 .download-text {
     padding: 0;

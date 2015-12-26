@@ -35,13 +35,16 @@
         </li>
         <li class="yrd-balance">
           <a href="#" data-target="#help-yrd-modal" data-toggle="modal">
-            <i class="fa fa-gg"></i>
+            <i class="yrd-symbol"></i>
             25
           </a>
         </li>
       <% else %>
         <li class="give-button hidden-xs">
-          <a href="/post">나누기</a>
+          <%= link_to "나누기", post_path %>
+        </li>
+        <li class="postings-button hidden-xs">
+          <%= link_to "상품보기", postings_path %>
         </li>
         <li class="dropdown user-details hidden-xs">
           <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -51,13 +54,16 @@
           </a>
           <span class="spacer">&nbsp;&nbsp;</span>
           <a class="yrd-balance" data-target="#help-yrd-modal" data-toggle="modal">
-            <i class="fa fa-gg"></i>
+            <i class="yrd-symbol"></i>
             <span class="hidden-xs"><%= current_user.point.to_s %></span>
             <span class="visible-xs-inline">25</span>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li class="visible-xs">
-              <a href="/post">나누기</a>
+              <%= link_to "나누기", post_path %>
+            </li>
+            <li class="visible-xs">
+              <%= link_to "상품보기", postings_path %>
             </li>
             <li>
               <a href="/users/eon-jeong-lee">프로필 설정</a>

@@ -16,13 +16,6 @@ ActiveRecord::Schema.define(version: 20151225064508) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.integer  "category_id"
-    t.string   "name",        null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "fulfillment_options", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -35,11 +28,14 @@ ActiveRecord::Schema.define(version: 20151225064508) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string   "title",                  default: "", null: false
-    t.integer  "category_id"
+    t.string   "title",                     default: "", null: false
     t.string   "desc"
-    t.integer  "condition",              default: 0,  null: false
-    t.integer  "price",        limit: 8, default: 0,  null: false
+    t.string   "department"
+    t.string   "subcategory"
+    t.string   "size_type"
+    t.string   "structured_size"
+    t.integer  "condition",                 default: 0,  null: false
+    t.integer  "price",           limit: 8, default: 0,  null: false
     t.string   "first_image"
     t.string   "second_image"
     t.string   "third_image"
@@ -47,12 +43,13 @@ ActiveRecord::Schema.define(version: 20151225064508) do
     t.string   "location"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.integer  "user_id"
   end
 
-  add_index "items", ["category_id"], name: "index_items_on_category_id", using: :btree
+  add_index "items", ["department"], name: "index_items_on_department", using: :btree
+  add_index "items", ["subcategory"], name: "index_items_on_subcategory", using: :btree
   add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
@@ -102,6 +99,5 @@ ActiveRecord::Schema.define(version: 20151225064508) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
-  add_foreign_key "items", "categories"
   add_foreign_key "items", "users"
 end
