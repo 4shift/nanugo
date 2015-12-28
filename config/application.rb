@@ -31,6 +31,8 @@ module Nanugo
       end if File.exists?(env_file)
     end
 
+    config.session_store
+    config.api_only = false
 
     #config/application.rb
     config.middleware.insert_before 0, "Rack::Cors" do

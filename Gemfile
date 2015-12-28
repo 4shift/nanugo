@@ -16,6 +16,8 @@ gem "fastclick-rails"
 gem "animate-rails"
 gem 'ionicons-rails'
 
+gem 'doorkeeper', '~> 1.4.0'
+gem 'grape-doorkeeper', '~> 0.0.2'
 gem 'devise', '~> 3.4.0'   # or later
 gem 'devise-async', '0.9.0'
 gem 'omniauth', '~> 1.1.3'
@@ -38,6 +40,9 @@ gem 'sidekiq', '~> 3.3'
 gem 'sinatra', require: false
 gem 'slim'
 
+gem 'rails-api', '~> 0.4.0'
+gem 'active_model_serializers', '~> 0.8.3'
+
 group :development do
   gem 'annotate', '~> 2.6.0.beta2'
   gem 'better_errors'
@@ -47,6 +52,7 @@ group :development do
   gem 'quiet_assets'
   gem 'foreman'
   gem "pry"
+  gem "thin"
 end
 
 group :development, :test do
