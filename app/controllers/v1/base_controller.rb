@@ -7,10 +7,9 @@ module V1
     respond_to :json
 
     before_action :authenticate_user_from_token!
-    check_authorization unless: :devise_controller?
 
     def authenticate_user_from_token!
-      auth_token = request.headers['Authorization']
+      auth_token = request.headers['X-Access-Token']
 
       if auth_token
         authenticate_with_auth_token auth_token
