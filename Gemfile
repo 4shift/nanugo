@@ -16,12 +16,12 @@ gem "fastclick-rails"
 gem "animate-rails"
 gem 'ionicons-rails'
 
-gem 'doorkeeper', '~> 1.4.0'
-gem 'grape-doorkeeper', '~> 0.0.2'
 gem 'devise', '~> 3.4.0'   # or later
 gem 'devise-async', '0.9.0'
+gem 'doorkeeper'
 gem 'omniauth', '~> 1.1.3'
 gem 'omniauth-facebook'
+gem 'oauth2'
 
 gem 'cancancan'
 gem 'rack-cors', :require => 'rack/cors'
@@ -42,6 +42,7 @@ gem 'slim'
 
 gem 'rails-api', '~> 0.4.0'
 gem 'active_model_serializers', '~> 0.8.3'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development do
   gem 'annotate', '~> 2.6.0.beta2'
@@ -60,7 +61,6 @@ group :development, :test do
   gem 'ffaker'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
 end
 
 group :production do

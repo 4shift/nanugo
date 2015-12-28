@@ -8,6 +8,12 @@ Rails.application.routes.draw do
                                     confirmations: :confirmations,
                                     omniauth_callbacks: :omniauth_callbacks }
 
+  namespace :v1, defaults: { format: :json } do
+    resource :login, only: [:create], controller: :sessions
+    resources :users, only: [:create]
+    resources :items, only: [:index, :show, :create]
+  end
+
   resources :users
   resources :items, except: [:index, :new]
   get '/postings' => 'items#index'

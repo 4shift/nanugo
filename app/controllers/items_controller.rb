@@ -23,6 +23,8 @@ class ItemsController < ApplicationController
   # POST /items
   def create
     @item = Item.new(item_params)
+    @item.department = parameterlize params[:department] if params[:department].present?
+    @item.subcategory = parameterlize params[:subcategory] if params[:subcategory].present?
 
     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
