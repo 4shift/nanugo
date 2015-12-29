@@ -7,13 +7,13 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('NanuGO', [
   'ionic',
+  'controllers.main',
+  'controllers.auth',
   'services.common.constants',
   'services.common.auth',
   'directives.common.main',
   'components.http-auth-interceptor',
-  'ngCordova.plugins.network',
-  'NanuGO.controllers',
-  'NanuGO.services'
+  'ngCordova.plugins.network'
 ])
 
 .run(function($ionicPlatform, AuthService, Constants, $state, $rootScope, $http, $cordovaNetwork, $ionicLoading) {
@@ -151,163 +151,60 @@ angular.module('NanuGO', [
 
     return opts.dependencies;
   }
-//
-//   $stateProvider
-//   // routing
-//   .state('app', {
-//       url: "/app",
-//       abstract: true,
-//       templateUrl: "templates/app.html",
-//       controller: 'AppCtrl'
-//   })
-//
-//   // starting page
-//   .state('app.start', {
-//       url: "/start",
-//       views: {
-//         'content@app': {
-//           controller: 'AppCtrl',
-//           templateUrl: "templates/index.html"
-//         }
-//       },
-//       authenticate : false,
-//       onEnter: _onEnter,
-//       onExit: _onExit
-//   })
-//
-//   // authentication page
-//   .state('app.auth', {
-//       url: "/auth",
-//       views: {
-//         'content@app': {
-//           controller: 'AuthCtrl',
-//           templateUrl: "templates/auth/index.html"
-//         }
-//       },
-//       authenticate : false,
-//       onEnter: _onEnter,
-//       onExit: _onExit
-//   })
-//
-//   // signup page
-//   .state('app.auth.signup', {
-//     url: "/signup",
-//     views: {
-//       'content@app': {
-//         controller: 'AuthCtrl',
-//         templateUrl: "templates/auth/signup.html"
-//       }
-//     },
-//     authenticate : false,
-//     onEnter: _onEnter,
-//     onExit : _onExit
-//   })
-//
-//   // logged user's profile page
-//   .state('app.profile', {
-//       url: "/profile",
-//       views: {
-//         'content@app': {
-//           controller: 'ProfileCtrl',
-//           templateUrl: "templates/profile/index.html"
-//         }
-//       },
-//       authenticate : true,
-//       onEnter: _onEnter,
-//       onExit : _onExit
-//   })
-//
-//   // users page
-//   .state('app.users', {
-//       url: "/users",
-//       views: {
-//         'content@app': {
-//           controller: 'UsersCtrl',
-//           templateUrl: "templates/users/index.html",
-//         }
-//       },
-//       authenticate: true,
-//       onEnter: _onEnter,
-//       onExit : _onExit
-//   })
-//
-//   // users/:id profile page
-//   .state('app.users.profile', {
-//       url: "/:id",
-//       views: {
-//         'content@app': {
-//           controller: 'UserCtrl',
-//           templateUrl: "templates/users/profile.html"
-//         }
-//       },
-//       authenticate: true,
-//       resolve : {
-//         CtrlFilter : _ctrlFilter({
-//           dependencies : ['Constants', '$state', '$stateParams','$q', 'UserModel'],
-//           type : 'data'
-//         })
-//       },
-//       onEnter: _onEnter,
-//       onExit : _onExit
-//   });
-//
-//
-//   // if none of the above states are matched, use this as the fallback
-//   $urlRouterProvider.otherwise('/app/start');
-// })
-
 
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
+  .state('app', {
+    url: "/app",
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: "templates/app.html",
+    controller: 'AppCtrl'
   })
 
-  // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
+  // starting page
+  .state('app.start', {
+      url: "/start",
+      views: {
+        'content@app': {
+          controller: 'AppCtrl',
+          templateUrl: "templates/index.html"
+        }
+      },
+      authenticate: false,
+      onEnter: _onEnter,
+      onExit: _onExit
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  // authentication page
+  .state('app.auth', {
+      url: "/auth",
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'content@app': {
+          controller: 'AuthCtrl',
+          templateUrl: "templates/auth/index.html"
         }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
+      },
+      authenticate : false,
+      onEnter: _onEnter,
+      onExit: _onExit
+  })
 
-  .state('tab.account', {
-    url: '/account',
+  // signup page
+  .state('app.auth.signup', {
+    url: "/signup",
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'content@app': {
+        controller: 'AuthCtrl',
+        templateUrl: "templates/auth/signup.html"
       }
-    }
+    },
+    authenticate : false,
+    onEnter: _onEnter,
+    onExit : _onExit
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/app/start');
 
 });
