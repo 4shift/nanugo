@@ -21,7 +21,7 @@ angular.module('services.common.auth', ['services.models.user'])
       $http.defaults.headers.common['X-Access-Token'] = window.localStorage.getItem('sessionToken') || "";
 
       // getting the userdata if there's any from the localstorage
-      var userData = window.localStorage.getItem('app_user') || { profileBg: "", avatar: "", objectId: "", username: "", email: "", location: "" };
+      var userData = window.localStorage.getItem('app_user') || {objectId: "", username: "", email: "", avatar: ""};
 
       //quick check to make sure it's a string ()
       if (typeof(userData) === "string") {
@@ -33,9 +33,9 @@ angular.module('services.common.auth', ['services.models.user'])
     },
 
     // update currentUser's data
-    updateUser: function(user,options){
+    updateUser: function(user, options) {
       var self = this;
-      var opts = { remove: false, set: false }
+      var opts = {remove: false, set: false}
 
       angular.extend(opts, options);
       angular.extend(self.currentUser.info, user);
@@ -77,7 +77,7 @@ angular.module('services.common.auth', ['services.models.user'])
 
       // error callback
       var error = function(error, status, headers, config) {
-        if(Constants.DEBUGMODE){
+        if (Constants.DEBUGMODE) {
           console.log("AuthService.error callback function");
           console.log(error);
         }
@@ -97,12 +97,18 @@ angular.module('services.common.auth', ['services.models.user'])
       var deferred = $q.defer();
 
       var success = function(response, status, headers, config) {
-        var user = response.payload.user;
-        var token = response.payload.token;
+
+        var user = {
+          username: response.username,
+          objectId: response.user_id,
+          email: response.email,
+          avatar: response.avatar
+        }
+
+        var token = response.access_token
 
         self.updateUser(user, {set: true});
 
-        //set token on success
         $http.defaults.headers.common['X-Access-Token'] = token;
         window.localStorage.setItem('sessionToken', token);
 
@@ -133,7 +139,7 @@ angular.module('services.common.auth', ['services.models.user'])
               var _url = url.toString();
               if (Constants.DEBUGMODE) {
                 console.log("Browser loadstop event");
-                console.log("Url : "+_url);
+                console.log("Url : " + _url);
               }
 
               // we check if the callback page was reached
@@ -179,7 +185,7 @@ angular.module('services.common.auth', ['services.models.user'])
         }
       } else {
         //default login
-        $http.post(Constants.API.baseUrl + '/users', {user: userData}).success(success).error(error);
+        $http.post(Constants.API.baseUrl + '/login', userData).success(success).error(error);
       }
 
       return deferred.promise;

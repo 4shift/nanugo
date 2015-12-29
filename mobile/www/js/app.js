@@ -9,6 +9,8 @@ angular.module('NanuGO', [
   'ionic',
   'controllers.main',
   'controllers.auth',
+  'controllers.profile',
+  'controllers.users.profile',
   'services.common.constants',
   'services.common.auth',
   'directives.common.main',
@@ -188,6 +190,20 @@ angular.module('NanuGO', [
       authenticate : false,
       onEnter: _onEnter,
       onExit: _onExit
+  })
+
+  // logged user's profile page
+  .state('app.profile', {
+      url: "/profile",
+      views: {
+        'content@app': {
+          controller: 'ProfileCtrl',
+          templateUrl: "templates/profile/index.html"
+        }
+      },
+      authenticate : true,
+      onEnter: _onEnter,
+      onExit : _onExit
   })
 
   // signup page

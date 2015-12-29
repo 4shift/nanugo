@@ -5,7 +5,7 @@ angular.module('services.common.constants',[])
 .service('Constants',[function(){
 
   var _API = {
-    baseUrl: "http://localhost:3000"
+    baseUrl: "http://localhost:3000/v1"
   }
 
   var _img = {
@@ -20,7 +20,7 @@ angular.module('services.common.constants',[])
   }
 
   var constants = {
-    DEBUGMODE : false,
+    DEBUGMODE : true,
     SHOWBROADCAST_EVENTS : true,
     API: _API,
     IMG: _img,

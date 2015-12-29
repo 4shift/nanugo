@@ -33,7 +33,6 @@ function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Con
 
 			$scope.error = error;
 
-
 			var errorPopup = $ionicPopup.show({
 		    	templateUrl: 'templates/modal/error.html',
 		    	title: 'Error',
@@ -81,7 +80,7 @@ function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Con
 		}
 
 		// use AuthService to login
-		AuthService.login($scope.user,provider).then(success,error);
+		AuthService.login($scope.user, provider).then(success, error);
 	}
 
 	$scope.registerUser = function() {
