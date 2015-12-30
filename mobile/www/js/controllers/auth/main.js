@@ -11,7 +11,7 @@ angular.module('controllers.auth', [])
 	'$stateParams',
 	'Constants',
 	'AuthService',
-function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Constants, AuthService,$cordovaLocalStorage) {
+function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Constants, AuthService, $cordovaLocalStorage) {
 
 	if (Constants.DEBUGMODE) {
 		console.log("AuthCtrl controller");
@@ -61,7 +61,7 @@ function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Con
 			}
 
 			$ionicLoading.hide();
-			$state.go('app.profile');
+			$state.go('app.start');
 		}
 
 		$ionicLoading.show({
@@ -70,7 +70,7 @@ function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Con
 
 		if (provider === 'facebook' || provider === 'twitter' || provider === 'instagram') {
 			if (Constants.DEBUGMODE) {
-				console.log('authenticating with '+provider);
+				console.log('authenticating with ' + provider);
 			}
 
 			//remove after a few seconds

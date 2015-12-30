@@ -187,7 +187,7 @@ angular.module('NanuGO', [
           templateUrl: "templates/auth/index.html"
         }
       },
-      authenticate : false,
+      authenticate: false,
       onEnter: _onEnter,
       onExit: _onExit
   })
@@ -201,7 +201,7 @@ angular.module('NanuGO', [
           templateUrl: "templates/profile/index.html"
         }
       },
-      authenticate : true,
+      authenticate: true,
       onEnter: _onEnter,
       onExit : _onExit
   })
@@ -215,7 +215,7 @@ angular.module('NanuGO', [
         templateUrl: "templates/auth/signup.html"
       }
     },
-    authenticate : false,
+    authenticate: false,
     onEnter: _onEnter,
     onExit : _onExit
   });

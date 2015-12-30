@@ -1,15 +1,136 @@
-<ion-view hide-nav-bar="true" hide-back-button="true">
-  <ion-content class="main-page home-bg content-bg overlay-content" scroll="false">
-    <div class="logo"></div>
-    <div class="slogan">
-      <p>A hybrid (ionic, cordova) authentication app powered by a nodejs server :)</p>
-      <p>By<a class="pseudo-link" ng-click="launchFrnchNrd()">@frnchnrd</a></p>
-    </div>
-    <button class="button button-blue" ng-click="navigateTo('app.auth')">
-      Sign In
-    </button>
-    <button class="button button-transparent" ng-click="navigateTo('app.auth.signup')">
-      Sign up
-    </button>
-  </ion-content>
-</ion-view>
+<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    <ion-view hide-nav-bar="true" hide-back-button="true">
+      <ion-content class="main-page home-bg content-bg overlay-content roadblock" scroll="false">
+        <img class="logo" src="img/logo.svg" width="100" height="88">
+        <p>여러분의 물건을 나누어 보세요</p>
+        <a class="continue-link" href="">
+          나누고에 대해 알아보기
+          <img src="img/arrow.svg" width="13" height="12">
+        </a>
+        <button class="button button-block button-positive" ng-click="navigateTo('app.auth')">
+          로그인
+        </button>
+      </ion-content>
+    </ion-view>
+  </ion-slide>
+  <ion-slide>
+    <ion-view hide-nav-bar="true" hide-back-button="true">
+      <ion-content class="main-page home-bg content-bg overlay-content" scroll="false">
+        <section class="page" id="page-2">
+          <p>사용하지 않는 물건을 나누고 필요한 것을 얻을 수 있는 신개념 무료 공유경제 플랫폼에 오신 것을 환영합니다</p>
+          <div class="people">
+            <div class="row">
+              <img width="106" height="75" src="img/people/person_1.jpg" srcset="img/people/person_1@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_2.jpg" srcset="img/people/person_2@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_3.jpg" srcset="img/people/person_3@2x.jpg 2x" style="top: auto;">
+            </div>
+            <div class="row">
+              <img width="106" height="75" src="img/people/person_4.jpg" srcset="img/people/person_4@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_5.jpg" srcset="img/people/person_5@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_6.jpg" srcset="img/people/person_6@2x.jpg 2x" style="top: auto;">
+            </div>
+            <div class="row">
+              <img width="106" height="75" src="img/people/person_7.jpg" srcset="img/people/person_7@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_8.jpg" srcset="img/people/person_8@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_9.jpg" srcset="img/people/person_9@2x.jpg 2x" style="top: auto;">
+            </div>
+            <div class="row hidden-xxs">
+              <img width="106" height="75" src="img/people/person_10.jpg" srcset="img/people/person_10@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_11.jpg" srcset="img/people/person_11@2x.jpg 2x" style="top: auto;">
+              <img width="106" height="75" src="img/people/person_12.jpg" srcset="img/people/person_12@2x.jpg 2x" style="top: auto;">
+            </div>
+          </div>
+        </section>
+      </ion-content>
+    </ion-view>
+  </ion-slide>
+  <ion-slide>
+    <ion-view hide-nav-bar="true" hide-back-button="true">
+      <ion-content class="main-page home-bg content-bg overlay-content" scroll="false">
+        <section class="page" id="page-4">
+          <p>좋아했던 물건이지만 이제는 사용하지 않아서 나누고 싶은 물건이 있나요? 그렇다면 사진을 찍어서 올려주세요</p>
+          <div class="step-image">
+            <img src="img/step-1.png" width="320">
+          </div>
+        </section>
+      </ion-content>
+    </ion-view>
+  </ion-slide>
+  <ion-slide>
+    <ion-view hide-nav-bar="true" hide-back-button="true">
+      <ion-content class="main-page home-bg content-bg overlay-content" scroll="false">
+        <section class="page" id="page-5">
+          <p>원하는 사람이 나타난다면 물건이 잘 도착할 수 있도록 예쁘게 포장해 주세요. 물건은 택배를 이용하여 배송하거나 직접 만나서 전달할 수도 있어요</p>
+          <div class="step-image">
+            <img src="img/step-3.png" width="320">
+          </div>
+        </section>
+      </ion-content>
+    </ion-view>
+  </ion-slide>
+  <!-- <ion-slide>
+    <ion-view hide-nav-bar="true" hide-back-button="true">
+      <ion-content class="main-page home-bg content-bg overlay-content" scroll="false">
+        <div id="mobile-ftux">
+          <p id="new-here">New here?</p>
+
+          <section class="page" id="page-1">
+            <div id="p1a">
+              <img src="img/p1a.png" srcset="img/p1a@2x.png 2x" width="194" height="174">
+            </div>
+            <div id="p1b">
+              <img src="img/p1b.png" srcset="img/p1b@2x.png 2x" width="271" height="204">
+            </div>
+
+            <img id="yerdle-logotype" src="img/yerdle-logotype.svg" width="180" height="35">
+          </section>
+        </div>
+      </ion-content>
+    </ion-view>
+  </ion-slide> -->
+  <ion-slide>
+    <ion-view hide-nav-bar="true" hide-back-button="true">
+      <ion-content class="main-page home-bg content-bg overlay-content" scroll="false">
+        <section class="page" id="page-3">
+          <p>물건을 나누고 쌓은 NanuGO 포인트로 나에게 필요한 물건을 Get 할 수 있어요</p>
+          <div class="money">
+            <div class="bill" style="transform: matrix3d(0.930902, 0.365268, 0, 0, -0.365268, 0.930902, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+              <img src="img/yerdle-dollar.png" srcset="img/yerdle-dollar@2x.png 2x" width="231" height="116">
+            </div>
+            <div class="bill" style="transform: matrix3d(0.968653, 0.248417, 0, 0, -0.248417, 0.968653, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+              <img src="img/yerdle-dollar.png" srcset="img/yerdle-dollar@2x.png 2x" width="231" height="116">
+            </div>
+            <div class="bill" style="transform: matrix3d(0.996906, 0.0786088, 0, 0, -0.0786088, 0.996906, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+              <img src="img/yerdle-dollar.png" srcset="img/yerdle-dollar@2x.png 2x" width="231" height="116">
+            </div>
+          </div>
+
+          <div id="p3a" style="transform: matrix(0.92388, -0.38268, 0.38268, 0.92388, -315, 18);"><img src="img/apple_keyboard.png" srcset="img/apple_keyboard@2x.png 2x" width="111" height="56"></div>
+          <div id="p3b" style="transform: matrix(-0.30901, -0.95106, 0.95106, -0.30901, 540, 18);"><img src="img/book.png" srcset="img/book@2x.png 2x" width="111" height="111"></div>
+          <div id="p3c" style="transform: matrix(0.95105, -0.30901, 0.30901, 0.95105, -11, 81);"><img src="img/red_purse.png" srcset="img/red_purse@2x.png 2x" width="110" height="75"></div>
+          <div id="p3d" style="transform: matrix(0.95105, 0.30901, -0.30901, 0.95105, 27, 18);"><img src="img/camera.png" srcset="img/camera@2x.png 2x" width="110" height="67"></div>
+        </section>
+      </ion-content>
+    </ion-view>
+  </ion-slide>
+  <ion-slide>
+    <ion-view hide-nav-bar="true" hide-back-button="true">
+      <ion-content class="main-page home-bg content-bg overlay-content roadblock" scroll="false">
+        <img class="logo" src="img/logo.svg" width="100" height="88">
+        <p>지금 가입하면 25 나누고 포인트를 드립니다</p>
+        <button class="button button-block button-positive" ng-click="navigateTo('app.auth')">
+          페이스북으로 시작하기
+        </button>
+        <button class="button button-block button-energized" ng-click="navigateTo('app.auth.signup')">
+          이메일로 가입하기
+        </button>
+        <span>
+          <a class="continue-link" ng-click="navigateTo('app.auth')">
+            이미 계정이 있으신가요? 로그인
+          </a>
+        </span>
+      </ion-content>
+    </ion-view>
+  </ion-slide>
+</ion-slide-box>

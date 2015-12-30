@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.4.2 (15848) - http://www.bohemiancoding.com/sketch -->
+    <title>sparkle</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Yerdle-Dollars" sketch:type="MSArtboardGroup" transform="translate(-30.000000, -196.000000)" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.91936929">
+            <g id="Yerdle-Dollars-+-Sparkles" sketch:type="MSLayerGroup" transform="translate(4.000000, 121.000000)">
+                <g id="Sparkles" transform="translate(12.000000, 61.000000)" sketch:type="MSShapeGroup">
+                    <path d="M31.136439,20.7878649 C28.9354656,18.5868916 27.1844189,16.2285429 25.9700937,13.962993 C24.7762256,16.6335495 23.7510269,18.5398498 21.099931,21.1909457 C18.7884147,23.502462 16.3033178,25.3177221 13.934434,26.5361853 C16.0927573,27.7403133 19.2962791,29.4238017 21.3849522,31.5124748 C23.4736252,33.6011479 25.1571137,36.8046696 26.3612417,38.962993 C27.5797049,36.5941092 29.394965,34.1090123 31.7064813,31.797496 C34.3575772,29.1464001 36.2638774,27.1480783 38.934434,25.9542102 C36.6688841,24.739885 33.3374123,22.9888382 31.136439,20.7878649 Z" id="sparkle"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -48,8 +48,8 @@ angular.module('controllers.profile', ['ngCordova.plugins.camera'])
 
 	$scope.$on('event:auth-loginRequired', function() {
 		$ionicLoading.hide();
-    	$scope.modal.hide();
-  	});
+  	$scope.modal.hide();
+	});
 
 	// Triggered in the login modal to close it
 	$scope.closeEdit = function(saved) {

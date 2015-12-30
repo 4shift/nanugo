@@ -1,222 +1,227 @@
 /*
-	Components
+Components
 
-	extending components from ionic.app.scss
+extending components from ionic.app.scss
 */
 
 .button {
 	@extend .button;
 
 	&.button-transparent {
-	    @include button-style($button-transparent-bg, $button-transparent-border, $button-transparent-active-bg, $button-transparent-active-border, $button-transparent-text);
-	    @include button-clear($button-transparent-border);
-	    @include button-outline($button-transparent-border);
+		@include button-style($button-transparent-bg, $button-transparent-border, $button-transparent-active-bg, $button-transparent-active-border, $button-transparent-text);
+		@include button-clear($button-transparent-border);
+		@include button-outline($button-transparent-border);
 
-	    padding: 3px 12px;
-	    background-image: url('../img/button-transparent-bg.png');
-  	}
+		padding: 3px 12px;
+		background-image: url('../img/button-transparent-bg.png');
+	}
 
-  	&.button-signin {
-  		@extend .button-transparent;
+	&.button-signin {
+		@extend .button-transparent;
 
-      @include bg-gradient-style-2($blue-shade-color-1, $blue-shade-color-2);
+		@include bg-gradient-style-2($blue-shade-color-1, $blue-shade-color-2);
 
-	    @include button-style($button-transparent-border, $button-transparent-border, $blue-shade-color-0, $button-transparent-active-border, $button-transparent-text);
+		@include button-style($button-transparent-border, $button-transparent-border, $blue-shade-color-0, $button-transparent-active-border, $button-transparent-text);
 
-      &.activated {
-        background: $blue-shade-color-0;
-      }
-  	}
+		&.activated {
+			background: $blue-shade-color-0;
+		}
+	}
 
-  	&.button-twitter {
-  		@extend .button-transparent;
-	    @include button-style($button-twitter-bg, $button-transparent-border, $blue-shade-color-6, $button-transparent-active-border, $button-transparent-text);
-	    background-image: none;
-  	}
+	&.button-block {
+		width: 80%;
+		margin-top: 0;
+	}
 
-  	&.button-facebook {
-  		@extend .button-transparent;
-	    @include button-style($button-facebook-bg, $button-transparent-border, $button-transparent-active-bg, $button-transparent-active-border, $button-transparent-text);
-	    background-image: none;
-  	}
+	&.button-twitter {
+		@extend .button-transparent;
+		@include button-style($button-twitter-bg, $button-transparent-border, $blue-shade-color-6, $button-transparent-active-border, $button-transparent-text);
+		background-image: none;
+	}
 
-  	&.button-instagram {
-  		@extend .button-transparent;
-	    @include button-style($blue-shade-color-4, $button-transparent-border, $blue-shade-color-5, $button-transparent-active-border, $button-transparent-text);
-	    background-image: none;
-  	}
+	&.button-facebook {
+		@extend .button-transparent;
+		@include button-style($button-facebook-bg, $button-transparent-border, $button-transparent-active-bg, $button-transparent-active-border, $button-transparent-text);
+		background-image: none;
+	}
 
-  	&.button-green {
-	    @extend .button-transparent;
-      @include button-style($green-shade-color-1, $button-transparent-border, rgba(0,255,0,1), $button-transparent-active-border, $button-transparent-text);
-      background-image: none;
-      /*#648f3f*/
-  	}
+	&.button-instagram {
+		@extend .button-transparent;
+		@include button-style($blue-shade-color-4, $button-transparent-border, $blue-shade-color-5, $button-transparent-active-border, $button-transparent-text);
+		background-image: none;
+	}
 
-  	&.button-red {
-	    @extend .button-transparent;
-      @include button-style(#dc6263, $button-transparent-border, rgba(255,0,0,1), $button-transparent-active-border, $button-transparent-text);
-      background-image: none;
-  	}
+	&.button-green {
+		@extend .button-transparent;
+		@include button-style($green-shade-color-1, $button-transparent-border, rgba(0,255,0,1), $button-transparent-active-border, $button-transparent-text);
+		background-image: none;
+		/*#648f3f*/
+	}
 
-    &.button-blue {
-      @extend .button-transparent;
-      @include button-style($blue-shade-color-8-opacity, $button-transparent-border, #02c7c0, $button-transparent-active-border, $button-transparent-text);
-      background-image: none;
-    }
+	&.button-red {
+		@extend .button-transparent;
+		@include button-style(#dc6263, $button-transparent-border, rgba(255,0,0,1), $button-transparent-active-border, $button-transparent-text);
+		background-image: none;
+	}
+
+	&.button-blue {
+		@extend .button-transparent;
+		@include button-style($blue-shade-color-8-opacity, $button-transparent-border, #02c7c0, $button-transparent-active-border, $button-transparent-text);
+		background-image: none;
+	}
 }
 
 .bar {
 	@extend .bar;
 	height: $bar-transparent-height;
-  color: #fff;
+	color: #fff;
 
 	&.bar-light-opacity {
-   	/*
-   		@include bar-style(#000, $bar-light-border, $bar-light-text);
-   	*/
-   	background: none;
-   	border-width: 0px;
-  }
+		/*
+		@include bar-style(#000, $bar-light-border, $bar-light-text);
+		*/
+		background: none;
+		border-width: 0px;
+	}
 
-  &.bar-blue {
-      background: $blue-shade-color-1;
-      border-width: 0px;
-  }
+	&.bar-blue {
+		background: $blue-shade-color-1;
+		border-width: 0px;
+	}
 
-  &.bar-dark-ui {
-      background: #383a4c;
-      border-width: 0px;
+	&.bar-dark-ui {
+		background: #383a4c;
+		border-width: 0px;
 
-      .title {
-        color: #ffffff;
-      }
+		.title {
+			color: #ffffff;
+		}
 
-      .button{
-        &.button-icon,
-        &.back-button{
-          color: #ffffff;
-        }
-      }
-  }
+		.button{
+			&.button-icon,
+			&.back-button{
+				color: #ffffff;
+			}
+		}
+	}
 
-  .title {
-  	height: $bar-transparent-height;
-  	line-height: $bar-transparent-height;
-  	font-size: $bar-transparent-title-font-size;
-    color: $black-shade-color-3;
-  }
+	.title {
+		height: $bar-transparent-height;
+		line-height: $bar-transparent-height;
+		font-size: $bar-transparent-title-font-size;
+		color: $black-shade-color-3;
+	}
 
-  .button{
-    &.button-icon,
-    &.back-button{
-      color: $button-custom-icon-color;
-    }
-  }
+	.button{
+		&.button-icon,
+		&.back-button{
+			color: $button-custom-icon-color;
+		}
+	}
 
-  .buttons {
-    &.left-buttons {
-      button {
-        top: -5px;
-        left: -5px;
-        height: 60px;
-        border-radius: 0px;
-        width:60px;
+	.buttons {
+		&.left-buttons {
+			button {
+				top: -5px;
+				left: -5px;
+				height: 60px;
+				border-radius: 0px;
+				width:60px;
 
-        &.button-cancel{
-          &:after{
-            @include inline-icons('../img/x-mark.png', 20px, 20px, 16px, 0, 0, 0, 9%);
-            left: 13px;
-          }
-        }
-      }
-    }
+				&.button-cancel{
+					&:after{
+						@include inline-icons('../img/x-mark.png', 20px, 20px, 16px, 0, 0, 0, 9%);
+						left: 13px;
+					}
+				}
+			}
+		}
 
-    &.right-buttons {
-      button {
-        top: -5px;
-        right: -5px;
-        height: $bar-transparent-height;
-        border-radius: 0px;
-        width:60px;
+		&.right-buttons {
+			button {
+				top: -5px;
+				right: -5px;
+				height: $bar-transparent-height;
+				border-radius: 0px;
+				width:60px;
 
-        &.button-save{
-            &:after{
-            @include inline-icons('../img/check-mark.png', 20px, 20px, 16px, 0, 0, 0, 9%);
-            left: 16px;
-          }
-        }
+				&.button-save{
+					&:after{
+						@include inline-icons('../img/check-mark.png', 20px, 20px, 16px, 0, 0, 0, 9%);
+						left: 16px;
+					}
+				}
 
-      }
-    }
-  }
+			}
+		}
+	}
 
 
 }
 
 /*
-  Sidebar
+Sidebar
 */
 .custom-menu-item {
-  @include custom-menu-item();
-  letter-spacing : 0.25px;
-  text-align: center;
-  font-size : 16px;
+	@include custom-menu-item();
+	letter-spacing : 0.25px;
+	text-align: center;
+	font-size : 16px;
 
-  &.profile-item {
-    background: #424458;
-    position: relative;
-    text-align: center;
-    border: none;
+	&.profile-item {
+		background: #424458;
+		position: relative;
+		text-align: center;
+		border: none;
 
-    .author-info h1 {
-      font-size: 16px;
-      color: #fff;
-      letter-spacing : 1px;
-    }
-  }
+		.author-info h1 {
+			font-size: 16px;
+			color: #fff;
+			letter-spacing : 1px;
+		}
+	}
 
-  &.settings-item:after {
-    @include inline-icons('../img/settings-icon.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
-  }
+	&.settings-item:after {
+		@include inline-icons('../img/settings-icon.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
+	}
 
-  &.messages-item:after {
-    @include inline-icons('../img/messages-icon.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
-  }
+	&.messages-item:after {
+		@include inline-icons('../img/messages-icon.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
+	}
 
-  &.users-item:after {
-    @include inline-icons('../img/group_user-icon.png', 25px, 25px, 50%, -13px, 0, 0, 25%);
-  }
+	&.users-item:after {
+		@include inline-icons('../img/group_user-icon.png', 25px, 25px, 50%, -13px, 0, 0, 25%);
+	}
 
-  &.threads-item:after {
-    @include inline-icons('../img/group.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
-  }
+	&.threads-item:after {
+		@include inline-icons('../img/group.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
+	}
 
-  .item-content {
-    padding: 20px 15px 20px 15px;
-    background-color: transparent;
-    color: #fff;
+	.item-content {
+		padding: 20px 15px 20px 15px;
+		background-color: transparent;
+		color: #fff;
 
-    &.activated{
-      background: rgba(0,0,0,0.5);
-    }
-  }
+		&.activated{
+			background: rgba(0,0,0,0.5);
+		}
+	}
 }
 
 .menu-logout {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #fff;
-  height: 80px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+	height: 80px;
 
-  &:after{
-    @include inline-icons('../img/logout-icon.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
-  }
+	&:after{
+		@include inline-icons('../img/logout-icon.png', 14px, 14px, 50%, -7px, 0, 0, 25%);
+	}
 
-  .item-content {
-    margin: 0 auto;
-    background: $red-shade-color-1;
-    height:100%;
-  }
+	.item-content {
+		margin: 0 auto;
+		background: $red-shade-color-1;
+		height:100%;
+	}
 }
