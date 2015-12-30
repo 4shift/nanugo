@@ -18,6 +18,15 @@ module V1
                   }
     end
 
+    def create
+      @item = Item.new(item_params)
+      if @item.save
+        render json: @item, serializer: ItemSerializer, root: nil
+      else
+        render json: {error: @item.errors.full_messages}, status: :unprocessable_entity
+      end
+    end
+
     private
 
     def item_params
