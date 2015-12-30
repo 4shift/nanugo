@@ -10,7 +10,7 @@
 
   angular.module('components.http-auth-interceptor', ['http-auth-interceptor-buffer'])
 
-  .factory('AuthInterceptor', ['$rootScope','httpBuffer', function($rootScope, httpBuffer) {
+  .factory('AuthInterceptor', ['$rootScope', 'httpBuffer', function($rootScope, httpBuffer) {
     return {
       /**
        * Call this function to indicate that authentication was successfull and trigger a
@@ -19,7 +19,7 @@
        * example if you need to pass through details of the user that was logged in
        */
       loginConfirmed: function(data, configUpdater) {
-        var updater = configUpdater || function(config) {return config;};
+        var updater = configUpdater || function(config) { return config; };
         $rootScope.$broadcast('event:auth-loginConfirmed', data);
         httpBuffer.retryAll(updater);
       },
@@ -50,16 +50,14 @@
       }
 
       function error(response) {
-        if (response.status === 401 &&
-			   !response.config.ignoreAuthModule
-  			){
+        if (response.status === 401 && !response.config.ignoreAuthModule) {
   			  var deferred = $q.defer();
   			  httpBuffer.append(response.config, deferred);
   			  $rootScope.$broadcast('event:auth-loginRequired', response);
   			  return deferred.promise;
   			}
 
-        if(response.status === 0){
+        if (response.status === 0) {
           var deferred = $q.defer();
           $rootScope.$broadcast('event:app-networkRequired', response);
           return deferred.promise;
@@ -95,9 +93,11 @@
       function successCallback(response) {
         deferred.resolve(response);
       }
+
       function errorCallback(response) {
         deferred.reject(response);
       }
+
       $http = $http || $injector.get('$http');
       $http(config).then(successCallback, errorCallback);
     }

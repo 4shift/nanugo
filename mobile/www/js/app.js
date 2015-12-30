@@ -11,6 +11,7 @@ angular.module('NanuGO', [
   'controllers.auth',
   'controllers.profile',
   'controllers.users.profile',
+  'controllers.item',
   'services.common.constants',
   'services.common.auth',
   'directives.common.main',
@@ -52,7 +53,7 @@ angular.module('NanuGO', [
 
   $rootScope.$on("event:auth-loginRequired", function() {
     AuthService.resetCookie();
-    $state.go("app.start");
+    $state.go("app.auth");
   });
 
   $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
@@ -61,11 +62,16 @@ angular.module('NanuGO', [
     });
 
     if (!toState.authenticate && AuthService.isLoggedIn()) {
-      $state.transitionTo("app.profile");
+      // $state.transitionTo("app.postings");
       event.preventDefault();
     } else if (toState.authenticate && !AuthService.isLoggedIn()) {
       $state.transitionTo("app.auth");
     }
+  });
+
+  $rootScope.$on("event:app-startRequired", function() {
+    AuthService.resetCookie();
+    $state.go("app.start");
   });
 
   $rootScope.$on("$stateChangeSuccess", function(event, toState, toParams, fromState, fromParams) {
@@ -156,55 +162,68 @@ angular.module('NanuGO', [
 
   $stateProvider
 
-  // setup an abstract state for the tabs directive
   .state('app', {
     url: "/app",
     abstract: true,
-    templateUrl: "templates/app.html",
+    templateUrl: "templates/tabs.html",
     controller: 'AppCtrl'
   })
 
   // starting page
   .state('app.start', {
-      url: "/start",
-      views: {
-        'content@app': {
-          controller: 'AppCtrl',
-          templateUrl: "templates/index.html"
-        }
-      },
-      authenticate: false,
-      onEnter: _onEnter,
-      onExit: _onExit
+    url: "/start",
+    views: {
+      'content@app': {
+        controller: 'AppCtrl',
+        templateUrl: "templates/index.html"
+      }
+    },
+    authenticate: false,
+    onEnter: _onEnter,
+    onExit: _onExit
   })
 
   // authentication page
   .state('app.auth', {
-      url: "/auth",
-      views: {
-        'content@app': {
-          controller: 'AuthCtrl',
-          templateUrl: "templates/auth/index.html"
-        }
-      },
-      authenticate: false,
-      onEnter: _onEnter,
-      onExit: _onExit
+    url: "/auth",
+    views: {
+      'content@app': {
+        controller: 'AuthCtrl',
+        templateUrl: "templates/auth/index.html"
+      }
+    },
+    authenticate: false,
+    onEnter: _onEnter,
+    onExit: _onExit
   })
 
   // logged user's profile page
   .state('app.profile', {
-      url: "/profile",
-      views: {
-        'content@app': {
-          controller: 'ProfileCtrl',
-          templateUrl: "templates/profile/index.html"
-        }
-      },
-      authenticate: true,
-      onEnter: _onEnter,
-      onExit : _onExit
+    url: "/profile",
+    views: {
+      'content@app': {
+        controller: 'ProfileCtrl',
+        templateUrl: "templates/profile/index.html"
+      }
+    },
+    authenticate: true,
+    onEnter: _onEnter,
+    onExit : _onExit
   })
+
+  // // postings
+  // .state('app.postings', {
+  //   url: "/postings",
+  //   views: {
+  //     'content@app': {
+  //       controller: 'ItemCtrl',
+  //       templateUrl: "templates/item/index.html"
+  //     }
+  //   },
+  //   authenticate: false,
+  //   onEnter: _onEnter,
+  //   onExit : _onExit
+  // })
 
   // signup page
   .state('app.auth.signup', {
