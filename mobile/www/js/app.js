@@ -50,6 +50,7 @@ angular.module('NanuGO', [
   });
 
   AuthService.init();
+  var isLaunch = true;
 
   $rootScope.$on("event:auth-loginRequired", function() {
     AuthService.resetCookie();
@@ -61,22 +62,32 @@ angular.module('NanuGO', [
       template: "Loading..."
     });
 
-    if (!toState.authenticate && AuthService.isLoggedIn()) {
-      // $state.transitionTo("app.postings");
+    if (Constants.DEBUGMODE) {
+      console.log(fromState);
+    }
+
+    if (isLaunch === true && !AuthService.isLoggedIn()) {
+      if (Constants.DEBUGMODE) {
+        console.log("first launch and login required");
+      }
+
+      isLaunch = false;
       event.preventDefault();
+      $state.go("app.start");
     } else if (toState.authenticate && !AuthService.isLoggedIn()) {
       $state.transitionTo("app.auth");
     }
   });
 
-  $rootScope.$on("event:app-startRequired", function() {
-    AuthService.resetCookie();
-    $state.go("app.start");
-  });
-
   $rootScope.$on("$stateChangeSuccess", function(event, toState, toParams, fromState, fromParams) {
     $ionicLoading.hide();
   });
+})
+
+.config(function($ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position("bottom");
+  $ionicConfigProvider.tabs.style("standard");
+  $ionicConfigProvider.navBar.alignTitle('center')
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -197,6 +208,20 @@ angular.module('NanuGO', [
     onExit: _onExit
   })
 
+  // login page
+  .state('app.auth.signin', {
+    url: "/signin",
+    views: {
+      'content@app': {
+        controller: 'AuthCtrl',
+        templateUrl: "templates/auth/signin.html"
+      }
+    },
+    authenticate: false,
+    onEnter: _onEnter,
+    onExit: _onExit
+  })
+
   // logged user's profile page
   .state('app.profile', {
     url: "/profile",
@@ -211,19 +236,19 @@ angular.module('NanuGO', [
     onExit : _onExit
   })
 
-  // // postings
-  // .state('app.postings', {
-  //   url: "/postings",
-  //   views: {
-  //     'content@app': {
-  //       controller: 'ItemCtrl',
-  //       templateUrl: "templates/item/index.html"
-  //     }
-  //   },
-  //   authenticate: false,
-  //   onEnter: _onEnter,
-  //   onExit : _onExit
-  // })
+  // postings
+  .state('app.postings', {
+    url: "/postings",
+    views: {
+      'content@app': {
+        controller: 'ItemCtrl',
+        templateUrl: "templates/item/index.html"
+      }
+    },
+    authenticate: true,
+    onEnter: _onEnter,
+    onExit : _onExit
+  })
 
   // signup page
   .state('app.auth.signup', {
@@ -239,7 +264,5 @@ angular.module('NanuGO', [
     onExit : _onExit
   });
 
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/start');
-
+  $urlRouterProvider.otherwise('/app/postings');
 });

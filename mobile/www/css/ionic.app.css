@@ -3897,101 +3897,101 @@ a.subdued {
       background-position: bottom;
       background-size: 100% 1px;
       background-repeat: no-repeat; } }
-  .bar-clear.bar {
+  .bar.bar-clear {
     border: none;
     background: none;
     color: #fff; }
-    .bar-clear.bar .button {
+    .bar.bar-clear .button {
       color: #fff; }
-    .bar-clear.bar .title {
+    .bar.bar-clear .title {
       color: #fff; }
-  .item-input-inset.bar .item-input-wrapper {
+  .bar.item-input-inset .item-input-wrapper {
     margin-top: -1px; }
-    .item-input-inset.bar .item-input-wrapper input {
+    .bar.item-input-inset .item-input-wrapper input {
       padding-left: 8px;
       width: 94%;
       height: 28px;
       background: transparent; }
-  .bar-light.bar {
+  .bar.bar-light {
     border-color: #ddd;
     background-color: white;
     background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
     color: #444; }
-    .bar-light.bar .title {
+    .bar.bar-light .title {
       color: #444; }
-    .bar-light.bar-footer.bar {
+    .bar.bar-light.bar-footer {
       background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%); }
-  .bar-stable.bar {
+  .bar.bar-stable {
     border-color: #b2b2b2;
     background-color: #f8f8f8;
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
     color: #444; }
-    .bar-stable.bar .title {
+    .bar.bar-stable .title {
       color: #444; }
-    .bar-stable.bar-footer.bar {
+    .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
-  .bar-positive.bar {
+  .bar.bar-positive {
     border-color: #0c60ee;
     background-color: #387ef5;
     background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
     color: #fff; }
-    .bar-positive.bar .title {
+    .bar.bar-positive .title {
       color: #fff; }
-    .bar-positive.bar-footer.bar {
+    .bar.bar-positive.bar-footer {
       background-image: linear-gradient(180deg, #0c60ee, #0c60ee 50%, transparent 50%); }
-  .bar-calm.bar {
+  .bar.bar-calm {
     border-color: #0a9dc7;
     background-color: #11c1f3;
     background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);
     color: #fff; }
-    .bar-calm.bar .title {
+    .bar.bar-calm .title {
       color: #fff; }
-    .bar-calm.bar-footer.bar {
+    .bar.bar-calm.bar-footer {
       background-image: linear-gradient(180deg, #0a9dc7, #0a9dc7 50%, transparent 50%); }
-  .bar-assertive.bar {
+  .bar.bar-assertive {
     border-color: #e42112;
     background-color: #ef473a;
     background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
     color: #fff; }
-    .bar-assertive.bar .title {
+    .bar.bar-assertive .title {
       color: #fff; }
-    .bar-assertive.bar-footer.bar {
+    .bar.bar-assertive.bar-footer {
       background-image: linear-gradient(180deg, #e42112, #e42112 50%, transparent 50%); }
-  .bar-balanced.bar {
+  .bar.bar-balanced {
     border-color: #28a54c;
     background-color: #33cd5f;
     background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);
     color: #fff; }
-    .bar-balanced.bar .title {
+    .bar.bar-balanced .title {
       color: #fff; }
-    .bar-balanced.bar-footer.bar {
+    .bar.bar-balanced.bar-footer {
       background-image: linear-gradient(180deg, #28a54c, #0c60ee 50%, transparent 50%); }
-  .bar-energized.bar {
+  .bar.bar-energized {
     border-color: #e6b500;
     background-color: #ffc900;
     background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);
     color: #fff; }
-    .bar-energized.bar .title {
+    .bar.bar-energized .title {
       color: #fff; }
-    .bar-energized.bar-footer.bar {
+    .bar.bar-energized.bar-footer {
       background-image: linear-gradient(180deg, #e6b500, #e6b500 50%, transparent 50%); }
-  .bar-royal.bar {
+  .bar.bar-royal {
     border-color: #6b46e5;
     background-color: #886aea;
     background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);
     color: #fff; }
-    .bar-royal.bar .title {
+    .bar.bar-royal .title {
       color: #fff; }
-    .bar-royal.bar-footer.bar {
+    .bar.bar-royal.bar-footer {
       background-image: linear-gradient(180deg, #6b46e5, #6b46e5 50%, transparent 50%); }
-  .bar-dark.bar {
+  .bar.bar-dark {
     border-color: #111;
     background-color: #444444;
     background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);
     color: #fff; }
-    .bar-dark.bar .title {
+    .bar.bar-dark .title {
       color: #fff; }
-    .bar-dark.bar-footer.bar {
+    .bar.bar-dark.bar-footer {
       background-image: linear-gradient(180deg, #111, #111 50%, transparent 50%); }
   .bar .title {
     display: block;
@@ -4024,15 +4024,16 @@ a.subdued {
     font-weight: 400;
     font-size: 13px;
     line-height: 32px; }
-    .bar .button-icon.button:before, .bar .button .icon:before, .bar .icon.button:before, .bar .icon-left.button:before, .bar .icon-right.button:before, .bar button.button-icon:before,
-    .bar button .icon:before, .bar button .icon:before, .bar button.icon:before, .bar button.icon-left:before, .bar button.icon-right:before {
+    .bar .button-icon.button:before,
+    .bar .button .icon:before, .bar .icon.button:before, .bar .icon-left.button:before, .bar .icon-right.button:before, .bar button.button-icon:before,
+    .bar button .icon:before, .bar button.icon:before, .bar button.icon-left:before, .bar button.icon-right:before {
       padding-right: 2px;
       padding-left: 2px;
       font-size: 20px;
       line-height: 32px; }
     .bar .button-icon.button, .bar button.button-icon {
       font-size: 17px; }
-      .bar .button-icon.button .icon:before, .bar .button-icon.button:before, .bar .button-icon.icon-left.button:before, .bar .button-icon.icon-right.button:before, .bar button.button-icon .icon:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
+      .bar .button-icon.button .icon:before, .bar .button-icon.button:before, .bar .button-icon.icon-left.button:before, .bar .button-icon.icon-right.button:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
         vertical-align: top;
         font-size: 32px;
         line-height: 32px; }
@@ -4041,7 +4042,7 @@ a.subdued {
       padding-left: 2px;
       font-weight: 300;
       font-size: 17px; }
-      .bar .button-clear.button .icon:before, .bar .button-clear.icon.button:before, .bar .button-clear.icon-left.button:before, .bar .button-clear.icon-right.button:before, .bar button.button-clear .icon:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before, .bar button.button-clear.icon-left:before, .bar button.button-clear.icon-right:before {
+      .bar .button-clear.button .icon:before, .bar .button-clear.icon.button:before, .bar .button-clear.icon-left.button:before, .bar .button-clear.icon-right.button:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before, .bar button.button-clear.icon-left:before, .bar button.button-clear.icon-right:before {
         font-size: 32px;
         line-height: 32px; }
     .bar .back-button.button, .bar button.back-button {
@@ -4052,12 +4053,16 @@ a.subdued {
       font-weight: 400; }
     .bar .back-button.active.button, .bar .back-button.activated.button, .bar button.back-button.active, .bar button.back-button.activated {
       opacity: 0.2; }
-  .bar .button-bar > .button, .bar .buttons > .button {
+  .bar .button-bar > .button,
+  .bar .buttons > .button {
     min-height: 31px;
     line-height: 32px; }
-  .bar .button-bar + .button, .bar .button + .button-bar {
+  .bar .button-bar + .button,
+  .bar .button + .button-bar {
     margin-left: 5px; }
-  .bar .buttons, .bar .buttons.primary-buttons, .bar .buttons.secondary-buttons {
+  .bar .buttons,
+  .bar .buttons.primary-buttons,
+  .bar .buttons.secondary-buttons {
     display: inherit; }
   .bar .buttons span {
     display: inline-block; }
@@ -4067,7 +4072,11 @@ a.subdued {
   .bar .buttons-right span {
     margin-left: 5px;
     display: inherit; }
-  .bar .title + .button:last-child, .bar > .button + .button:last-child, .bar > .pull-right.button, .bar .buttons.pull-right, .bar .title + .buttons {
+  .bar .title + .button:last-child,
+  .bar > .button + .button:last-child,
+  .bar > .pull-right.button,
+  .bar .buttons.pull-right,
+  .bar .title + .buttons {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -4295,7 +4304,8 @@ a.subdued {
   left: 0;
   z-index: 9; }
 
-.bar .back-button.hide, .bar .buttons .hide {
+.bar .back-button.hide,
+.bar .buttons .hide {
   display: none; }
 
 .nav-bar-tabs-top .bar {
@@ -9839,284 +9849,30 @@ Components
 
 extending components from ionic.app.scss
 */
-.button-transparent.button, .button.button-signin, .button.button-twitter, .button.button-facebook, .button.button-instagram, .button.button-green, .button.button-red, .button.button-blue {
-  border-color: transparent;
-  background-color: transparent;
-  color: #fff;
-  padding: 3px 12px;
-  background-image: url("../img/button-transparent-bg.png"); }
-  .button-transparent.button:hover, .button.button-signin:hover, .button.button-twitter:hover, .button.button-facebook:hover, .button.button-instagram:hover, .button.button-green:hover, .button.button-red:hover, .button.button-blue:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-transparent.active.button, .active.button.button-signin, .active.button.button-twitter, .active.button.button-facebook, .active.button.button-instagram, .active.button.button-green, .active.button.button-red, .active.button.button-blue, .button-transparent.activated.button, .activated.button.button-signin, .activated.button.button-twitter, .activated.button.button-facebook, .activated.button.button-instagram, .activated.button.button-green, .activated.button.button-red, .activated.button.button-blue {
-    background-color: rgba(0, 0, 0, 0.5); }
-  .button-transparent.button-clear.button, .button-clear.button.button-signin, .button-clear.button.button-twitter, .button-clear.button.button-facebook, .button-clear.button.button-instagram, .button-clear.button.button-green, .button-clear.button.button-red, .button-clear.button.button-blue {
-    border-color: transparent;
-    background: none;
-    box-shadow: none;
-    color: transparent; }
-  .button-transparent.button-icon.button, .button-icon.button.button-signin, .button-icon.button.button-twitter, .button-icon.button.button-facebook, .button-icon.button.button-instagram, .button-icon.button.button-green, .button-icon.button.button-red, .button-icon.button.button-blue {
-    border-color: transparent;
-    background: none; }
-  .button-transparent.button-outline.button, .button-outline.button.button-signin, .button-outline.button.button-twitter, .button-outline.button.button-facebook, .button-outline.button.button-instagram, .button-outline.button.button-green, .button-outline.button.button-red, .button-outline.button.button-blue {
-    border-color: transparent;
-    background: transparent;
-    color: transparent; }
-    .button-transparent.button-outline.active.button, .button-outline.active.button.button-signin, .button-outline.active.button.button-twitter, .button-outline.active.button.button-facebook, .button-outline.active.button.button-instagram, .button-outline.active.button.button-green, .button-outline.active.button.button-red, .button-outline.active.button.button-blue, .button-transparent.button-outline.activated.button, .button-outline.activated.button.button-signin, .button-outline.activated.button.button-twitter, .button-outline.activated.button.button-facebook, .button-outline.activated.button.button-instagram, .button-outline.activated.button.button-green, .button-outline.activated.button.button-red, .button-outline.activated.button.button-blue {
-      background-color: transparent;
-      box-shadow: none;
-      color: #fff; }
-
-.button-signin.button {
-  background: -moz-linear-gradient(left, #0185a2 0, #66c2c8 90%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0185a2), color-stop(90%, #66c2c8));
-  background: -webkit-linear-gradient(left, #0185a2 0, #66c2c8 90%);
-  background: -o-linear-gradient(left, #0185a2 0, #66c2c8 90%);
-  background: linear-gradient(to right, #0185a2 0, #66c2c8 90%);
-  border-color: transparent;
-  background-color: transparent;
-  color: #fff; }
-  .button-signin.button:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-signin.active.button, .button-signin.activated.button {
-    background-color: #01758f; }
-  .button-signin.activated.button {
-    background: #01758f; }
-
 .button-block.button {
+  margin: 10px auto;
   width: 80%;
-  margin-top: 0; }
+  font-weight: bold; }
 
-.button-twitter.button {
-  border-color: transparent;
-  background-color: #55acee;
-  color: #fff;
-  background-image: none; }
-  .button-twitter.button:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-twitter.active.button, .button-twitter.activated.button {
-    background-color: #319bea; }
+.bar-light {
+  background-color: transparent !important;
+  /* or transparent, or background:none */
+  border: none; }
 
-.button-facebook.button {
-  border-color: transparent;
-  background-color: #375a9a;
-  color: #fff;
-  background-image: none; }
-  .button-facebook.button:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-facebook.active.button, .button-facebook.activated.button {
-    background-color: rgba(0, 0, 0, 0.5); }
+.has-header {
+  top: 0; }
 
-.button-instagram.button {
-  border-color: transparent;
-  background-color: #457ca9;
-  color: #fff;
-  background-image: none; }
-  .button-instagram.button:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-instagram.active.button, .button-instagram.activated.button {
-    background-color: #39688d; }
+.custom-header {
+  top: 44px; }
 
-.button-green.button {
-  border-color: transparent;
-  background-color: #88c057;
-  color: #fff;
-  background-image: none;
-  /*#648f3f*/ }
-  .button-green.button:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-green.active.button, .button-green.activated.button {
-    background-color: lime; }
+.scroll-content {
+  overflow: visible !important; }
 
-.button-red.button {
-  border-color: transparent;
-  background-color: #dc6263;
-  color: #fff;
-  background-image: none; }
-  .button-red.button:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-red.active.button, .button-red.activated.button {
-    background-color: red; }
+.list:last-child.card {
+  margin-bottom: 0; }
 
-.button-blue.button {
-  border-color: transparent;
-  background-color: rgba(25, 213, 206, 0.5);
-  color: #fff;
-  background-image: none; }
-  .button-blue.button:hover {
-    color: #fff;
-    text-decoration: none; }
-  .button-blue.active.button, .button-blue.activated.button {
-    background-color: #02c7c0; }
-
-.bar {
-  height: 60px;
-  color: #fff; }
-  .bar-light-opacity.bar {
-    /*
-		@include bar-style(#000, $bar-light-border, $bar-light-text);
-		*/
-    background: none;
-    border-width: 0px; }
-  .bar-blue.bar {
-    background: #0185a2;
-    border-width: 0px; }
-  .bar-dark-ui.bar {
-    background: #383a4c;
-    border-width: 0px; }
-    .bar-dark-ui.bar .title {
-      color: #ffffff; }
-    .bar-dark-ui.bar .button-icon.button, .bar-dark-ui.bar .back-button.button {
-      color: #ffffff; }
-  .bar .title {
-    height: 60px;
-    line-height: 60px;
-    font-size: 20px;
-    color: #49799a; }
-  .bar .button-icon.button, .bar .back-button.button {
-    color: #49799a; }
-  .bar .buttons.left-buttons button {
-    top: -5px;
-    left: -5px;
-    height: 60px;
-    border-radius: 0px;
-    width: 60px; }
-    .bar .buttons.left-buttons button.button-cancel:after {
-      content: "";
-      background: url("../img/x-mark.png");
-      width: 20px;
-      height: 20px;
-      display: block;
-      background-repeat: no-repeat;
-      top: 16px;
-      position: absolute;
-      background-position: center;
-      margin: 0 0 0 9%;
-      background-size: contain;
-      left: 13px; }
-  .bar .buttons.right-buttons button {
-    top: -5px;
-    right: -5px;
-    height: 60px;
-    border-radius: 0px;
-    width: 60px; }
-    .bar .buttons.right-buttons button.button-save:after {
-      content: "";
-      background: url("../img/check-mark.png");
-      width: 20px;
-      height: 20px;
-      display: block;
-      background-repeat: no-repeat;
-      top: 16px;
-      position: absolute;
-      background-position: center;
-      margin: 0 0 0 9%;
-      background-size: contain;
-      left: 16px; }
-
-/*
-Sidebar
-*/
-.custom-menu-item {
-  width: 100%;
-  margin: 0 auto;
-  background: transparent;
-  border: transparent;
-  letter-spacing: 0.25px;
-  text-align: center;
-  font-size: 16px; }
-  .custom-menu-item.profile-item {
-    background: #424458;
-    position: relative;
-    text-align: center;
-    border: none; }
-    .custom-menu-item.profile-item .author-info h1 {
-      font-size: 16px;
-      color: #fff;
-      letter-spacing: 1px; }
-  .custom-menu-item.settings-item:after {
-    content: "";
-    background: url("../img/settings-icon.png");
-    width: 14px;
-    height: 14px;
-    display: block;
-    background-repeat: no-repeat;
-    top: 50%;
-    position: absolute;
-    background-position: center;
-    margin: -7px 0 0 25%;
-    background-size: contain; }
-  .custom-menu-item.messages-item:after {
-    content: "";
-    background: url("../img/messages-icon.png");
-    width: 14px;
-    height: 14px;
-    display: block;
-    background-repeat: no-repeat;
-    top: 50%;
-    position: absolute;
-    background-position: center;
-    margin: -7px 0 0 25%;
-    background-size: contain; }
-  .custom-menu-item.users-item:after {
-    content: "";
-    background: url("../img/group_user-icon.png");
-    width: 25px;
-    height: 25px;
-    display: block;
-    background-repeat: no-repeat;
-    top: 50%;
-    position: absolute;
-    background-position: center;
-    margin: -13px 0 0 25%;
-    background-size: contain; }
-  .custom-menu-item.threads-item:after {
-    content: "";
-    background: url("../img/group.png");
-    width: 14px;
-    height: 14px;
-    display: block;
-    background-repeat: no-repeat;
-    top: 50%;
-    position: absolute;
-    background-position: center;
-    margin: -7px 0 0 25%;
-    background-size: contain; }
-  .custom-menu-item .item-content {
-    padding: 20px 15px 20px 15px;
-    background-color: transparent;
-    color: #fff; }
-    .custom-menu-item .item-content.activated {
-      background: rgba(0, 0, 0, 0.5); }
-
-.menu-logout {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #fff;
-  height: 80px; }
-  .menu-logout:after {
-    content: "";
-    background: url("../img/logout-icon.png");
-    width: 14px;
-    height: 14px;
-    display: block;
-    background-repeat: no-repeat;
-    top: 50%;
-    position: absolute;
-    background-position: center;
-    margin: -7px 0 0 25%;
-    background-size: contain; }
-  .menu-logout .item-content {
-    margin: 0 auto;
-    background: #ed7161;
-    height: 100%; }
+.card {
+  margin: 0; }
 
 /*
 	main css
@@ -10410,7 +10166,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #383a4c; }
+  background-color: #FFF; }
   .main-login-page .slogan,
   .signup-page .slogan {
     color: #556a78;
@@ -10426,7 +10182,7 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
-    background-image: url("../img/logo.png");
+    background-image: url("../img/a_logo.png");
     width: 25%;
     height: 15%;
     margin: 25% auto 25px auto; }
@@ -10509,78 +10265,6 @@ button {
         font-size: 16px;
         color: #fff;
         letter-spacing: 0.5px; }
-  .main-login-page .button,
-  .signup-page .button {
-    width: 88%;
-    height: 56px;
-    margin: 5px auto;
-    position: relative;
-    padding: 0;
-    background-position: cover;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    z-index: 2; }
-    .main-login-page .button-signin.button,
-    .signup-page .button-signin.button {
-      text-align: center;
-      margin-bottom: 15px; }
-    .main-login-page .button-twitter.button,
-    .signup-page .button-twitter.button {
-      padding: 0 0 0 12%; }
-      .main-login-page .button-twitter.button:before,
-      .signup-page .button-twitter.button:before {
-        content: "";
-        width: 20%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.5);
-        background: #319bea; }
-      .main-login-page .button-twitter.button:after,
-      .signup-page .button-twitter.button:after {
-        content: "";
-        background: url("../img/twitter-icon.png");
-        width: 25px;
-        height: 25px;
-        display: block;
-        background-repeat: no-repeat;
-        top: 25%;
-        position: absolute;
-        background-position: center;
-        margin: 0 0 0 9%;
-        background-size: contain;
-        opacity: 0.3; }
-    .main-login-page .button-instagram.button,
-    .signup-page .button-instagram.button {
-      padding: 0 0 0 12%; }
-      .main-login-page .button-instagram.button:before,
-      .signup-page .button-instagram.button:before {
-        content: "";
-        width: 20%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.5);
-        background: #39688d; }
-      .main-login-page .button-instagram.button:after,
-      .signup-page .button-instagram.button:after {
-        content: "";
-        background: url("../img/instagram-icon.png");
-        width: 30px;
-        height: 30px;
-        display: block;
-        background-repeat: no-repeat;
-        top: 25%;
-        position: absolute;
-        background-position: center;
-        margin: 0 0 0 9%;
-        background-size: contain;
-        opacity: 0.3; }
 
 /*
 	signup

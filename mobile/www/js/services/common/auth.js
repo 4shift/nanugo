@@ -30,10 +30,6 @@ angular.module('services.common.auth', ['services.models.user'])
 
         // setting currentUser
         self.currentUser = new UserModel(userData);
-
-        if (!window.localStorage.getItem('sessionToken')) {
-          $rootScope.$broadcast('event:app-startRequired');
-        }
       },
 
       // update currentUser's data
@@ -232,7 +228,7 @@ angular.module('services.common.auth', ['services.models.user'])
           deferred.reject(error);
         }
 
-        $http.get(Constants.API.baseUrl+'/me').success(success).error(error);
+        $http.get(Constants.API.baseUrl + '/me').success(success).error(error);
 
         return deferred.promise;
       },

@@ -8,12 +8,12 @@
 	@include page-slogan();
 	text-align:center;
 
-	@include content-bg(cover, #383a4c);
+	@include content-bg(cover, #FFF);
 
 
 	.logo{
 		@include content-bg(contain,transparent);
-		background-image: url('../img/logo.png');
+		background-image: url('../img/a_logo.png');
 		width:25%;
 		height:15%;
 		margin: 25% auto 25px auto;
@@ -80,49 +80,4 @@
 		}
 	}
 
-	.button {
-		width: 88%;
-		height:56px;
-		margin:5px auto;
-		position:relative;
-		padding:0;
-		background-position: cover;
-		text-transform: uppercase;
-		font-size:16px;
-		letter-spacing: 0.5px;
-		z-index:2;
-
-		&.button-signin {
-			text-align: center;
-			margin-bottom:15px;
-		}
-
-		&.button-twitter {
-			padding: 0 0 0 12%;
-
-			&:before {
-				@include inline-icons-bg(rgba(0,0,0,0.5), 20%, 100%);
-				background: $blue-shade-color-6;
-			}
-
-			&:after{
-				@include inline-icons('../img/twitter-icon.png', 25px, 25px, 25%, 0, 0, 0, 9%);
-				opacity:0.3;
-			}
-		}
-		&.button-instagram {
-			padding: 0 0 0 12%;
-
-			&:before {
-				@include inline-icons-bg(rgba(0,0,0,0.5), 20%, 100%);
-				background: $blue-shade-color-5;
-			}
-
-			&:after{
-				@include inline-icons('../img/instagram-icon.png', 30px, 30px, 25%, 0, 0, 0, 9%);
-				opacity:0.3;
-
-			}
-		}
-	}
 }

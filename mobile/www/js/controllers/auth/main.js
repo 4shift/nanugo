@@ -61,7 +61,7 @@ function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Con
 			}
 
 			$ionicLoading.hide();
-			$state.go('app.start');
+			$state.go('app.postings');
 		}
 
 		$ionicLoading.show({

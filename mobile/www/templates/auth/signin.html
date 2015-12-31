@@ -1,0 +1,25 @@
+<ion-view title="Sign In" hide-back-button="true">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-close">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="main-login-page content-bg overlay-content" scroll="false" >
+		<div class="list">
+  	  <label class="item item-input email">
+  	    <input type="email" placeholder="Email Address" ng-model="user.email">
+  	  </label>
+
+  	  <label class="item item-input lock">
+  	    <input type="password" placeholder="Password" ng-model="user.password">
+  	  </label>
+  	</div>
+
+  	<button class="button button-block button-energized" ng-click="authenticateUser()">
+  		이메일로 로그인
+  	</button>
+
+  	<button class="button button-block button-positive hide-on-keyboard-open" ng-click="authenticate('facebook')">
+  		페이스북으로 계속하기
+  	</button>
+  </ion-content>
+</ion-view>
