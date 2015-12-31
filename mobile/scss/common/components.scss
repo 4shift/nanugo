@@ -4,6 +4,23 @@ Components
 extending components from ionic.app.scss
 */
 
+.bar .button-icon.button:before,
+.bar .button .icon:before,
+.bar .icon.button:before,
+.bar .icon-left.button:before,
+.bar .icon-right.button:before,
+.bar button.button-icon:before,
+.bar button .icon:before,
+.bar button.icon:before,
+.bar button.icon-left:before,
+.bar button.icon-right:before {
+  padding-right: 2px;
+  padding-left: 2px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+
 .button {
 	@extend .button;
 
@@ -25,10 +42,6 @@ extending components from ionic.app.scss
 
 .custom-header {
 	top: 44px;
-}
-
-.scroll-content {
-  overflow: visible !important;
 }
 
 .list:last-child.card {

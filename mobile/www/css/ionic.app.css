@@ -9849,6 +9849,21 @@ Components
 
 extending components from ionic.app.scss
 */
+.bar .button-icon.button:before,
+.bar .button .icon:before,
+.bar .icon.button:before,
+.bar .icon-left.button:before,
+.bar .icon-right.button:before,
+.bar button.button-icon:before,
+.bar button .icon:before,
+.bar button.icon:before,
+.bar button.icon-left:before,
+.bar button.icon-right:before {
+  padding-right: 2px;
+  padding-left: 2px;
+  font-size: 16px;
+  line-height: 32px; }
+
 .button-block.button {
   margin: 10px auto;
   width: 80%;
@@ -9864,9 +9879,6 @@ extending components from ionic.app.scss
 
 .custom-header {
   top: 44px; }
-
-.scroll-content {
-  overflow: visible !important; }
 
 .list:last-child.card {
   margin-bottom: 0; }
@@ -10530,3 +10542,15 @@ button {
       .users-page .list .item-avatar.user-list-item .location {
         color: #babcc6;
         font-size: 13px; }
+
+.card .item {
+  font-size: .8em;
+  padding-bottom: 10px; }
+  .card .item p {
+    font-size: 1em; }
+
+.card .actions {
+  color: #999;
+  margin-top: 5px; }
+  .card .actions .wish {
+    float: right; }

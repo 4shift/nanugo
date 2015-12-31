@@ -3,47 +3,93 @@
     <button class="button button-icon icon ion-search">
     </button>
   </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button">
+      <i class="icon ion-social-usd-outline"></i>
+      10
+    </button>
+  </ion-nav-buttons>
   <ion-content class="padding custom-header">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
     <div class="row">
       <div class="col col-50">
         <div class="list card">
-          <div class="item item-image">
-            <img src="http://ecx.images-amazon.com/images/I/41D5vU4I1NL.jpg">
+          <div class="item-image">
+            <img src="http://res.cloudinary.com/dctb9ebps/image/upload/c_fill,h_300,w_300/gwbc1gqiv4xfy4snmg5z.jpg">
           </div>
           <div class="item">
-            <h2>Pretty Hate Machine</h2>
-            <p>Nine Inch Nails</p>
-          </div>
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
+            <h3>뽀로로 크레용 나눠요~</h3>
+            <p>From 수원</p>
+            <div class="actions">
+              <span class="wish">
+                <i class="icon ion-ios-heart-outline"></i>
+                120
+              </span>
+              <i class="icon ion-social-usd-outline"></i>
+              10
+            </div>
           </div>
         </div>
       </div>
       <div class="col col-50">
         <div class="list card">
-          <div class="item item-image">
-            <img src="http://ecx.images-amazon.com/images/I/41D5vU4I1NL.jpg">
+          <div class="item-image">
+            <img src="http://res.cloudinary.com/dctb9ebps/image/upload/c_fill,h_300,w_300/sit1hhf9tztbgvqikuaa.jpg">
           </div>
           <div class="item">
-            <h2>Pretty Hate Machine</h2>
-            <p>Nine Inch Nails</p>
+            <h3>즐겨입던 블랙진 입니다.</h3>
+            <p>From 광주</p>
+            <div class="actions">
+              <span class="wish">
+                <i class="icon ion-ios-heart-outline"></i>
+                5
+              </span>
+              <i class="icon ion-social-usd-outline"></i>
+              25
+            </div>
           </div>
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="list card">
+          <div class="item-image">
+            <img src="http://res.cloudinary.com/dctb9ebps/image/upload/c_fill,h_300,w_300/j9davg8ccosartwjgsg5.jpg">
+          </div>
+          <div class="item">
+            <h3>영국에서 구입한 엔티크 목걸이</h3>
+            <p>From 캠든마켓</p>
+            <div class="actions">
+              <span class="wish">
+                <i class="icon ion-ios-heart-outline"></i>
+                18
+              </span>
+              <i class="icon ion-social-usd-outline"></i>
+              4
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="list card">
+          <div class="item-image">
+            <img src="http://res.cloudinary.com/dctb9ebps/image/upload/c_fill,h_300,w_300/gwbc1gqiv4xfy4snmg5z.jpg">
+          </div>
+          <div class="item">
+            <h3>동시리가 사용하던 크레용</h3>
+            <p>From 해운대구</p>
+            <div class="actions">
+              <span class="wish">
+                <i class="icon ion-ios-heart-outline"></i>
+                20
+              </span>
+              <i class="icon ion-social-usd-outline"></i>
+              200
+            </div>
           </div>
         </div>
       </div>
@@ -52,89 +98,45 @@
       <div class="col col-50">
         <div class="list card">
           <div class="item item-image">
-            <img src="http://ecx.images-amazon.com/images/I/41D5vU4I1NL.jpg">
+            <img src="http://res.cloudinary.com/dctb9ebps/image/upload/c_fill,h_300,w_300/sit1hhf9tztbgvqikuaa.jpg">
           </div>
           <div class="item">
             <h2>Pretty Hate Machine</h2>
             <p>Nine Inch Nails</p>
-          </div>
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
+            <div class="actions">
+              <span class="wish">
+                <i class="icon ion-ios-heart-outline"></i>
+                20
+              </span>
+              <i class="icon ion-social-usd-outline"></i>
+              200
+            </div>
           </div>
         </div>
       </div>
       <div class="col col-50">
         <div class="list card">
           <div class="item item-image">
-            <img src="http://ecx.images-amazon.com/images/I/41D5vU4I1NL.jpg">
+            <img src="http://res.cloudinary.com/dctb9ebps/image/upload/c_fill,h_300,w_300/j9davg8ccosartwjgsg5.jpg">
           </div>
           <div class="item">
             <h2>Pretty Hate Machine</h2>
             <p>Nine Inch Nails</p>
-          </div>
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
+            <div class="actions">
+              <span class="wish">
+                <i class="icon ion-ios-heart-outline"></i>
+                20
+              </span>
+              <i class="icon ion-social-usd-outline"></i>
+              200
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col col-50">
-        <div class="list card">
-          <div class="item item-image">
-            <img src="http://ecx.images-amazon.com/images/I/41D5vU4I1NL.jpg">
-          </div>
-          <div class="item">
-            <h2>Pretty Hate Machine</h2>
-            <p>Nine Inch Nails</p>
-          </div>
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col col-50">
-        <div class="list card">
-          <div class="item item-image">
-            <img src="http://ecx.images-amazon.com/images/I/41D5vU4I1NL.jpg">
-          </div>
-          <div class="item">
-            <h2>Pretty Hate Machine</h2>
-            <p>Nine Inch Nails</p>
-          </div>
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ion-infinite-scroll
+      on-infinite="loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
   </ion-content>
 </ion-view>

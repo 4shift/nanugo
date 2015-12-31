@@ -1,0 +1,19 @@
+.card {
+  .item {
+    font-size: .8em;
+    padding-bottom: 10px;
+
+    p {
+      font-size: 1em;
+    }
+  }
+
+  .actions {
+    color: #999;
+    margin-top: 5px;
+
+    .wish {
+      float: right;
+    }
+  }
+}
