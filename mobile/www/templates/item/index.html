@@ -14,7 +14,59 @@
       pulling-text="Pull to refresh..."
       on-refresh="doRefresh()">
     </ion-refresher>
-    <div class="row">
+    <div ng-repeat="item in collection">
+      <div class="row" ng-if="$even">
+        <div class="col col-50">
+          <a href="#/app/items/{{collection[$index].id}}">
+            <div class="list card">
+              <div class="item-image">
+                <img ng-src="{{collection[$index].first_image}}">
+              </div>
+              <div class="item">
+                <h3>{{collection[$index].title}}</h3>
+                <p>From {{collection[$index].desc}}</p>
+                <div class="actions">
+                  <span class="wish">
+                    <i class="icon ion-ios-heart-outline"></i>
+                    120
+                  </span>
+                  <i class="icon ion-social-usd-outline"></i>
+                  10
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col col-50">
+          <a href="#/app/items/{{collection[$index+1].id}}">
+            <div class="list card">
+              <div class="item-image">
+                <img ng-src="{{collection[$index+1].first_image}}">
+              </div>
+              <div class="item">
+                <h3>{{collection[$index+1].title}}</h3>
+                <p>From {{collection[$index+1].desc}}</p>
+                <div class="actions">
+                  <span class="wish">
+                    <i class="icon ion-ios-heart-outline"></i>
+                    120
+                  </span>
+                  <i class="icon ion-social-usd-outline"></i>
+                  10
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+        <!-- <a class="item item-avatar user-list-item"
+            collection-repeat="item in collection"
+            collection-item-width="'50%'"
+            collection-item-height="90" href="#/app/items/{{item.id}}">
+        </a>
+      </div> -->
+    </div>
+    <!-- <div class="row">
       <div class="col col-50">
         <div class="list card">
           <div class="item-image">
@@ -133,7 +185,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <ion-infinite-scroll
       on-infinite="loadMore()"
       distance="1%">

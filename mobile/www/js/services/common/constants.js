@@ -20,7 +20,7 @@ angular.module('services.common.constants',[])
   }
 
   var constants = {
-    DEBUGMODE : false,
+    DEBUGMODE : true,
     SHOWBROADCAST_EVENTS : true,
     API: _API,
     IMG: _img,

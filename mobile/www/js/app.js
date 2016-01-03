@@ -11,7 +11,8 @@ angular.module('NanuGO', [
   'controllers.auth',
   'controllers.profile',
   'controllers.users.profile',
-  'controllers.item',
+  'controllers.items',
+  'controllers.items.show',
   'services.common.constants',
   'services.common.auth',
   'directives.common.main',
@@ -142,7 +143,7 @@ angular.module('NanuGO', [
 
           return deferred.resolve({
             type: 'data',
-            params : {
+            params: {
               model: model.info
             }
           });
@@ -241,11 +242,31 @@ angular.module('NanuGO', [
     url: "/postings",
     views: {
       'content@app': {
-        controller: 'ItemCtrl',
+        controller: 'ItemsCtrl',
         templateUrl: "templates/item/index.html"
       }
     },
     authenticate: true,
+    onEnter: _onEnter,
+    onExit : _onExit
+  })
+
+  // item
+  .state('app.item', {
+    url: "/items/:id",
+    views: {
+      'content@app': {
+        controller: 'ItemCtrl',
+        templateUrl: "templates/item/show.html"
+      }
+    },
+    authenticate: false,
+    resolve : {
+      CtrlFilter: _ctrlFilter({
+        dependencies : ['Constants', '$state', '$stateParams', '$q', 'ItemModel'],
+        type : 'data'
+      })
+    },
     onEnter: _onEnter,
     onExit : _onExit
   })

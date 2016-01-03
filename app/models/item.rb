@@ -28,7 +28,7 @@ class Item < ActiveRecord::Base
               "Sports & Outdoor", "Electronics & Games", "Hobbies & DIY",
               "Movies & Music", "Books", "Unisex", "Tools"]
 
-  self.per_page = 2
+  self.per_page = 20
 
   enum condition: [:brand, :almost, :used, :broken]
   enum method: [:pickup, :shipping]

@@ -1,6 +1,6 @@
 'use.strict'
 
-angular.module('services.models.item',[])
+angular.module('services.models.item', [])
 
 .factory('ItemModel', [
   '$http',
@@ -22,8 +22,8 @@ angular.module('services.models.item',[])
 
       var success = function(response, status, headers, config) {
         //update current info for this user model
-        angular.extend(self.info, response.payload);
-        deferred.resolve(response.payload);
+        angular.extend(self.info, response.item);
+        deferred.resolve(response.item);
       }
 
       var error = function(error, status, headers, config) {

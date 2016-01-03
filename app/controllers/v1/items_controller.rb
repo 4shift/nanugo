@@ -27,6 +27,11 @@ module V1
       end
     end
 
+    def show
+      @item = Item.includes(:user).find(params[:id])
+      render json: @item, serializer: ItemSerializer
+    end
+
     private
 
     def item_params

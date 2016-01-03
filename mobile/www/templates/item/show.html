@@ -1,0 +1,53 @@
+<ion-view title="Item" hide-nav-bar="true" hide-back-button="true">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-close">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="has-header profile-page">
+    <div class="profile-img-wrapper  profile-content">
+      <ion-slide-box on-slide-changed="slideHasChanged($index)">
+        <ion-slide>
+          <img ng-src="{{item.first_image}}" width="100%">
+        </ion-slide>
+        <ion-slide ng-if="item.second_image">
+          <img ng-src="{{item.second_image}}" width="100%">
+        </ion-slide>
+        <!-- <ion-slide>
+          <div class="avatar-section">
+            <div class="content">
+              <div class="avatar-icon">
+                <div class="avatar-img" style="background-image: url({{item.first_image}});">
+                  <button class="button" ng-click="goTo('edit')"></button>
+                </div>
+              </div>
+
+              <div class="info-section">
+                <h1 ng-if="user.name">
+                  {{user.name}}
+                </h1>
+                <h1 ng-if="user.name == ''">
+                  {{user.username}}
+                </h1>
+                <h2 ng-if="user.name">
+                  @{{user.username}}
+                </h2>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="avatar-section avatar-bio-section">
+            <div class="content info-section">
+              <p>{{user.bio}}</p>
+              <p>{{user.website}}</p>
+              <h2 class="city">
+                {{user.location}}
+              </h2>
+            </div>
+          </div>
+        </ion-slide> -->
+      </ion-slide-box>
+    </div>
+    <div class="profile-menu-wrapper"></div>
+  </ion-content>
+</ion-view>

@@ -60,7 +60,12 @@ angular.module('services.models.collection',[])
       var deferred = $q.defer();
 
       var success = function(response) {
-        var output = response.payload;
+        if (C.DEBUGMODE) {
+          console.log("collection get entry");
+          console.log(response);
+        }
+
+        var output = response.items;
 
         for (var i = 0; i < output.length; i++) {
           if (self.latestTop) {
@@ -84,10 +89,9 @@ angular.module('services.models.collection',[])
 
       self.busy = true;
 
-      //
       if (_params.next) {
         _params.from = (this.latestTop) ? this.items[0] : this.items[this.itemIndex()];
-      }else{
+      } else {
         _params.from = (this.latestTop) ? this.items[this.itemIndex()] : this.items[0];
       }
 
