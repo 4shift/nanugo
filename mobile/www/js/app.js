@@ -51,7 +51,6 @@ angular.module('NanuGO', [
   });
 
   AuthService.init();
-  var isLaunch = true;
 
   $rootScope.$on("event:auth-loginRequired", function() {
     AuthService.resetCookie();
@@ -65,18 +64,13 @@ angular.module('NanuGO', [
 
     if (Constants.DEBUGMODE) {
       console.log(fromState);
+      console.log('to state');
+      console.log(toState);
     }
 
-    if (isLaunch === true && !AuthService.isLoggedIn()) {
-      if (Constants.DEBUGMODE) {
-        console.log("first launch and login required");
-      }
-
-      isLaunch = false;
+    if (toState.authenticate && !AuthService.isLoggedIn()) {
       event.preventDefault();
       $state.go("app.start");
-    } else if (toState.authenticate && !AuthService.isLoggedIn()) {
-      $state.transitionTo("app.auth");
     }
   });
 
@@ -177,7 +171,7 @@ angular.module('NanuGO', [
   .state('app', {
     url: "/app",
     abstract: true,
-    templateUrl: "templates/tabs.html",
+    templateUrl: "templates/app.html",
     controller: 'AppCtrl'
   })
 
@@ -246,7 +240,7 @@ angular.module('NanuGO', [
         templateUrl: "templates/item/index.html"
       }
     },
-    authenticate: true,
+    authenticate: false,
     onEnter: _onEnter,
     onExit : _onExit
   })
@@ -285,5 +279,5 @@ angular.module('NanuGO', [
     onExit : _onExit
   });
 
-  $urlRouterProvider.otherwise('/app/postings');
+  $urlRouterProvider.otherwise('/app/start');
 });

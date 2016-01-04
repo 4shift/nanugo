@@ -34,8 +34,10 @@ angular.module('controllers.main', [])
 		// setting $scope.user to the current user logged in the system
 		$scope.user = AuthService.currentUser.info;
 
-		if (AuthService.currentUser.info.avatar === "") {
-			$scope.user.avatar = Constants.IMG.avatar;
+		if (AuthService.isLoggedIn()) {
+			$state.go("app.postings");
+		} else {
+			$state.go("app.start");
 		}
 
 		$scope.navigateTo = function(state) {
@@ -72,17 +74,17 @@ angular.module('controllers.main', [])
 			return AuthService.logout().then(success, error);
 		}
 
-		$scope.$on("event:auth-loginRequired", function() {
-			if (Constants.DEBUGMODE) {
-				console.log("AppCtrl::event:auth-loginRequired Triggered");
-			}
-
-			$scope.openLoginModal();
-		});
-
-		$scope.$on("event:auth-loginConfirmed", function() {
-			$scope.closeLoginModal();
-		});
+		// $scope.$on("event:auth-loginRequired", function() {
+		// 	if (Constants.DEBUGMODE) {
+		// 		console.log("AppCtrl::event:auth-loginRequired Triggered");
+		// 	}
+		//
+		// 	$scope.openLoginModal();
+		// });
+		//
+		// $scope.$on("event:auth-loginConfirmed", function() {
+		// 	$scope.closeLoginModal();
+		// });
 
 		// Catching the broadcasted event
 		$scope.$on('event:app-networkRequired', function() {

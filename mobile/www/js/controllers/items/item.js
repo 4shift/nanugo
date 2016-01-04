@@ -27,7 +27,6 @@ angular.module('controllers.items.show', ['services.models.item'])
 			console.log($scope.item);
 		}
 
-
 		$scope.$on("$destroy", function() {
   		if (Constants.DEBUGMODE) {
   			console.log('destroying UserCtrl');

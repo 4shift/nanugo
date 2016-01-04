@@ -20,6 +20,18 @@ extending components from ionic.app.scss
   line-height: 32px;
 }
 
+.bar-header {
+  border: 0px !important;
+  border-bottom-color: transparent !important;
+  background-image: none !important;
+  border-bottom: none !important;
+}
+
+.bar-bottom-header {
+  border: 1px !important;
+  border-bottom-color: #666 !important;
+  border-bottom: #666 !important;
+}
 
 .button {
 	@extend .button;
