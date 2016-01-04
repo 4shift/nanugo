@@ -1,4 +1,4 @@
-<ion-view view-title="Postings" hide-back-button="true">
+<ion-view view-title="Postings" hide-back-button="true" hide-tabs='false'>
   <ion-nav-buttons side="left">
     <button class="button button-icon icon ion-search">
     </button>
@@ -18,7 +18,7 @@
     <!-- <div ng-repeat="item in collection"> -->
       <!-- <div class="row" ng-if="$even"> -->
         <!-- <div class="col col-50"> -->
-          <a href="#/app/items/{{collection[$index].id}}">
+          <a href="#/tabs/items/{{collection[$index].id}}">
             <div class="list card">
               <div class="item-image">
                 <img ng-src="{{collection[$index].first_image}}">

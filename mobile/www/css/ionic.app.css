@@ -9887,6 +9887,13 @@ extending components from ionic.app.scss
   background-color: transparent !important;
   /* or transparent, or background:none */
   border: none; }
+  .bar-light .button-clear.button {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px; }
 
 .has-header {
   top: 0; }
@@ -10568,3 +10575,19 @@ button {
   margin-top: 5px; }
   .card .actions .wish {
     float: right; }
+
+.item-price {
+  position: absolute;
+  top: 340px;
+  padding: 3px 12px;
+  background-color: white;
+  font-weight: bold; }
+
+.item-information {
+  padding: 10px; }
+
+.item-wrapper .slider-slide {
+  position: relative;
+  background: black; }
+  .item-wrapper .slider-slide img {
+    opacity: .8; }

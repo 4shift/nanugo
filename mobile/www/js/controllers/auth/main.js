@@ -61,7 +61,7 @@ function($ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Con
 			}
 
 			$ionicLoading.hide();
-			$state.go('app.postings');
+			$state.go('tabs.postings');
 		}
 
 		$ionicLoading.show({

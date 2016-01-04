@@ -46,6 +46,15 @@ extending components from ionic.app.scss
 .bar-light {
   background-color: transparent !important; /* or transparent, or background:none */
 	border: none;
+
+  .button-clear.button {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
 }
 
 .has-header {

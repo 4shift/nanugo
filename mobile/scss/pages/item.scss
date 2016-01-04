@@ -17,3 +17,26 @@
     }
   }
 }
+
+.item-price {
+  position: absolute;
+  top: 340px;
+  padding: 3px 12px;
+  background-color: white;
+  font-weight: bold;
+}
+
+.item-information {
+  padding: 10px;
+}
+
+.item-wrapper {
+  .slider-slide {
+    position: relative;
+    background: black;
+
+    img {
+      opacity: .8;
+    }
+  }
+}

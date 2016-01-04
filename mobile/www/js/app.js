@@ -13,6 +13,7 @@ angular.module('NanuGO', [
   'controllers.users.profile',
   'controllers.items',
   'controllers.items.show',
+  'controllers.give',
   'services.common.constants',
   'services.common.auth',
   'directives.common.main',
@@ -62,12 +63,6 @@ angular.module('NanuGO', [
       template: "Loading..."
     });
 
-    if (Constants.DEBUGMODE) {
-      console.log(fromState);
-      console.log('to state');
-      console.log(toState);
-    }
-
     if (toState.authenticate && !AuthService.isLoggedIn()) {
       event.preventDefault();
       $state.go("app.start");
@@ -83,6 +78,8 @@ angular.module('NanuGO', [
   $ionicConfigProvider.tabs.position("bottom");
   $ionicConfigProvider.tabs.style("standard");
   $ionicConfigProvider.navBar.alignTitle('center')
+
+  if(!ionic.Platform.isIOS())$ionicConfigProvider.scrolling.jsScrolling(false);
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -175,6 +172,13 @@ angular.module('NanuGO', [
     controller: 'AppCtrl'
   })
 
+  .state('tabs', {
+    url: "/tabs",
+    abstract: true,
+    templateUrl: "templates/tabs.html",
+    controller: "AppCtrl"
+  })
+
   // starting page
   .state('app.start', {
     url: "/start",
@@ -232,10 +236,10 @@ angular.module('NanuGO', [
   })
 
   // postings
-  .state('app.postings', {
+  .state('tabs.postings', {
     url: "/postings",
     views: {
-      'content@app': {
+      item: {
         controller: 'ItemsCtrl',
         templateUrl: "templates/item/index.html"
       }
@@ -245,11 +249,25 @@ angular.module('NanuGO', [
     onExit : _onExit
   })
 
+  // postings
+  .state('tabs.give', {
+    url: "/give",
+    views: {
+      give: {
+        controller: 'GiveCtrl',
+        templateUrl: "templates/give/index.html"
+      }
+    },
+    authenticate: true,
+    onEnter: _onEnter,
+    onExit : _onExit
+  })
+
   // item
-  .state('app.item', {
+  .state('tabs.item', {
     url: "/items/:id",
     views: {
-      'content@app': {
+      item: {
         controller: 'ItemCtrl',
         templateUrl: "templates/item/show.html"
       }

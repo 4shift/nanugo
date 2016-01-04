@@ -1,0 +1,13 @@
+.give-header {
+  margin: 10px;
+  width: 100%;
+  height: 200px;
+  border: 2px dotted #666;
+
+  .ion-upload {
+    font-size: 40px;
+    &:before {
+      font-size: 62px;
+    }
+  }
+}

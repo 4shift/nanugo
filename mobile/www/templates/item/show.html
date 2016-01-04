@@ -2,10 +2,10 @@
   <ion-content class="has-header">
     <div class="item-wrapper">
       <ion-slide-box on-slide-changed="slideHasChanged($index)">
-        <ion-slide>
+        <ion-slide class="full-page">
           <img ng-src="{{item.first_image}}" width="100%">
         </ion-slide>
-        <ion-slide ng-if="item.second_image">
+        <ion-slide class="full-page" ng-if="item.second_image">
           <img ng-src="{{item.second_image}}" width="100%">
         </ion-slide>
       </ion-slide-box>

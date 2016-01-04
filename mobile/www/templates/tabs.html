@@ -6,7 +6,7 @@ navigation history that also transitions its views in and out.
 <ion-tabs ng-class="{'tabs-item-hide': $root.hideTabs}" class="tabs-icon-top tabs-color-active-positive">
    <!-- Courses Tab -->
   <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/app/postings">
-    <ion-nav-view name="content"></ion-nav-view>
+    <ion-nav-view name="item"></ion-nav-view>
   </ion-tab>
 
  <!-- Dashboard Tab -->
@@ -15,8 +15,8 @@ navigation history that also transitions its views in and out.
   </ion-tab>
 
   <!-- Account Tab -->
-  <ion-tab title="Give" icon-off="ion-ios-camera-outline" icon-on="ion-ios-camera" href="#/app/give">
-    <ion-nav-view name="content"></ion-nav-view>
+  <ion-tab title="Give" icon-off="ion-ios-camera-outline" icon-on="ion-ios-camera" href="#/tabs/give">
+    <ion-nav-view name="give"></ion-nav-view>
   </ion-tab>
 
   <!-- Dashboard Tab -->

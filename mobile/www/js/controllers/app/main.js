@@ -35,7 +35,7 @@ angular.module('controllers.main', [])
 		$scope.user = AuthService.currentUser.info;
 
 		if (AuthService.isLoggedIn()) {
-			$state.go("app.postings");
+			$state.go("tabs.postings");
 		} else {
 			$state.go("app.start");
 		}
