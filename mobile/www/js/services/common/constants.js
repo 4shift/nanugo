@@ -5,7 +5,7 @@ angular.module('services.common.constants',[])
 .service('Constants',[function(){
 
   var _API = {
-    baseUrl: "http://localhost:3000/v1"
+    baseUrl: "http://0.0.0.0:3000/v1"
   }
 
   var _img = {

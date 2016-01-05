@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('controllers.give', ['ngCordova.plugins.camera'])
+angular.module('controllers.give', ['services.common.camera'])
 
 .controller('GiveCtrl', [
-	'$cordovaCamera',
+	'Camera',
 	'$ionicActionSheet',
 	'$ionicModal',
 	'$ionicLoading',
@@ -14,24 +14,49 @@ angular.module('controllers.give', ['ngCordova.plugins.camera'])
 	'$stateParams',
 	'Constants',
 	'AuthService',
-  function($cordovaCamera, $ionicActionSheet, $ionicModal, $ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Constants, AuthService) {
+  function(Camera, $ionicActionSheet, $ionicModal, $ionicLoading, $ionicPopup, $timeout, $scope, $state, $stateParams, Constants, AuthService) {
 		//show loading gif
 		$ionicLoading.show({
 	    	template: 'Loading Camera...'
 	   	});
 
-		$scope.updateLoading = function(msg,cb){
-			$ionicLoading.show({
-		    	template: msg
-		   	});
+		$scope.pictures = [
+			"http://placehold.it/100x100",
+			"http://placehold.it/100x100",
+			"http://placehold.it/100x100",
+			"http://placehold.it/100x100"
+		];
 
-			$timeout(function() {
-				$ionicLoading.hide();
-				if(typeof cb === 'function'){
-					cb();
-				}
-			}, 2000);
-		}
+		$scope.takePicture = function(index) {
+			 var options = {
+					quality : 75,
+					targetWidth: 200,
+					targetHeight: 200,
+					sourceType: 1
+			 };
+
+			 Camera.getPicture(options).then(function(imageData) {
+					$scope.picture = imageData;
+			 }, function(err) {
+					console.log(err);
+			 });
+		};
+
+		$scope.getPicture = function(index) {
+
+      var options = {
+         quality : 75,
+         targetWidth: 200,
+         targetHeight: 200,
+         sourceType: 0
+      };
+
+      Camera.getPicture(options).then(function(imageData) {
+         $scope.picture = imageData;;
+      }, function(err) {
+         console.log(err);
+      });
+   };
 
 		$scope.updateUser = function(){
 			if(Constants.DEBUGMODE){

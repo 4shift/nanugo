@@ -1,12 +1,21 @@
 <ion-view hide-nav-bar="true" hide-back-button="true">
   <ion-content>
     <div class="give-header">
-      <i class="ion-upload"></i>
+      <div class="image-thumb" ng-repeat="picture in pictures track by $index">
+        <a href="#" ng-click="takePicture({{$index}})">
+          <img ng-src={{picture}}>
+        </a>
+      </div>
     </div>
-    <div class="body">
-      <button class="button button-block button-positive" ng-click="('app.auth.signin')">
+
+    <div class="give-body">
+      <!-- <button class="button button-block button-positive" ng-click="('app.auth.signin')">
         촬영하기
-      </button>
+      </button> -->
+      <div class="padding">
+        <button class="button" ng-click="takePicture()">Take Picture</button>
+        <button class="button" ng-click="getPicture()">Open Gallery</button>
+      </div>
     </div>
   </ion-content>
 </ion-view>

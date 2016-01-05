@@ -79,7 +79,8 @@ angular.module('NanuGO', [
   $ionicConfigProvider.tabs.style("standard");
   $ionicConfigProvider.navBar.alignTitle('center')
 
-  if(!ionic.Platform.isIOS())$ionicConfigProvider.scrolling.jsScrolling(false);
+  if (!ionic.Platform.isIOS())
+    $ionicConfigProvider.scrolling.jsScrolling(false);
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
