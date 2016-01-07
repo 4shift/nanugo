@@ -16,6 +16,8 @@ angular.module('NanuGO', [
   'controllers.give',
   'services.common.constants',
   'services.common.auth',
+  'services.cloudinary.config',
+  'services.cloudinary.upload',
   'directives.common.main',
   'components.http-auth-interceptor',
   'ngCordova.plugins.network'
@@ -81,6 +83,10 @@ angular.module('NanuGO', [
 
   if (!ionic.Platform.isIOS())
     $ionicConfigProvider.scrolling.jsScrolling(false);
+})
+
+.config(function($compileProvider){
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

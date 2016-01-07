@@ -2,7 +2,7 @@
 
 angular.module('services.common.camera', [])
 
-.factory('Camera', function($q) {
+.factory('CameraService', ['$q', function($q) {
 
   return {
     getPicture: function(options) {
@@ -18,4 +18,4 @@ angular.module('services.common.camera', [])
     }
   }
 
-});
+}]);

@@ -1,11 +1,12 @@
-'use.strict'
+'use strict';
 
 angular.module('services.common.constants',[])
 
-.service('Constants',[function(){
+.service('Constants', [function() {
 
   var _API = {
-    baseUrl: "http://0.0.0.0:3000/v1"
+    baseUrl: "http://10.0.3.2:3000/v1"
+    // baseUrl: "http://localhost:3000/v1"
   }
 
   var _img = {
@@ -20,8 +21,8 @@ angular.module('services.common.constants',[])
   }
 
   var constants = {
-    DEBUGMODE : true,
-    SHOWBROADCAST_EVENTS : true,
+    DEBUGMODE: true,
+    SHOWBROADCAST_EVENTS: true,
     API: _API,
     IMG: _img,
     timeouts: _timeouts
