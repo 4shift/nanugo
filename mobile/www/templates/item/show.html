@@ -1,4 +1,4 @@
-<ion-view title="상품정보">
+<ion-view title="상품정보" class="frame_look_feel">
   <ion-content class="has-header" overflow-scroll="false">
     <div id="item-detail" class="item-detail-wrapper">
       <div class="wrap-cover">
@@ -13,142 +13,17 @@
       </div>
 
       <div class="item-detail">
-<!--
-        <div class="item-details-container">
-          <section class="item-title-and-price">
-            <div class="title">
-              <h2>Love You Forever Book</h2>
-            </div>
-            <div class="item-price">
-              <h2>
-                <i class="yrd-symbol"></i>
-                15
-              </h2>
-            </div>
-          </section>
-          <section class="item-hearts">
-            <a class="hearts-btn " data-posting-id="1006831">
-              <span class="heart">
-                <i class="icon-heart icon-heart-hollow">&nbsp;</i>
-              </span>
-              <span class="hearts-count">22</span>
-            </a>
-          </section>
-          <section class="sharing-buttons">
-            <ul class="share">
-              <li>
-                <a class="facebook-share">
-                  <img src="//d12azzhof0chfb.cloudfront.net/assets/sharing/Facebook-0bdb72a972ac9c3002975cdbbca6ae0e.png">
-                </a>
-              </li>
-              <li>
-                <a class="twitter-share">
-                  <img src="//d12azzhof0chfb.cloudfront.net/assets/sharing/Twitter-9bbd3d272ffdfa1e1d5b727ca14804c4.png">
-                </a>
-              </li>
-              <li>
-                <a class="email-share">
-                  <img src="//d12azzhof0chfb.cloudfront.net/assets/sharing/Email-14a9cd6bd62fbb02f0a974fd4ad740e2.png">
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section class="item-description">
-            <p>
-              Probably the sweetest book I've ever read (especially if you have a little boy)
-              This story always puts tears in my eyes
-              I purchased this from an online thrift store so it does have sticker on outside and apparently was used because it has a note inside the front of book. I already have another copy so I don't need this one.
-
-              Famous excerpt:
-              "I'll love you forever,
-              I'll like you for always,
-              As long as I'm living
-              My baby you'll be."
-
-              Message me with questions and check out my other items
-            </p>
-          </section>
-          <section class="poster-and-item-condition">
-            <div class="condition-container">
-              <h6 class="condition-header">Condition</h6>
-              <div class="condition">Used</div>
-              <a class="flag">Flag this item</a>
-            </div>
-            <div class="poster-container">
-              <h6 class="poster-header">From</h6>
-              <div class="poster">
-                <a href="/users/sierra-heist">
-                  <div class="poster-photo">
-                    <div class="profile-pic-wrapper">
-                      <img class="star" src="//d12azzhof0chfb.cloudfront.net/assets/badge/pro-ab68d1d8d707d62bf21719fa226e698f.png">
-                      <img class="img-circle" src="//graph.facebook.com/10205218160029080/picture?type=square&amp;height=600">
-                    </div>
-                  </div>
-                </a>
-                <div class="poster-name-and-location">
-                  <h5 class="name">
-                    <a href="/users/sierra-heist">Sierra H</a>
-                  </h5>
-                  <p class="location"></p>
-                  <div>Cape Canaveral, FL</div>
-                  <p></p>
-                  <div class="reviews">
-                    <div class="positive">
-                      <i class="icon-thumbs-up"></i>
-                      34
-                    </div>
-                    <div class="negative">
-                      <i class="icon-thumbs-down"></i>
-                      0
-                    </div>
-                  </div>
-                  <a class="btn btn-text" href="mailto:reply+917398c46a24b56747c89d9c3e457a3b@yerdle.com?body=Hi%20Sierra%2C%20I%20had%20a%20quick%20question%20about%20your%20Love%20You%20Forever%20Book.%0A%0A%0Ahttp%3A%2F%2Fyrdl.us%2FWnGcd&amp;subject=Question%20via%20Yerdle%20about%3A%20Love%20You%20Forever%20Book">
-                    <small>
-                      <i class="icon-contact_icon"></i>
-                      Contact
-                    </small>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="delivery-icons">
-            <ul class="delivery_methods text-center">
-              <li>
-                <div class="delivery-method">
-                  <i class="icon-truck active"></i>
-                  <h6>Free Shipping</h6>
-                  <span>
-                    <i class="fa fa-check"></i>
-                    Yes
-                  </span>
-                </div>
-              </li>
-              <li>
-                <div class="delivery-method">
-                  <i class="icon-pickup"></i>
-                  <h6>Pickup</h6>
-                  <span>No</span>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <section class="get-it-button-container">
-            <a class="btn btn-primary btn-full-width get-it" href="https://yerdle.com/postings/1006831/claimings/new">Get it</a>
-          </section>
-        </div> -->
-
         <div class="item-detail-con">
           <div class="item-price">
             <i class="icon ion-social-usd-outline"></i>
             {{item.price}}
           </div>
-          <div class="item-information">
+          <section class="item-information">
             <h3>{{item.title}}</h3>
             <div class="add-to-wish">
-              <a hef="#">
-                <i class="ion-ios-heart"></i>
-                <span>{{item.price}}</span>
+              <a hef="#" class="btn">
+                <i class="ion-ios-heart-outline"></i>
+                <span>34</span>
               </a>
             </div>
             <div class="share-button">
@@ -171,16 +46,44 @@
               </ul>
             </div>
             <p>{{item.desc}}</p>
-            <div class="user">
-              <img ng-src="{{item.user.avatar_url}}" alt="사용자 프로필">
-              <h4>{{item.user.username}}</h4>
-              <p>{{item.user.email}}</p>
+          </section>
+          <section class="user-information">
+            <div class="row">
+              <div class="col col-50">
+                <div class="user">
+                  <img ng-src="{{item.user.avatar}}" class="avatar x120" alt="사용자 프로필" ng-if="item.user.avatar">
+                  <img src="//res.cloudinary.com/dctb9ebps/image/upload/v1452494202/default_klxoka.jpg" class="avatar" alt="사용자 프로필" ng-if="!item.user.avatar">
+                  <h4>{{item.user.username}}</h4>
+                  <p>{{item.user.email}}</p>
+                </div>
+              </div>
+              <div class="col col-50">
+                <div class="condition-container">
+                  <h5 class="condition-header uppercase">Condition</h5>
+                  <div class="condition">{{item.condition}}</div>
+                  <a class="flag">이 제품을 신고</a>
+                </div>
+                <div class="delivery-method">
+                  <div class="shipping">
+                    <i class="ion-android-bus yes"></i>
+                    <h5>택배배송</h5>
+                    <h6 class="uppercase">Yes</h6>
+                  </div>
+                  <div class="pickup">
+                    <i class="ion-android-walk no"></i>
+                    <h5>직접수령</h5>
+                    <h6 class="uppercase">No</h6>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="condition">{{item.condition}}</span>
             <button class="button button-block button-positive" ng-click="navigateTo('app.auth.signin')">
               구매하기
             </button>
-          </div>
+          </section>
+          <section class="recommended-wrapper">
+            <p>추천상품</p>
+          </section>
         </div>
       </div>
 

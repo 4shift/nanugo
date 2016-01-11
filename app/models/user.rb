@@ -33,7 +33,7 @@
 #  point                  :integer          default(0), not null
 #
 
-require 'carrierwave/orm/activerecord'
+# require 'carrierwave/orm/activerecord'
 
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
@@ -48,9 +48,9 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   has_many :items
 
-  mount_uploader :avatar, AvatarUploader
+  # mount_uploader :avatar, AvatarUploader
 
-  validate :avatar_size_validation
+  # validate :avatar_size_validation
 
   def password_required?
     super if confirmed?
@@ -122,6 +122,7 @@ class User < ActiveRecord::Base
         member.uid = auth.uid
         member.email = auth.info.email
         member.username = auth.info.name.gsub(' ', '_')
+        member.avatar = "http://graph.facebook.com/#{auth.uid}/picture?width=400&height=400"
         member.password = Devise.friendly_token[0,20] + rand(5..30).to_s
         member.skip_confirmation!
         member.save
@@ -143,7 +144,7 @@ class User < ActiveRecord::Base
     save
   end
 
-  def avatar_size_validation
-    errors[:avatar] << "사용자 이미지 파일은 최대 2MB를 넘을 수 없습니다." if avatar.size > 2.megabytes
-  end
+  # def avatar_size_validation
+  #   errors[:avatar] << "사용자 이미지 파일은 최대 2MB를 넘을 수 없습니다." if avatar.size > 2.megabytes
+  # end
 end

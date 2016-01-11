@@ -19,6 +19,7 @@ angular.module('NanuGO', [
   'services.cloudinary.config',
   'services.cloudinary.upload',
   'directives.common.main',
+  'ion-google-place',
   'components.http-auth-interceptor',
   'ngCordova.plugins.network'
 ])
@@ -81,7 +82,7 @@ angular.module('NanuGO', [
   $ionicConfigProvider.tabs.style("standard");
   $ionicConfigProvider.navBar.alignTitle('center')
 
-  // if (!ionic.Platform.isIOS())
+  if (!ionic.Platform.isIOS())
     $ionicConfigProvider.scrolling.jsScrolling(true);
 })
 

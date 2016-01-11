@@ -13,10 +13,6 @@
   }
 }
 
-h2 {
-  margin: 20px 0;
-}
-
 .photo-upload-container {
   position: relative;
   width: 100%;
@@ -55,7 +51,8 @@ h2 {
       position: relative;
       height: 100%;
       width: 100%;
-      background: top/cover url('../img/a_logo.png');
+      background: top/cover url('../img/packages.png');
+      opacity: .8;
 
       .select-photo-text,
       .photo-upload .error,
@@ -99,11 +96,15 @@ h2 {
 
       .preview {
         position: relative;
+
+        img {
+          width: 100%;
+        }
       }
 
       .remove-button {
         position: absolute;
-        display: none;
+        display: block;
         z-index: 1;
         top: 5px;
         right: 5px;
@@ -157,4 +158,20 @@ h2 {
     font-size: 20px;
     color: #fff;
   }
+}
+
+.ion-google-place-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+}
+
+input.ion-google-place[readonly] {
+  background-color: transparent;
+  cursor: text;
+  margin: 0;
 }

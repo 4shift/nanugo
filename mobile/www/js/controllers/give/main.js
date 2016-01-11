@@ -23,14 +23,14 @@ angular.module('controllers.give', ['services.common.camera', 'ngCordova'])
 		});
 
 		$scope.images = [];
-		$scope.lastImage = "";
+		$scope.uploaded_images = [];
 
 		$scope.takePicture = function() {
 			var options = {
 				quality : 100,
 				// destinationType : Camera.DestinationType.DATA_URL,
 				sourceType : Camera.PictureSourceType.CAMERA,
-				// allowEdit : true,
+				allowEdit : true,
 				// encodingType: Camera.EncodingType.JPEG,
 				targetWidth: 640,
 				targetHeight: 640,
@@ -43,9 +43,7 @@ angular.module('controllers.give', ['services.common.camera', 'ngCordova'])
 					console.log("camera data: " + angular.toJson(imageData));
 				}
 
-				// $scope.images.push("data:image/jpeg;base64," + imageData);
 				$scope.images.push(imageData);
-				$scope.lastImage = imageData;
 			}, function(err) {
 				console.log(err);
 			});
@@ -57,7 +55,7 @@ angular.module('controllers.give', ['services.common.camera', 'ngCordova'])
 				quality : 100,
 				// destinationType : Camera.DestinationType.DATA_URL,
 				sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
-				// allowEdit : true,
+				allowEdit : true,
 				// encodingType: Camera.EncodingType.JPEG,
 				targetWidth: 640,
 				targetHeight: 640,
@@ -67,7 +65,6 @@ angular.module('controllers.give', ['services.common.camera', 'ngCordova'])
 
 			CameraService.getPicture(options).then(function(imageData) {
 				$scope.images.push(imageData);
-				$scope.lastImage = imageData;
 			}, function(err) {
 				console.log(err);
 			});
@@ -78,7 +75,7 @@ angular.module('controllers.give', ['services.common.camera', 'ngCordova'])
 			angular.forEach($scope.images, function(image) {
 				CloudinaryUploadService.uploadImage(image).then(
 					function(result) {
-						alert(result);
+						$scope.uploaded_images.push(result);
 					},
 					function(err) {
 						alert('file upload failed');
@@ -93,8 +90,6 @@ angular.module('controllers.give', ['services.common.camera', 'ngCordova'])
 			if(Constants.DEBUGMODE){
 				console.log('destroying ProfileCtrl');
 			}
-
-
 		});
 
 		$ionicLoading.hide();

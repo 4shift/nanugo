@@ -9852,6 +9852,9 @@ Components
 
 extending components from ionic.app.scss
 */
+.frame_look_feel {
+  background-color: #edebec; }
+
 .bar .button-icon.button:before,
 .bar .button .icon:before,
 .bar .icon.button:before,
@@ -9866,6 +9869,16 @@ extending components from ionic.app.scss
   padding-left: 2px;
   font-size: 16px;
   line-height: 32px; }
+
+.avatar {
+  border-radius: 50%;
+  top: 10px; }
+  .avatar.x120 {
+    width: 120px;
+    height: 120px; }
+
+.uppercase {
+  text-transform: uppercase; }
 
 .button-block.button {
   margin: 5px auto;
@@ -10408,11 +10421,6 @@ button {
       padding-left: 80px; }
       .users-page .list .item-avatar.user-list-item.activated {
         background: rgba(0, 0, 0, 0.5); }
-      .users-page .list .item-avatar.user-list-item .avatar {
-        border-radius: 50%;
-        top: 10px;
-        max-width: 60px;
-        max-height: 60px; }
       .users-page .list .item-avatar.user-list-item .name {
         color: #ffffff;
         font-size: 15px; }
@@ -10449,7 +10457,7 @@ button {
   #item-index .actions .wish {
     float: right; }
 
-#item-detail .item-detail-wrapper .slider-slide img {
+#item-detail.item-detail-wrapper .slider-slide img {
   display: block;
   background-size: cover;
   background-position: 50% 50%; }
@@ -10461,17 +10469,50 @@ button {
   background-color: white;
   font-weight: bold; }
 
-#item-detail .item-information {
-  padding: 10px 10px 20px 10px;
-  border-bottom: 1px solid #ddd; }
+#item-detail section {
+  padding: 10px 15px 20px 15px;
+  border-bottom: 1px solid #bebaba;
+  background-color: #fff; }
+  #item-detail section.user-information {
+    text-align: center; }
+    #item-detail section.user-information .condition-header {
+      color: #666; }
+    #item-detail section.user-information .condition-container {
+      margin-bottom: 25px; }
+    #item-detail section.user-information .delivery-method .shipping,
+    #item-detail section.user-information .delivery-method .pickup {
+      display: inline-block; }
+    #item-detail section.user-information .delivery-method .pickup {
+      margin-left: 30px; }
+    #item-detail section.user-information .delivery-method i {
+      font-size: 40px; }
+      #item-detail section.user-information .delivery-method i.yes {
+        color: #457ca9; }
+      #item-detail section.user-information .delivery-method i.no {
+        color: #ccc; }
+  #item-detail section.recommended-wrapper {
+    padding: 10px;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+    background-color: #ccc;
+    border-bottom: 1px solid #bebaba; }
+    #item-detail section.recommended-wrapper p {
+      margin: 0;
+      padding: 0; }
 
 #item-detail .add-to-wish {
-  font-size: 1.5em;
-  padding-bottom: 10px; }
+  margin: 20px 0 25px 0;
+  font-size: 1.6em; }
+  #item-detail .add-to-wish a {
+    color: black; }
+  #item-detail .add-to-wish i {
+    color: red; }
 
 #item-detail .share {
   position: relative;
   float: left;
+  margin-bottom: 25px;
   width: 100%;
   min-height: 1px;
   list-style-type: none; }
@@ -10496,9 +10537,6 @@ button {
     font-size: 40px; }
     .give-header .ion-upload:before {
       font-size: 62px; }
-
-h2 {
-  margin: 20px 0; }
 
 .photo-upload-container {
   position: relative;
@@ -10530,7 +10568,8 @@ h2 {
       position: relative;
       height: 100%;
       width: 100%;
-      background: top/cover url("../img/a_logo.png"); }
+      background: top/cover url("../img/packages.png");
+      opacity: .8; }
       .photo-upload-container .photo-container .photo-upload .select-photo-text,
       .photo-upload-container .photo-container .photo-upload .photo-upload .error,
       .photo-upload-container .photo-container .photo-upload .photo-upload .spinner {
@@ -10608,3 +10647,17 @@ h2 {
     top: 18px;
     font-size: 20px;
     color: #fff; }
+
+.ion-google-place-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: none; }
+
+input.ion-google-place[readonly] {
+  background-color: transparent;
+  cursor: text;
+  margin: 0; }

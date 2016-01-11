@@ -4,6 +4,10 @@ Components
 extending components from ionic.app.scss
 */
 
+.frame_look_feel {
+  background-color: #edebec;
+}
+
 .bar .button-icon.button:before,
 .bar .button .icon:before,
 .bar .icon.button:before,
@@ -18,6 +22,20 @@ extending components from ionic.app.scss
   padding-left: 2px;
   font-size: 16px;
   line-height: 32px;
+}
+
+.avatar {
+  border-radius: 50%;
+  top: 10px;
+
+  &.x120 {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 //
 // .bar-header {

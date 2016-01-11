@@ -1,6 +1,6 @@
 module V1
   class SessionSerializer < ActiveModel::Serializer
-    attributes :email, :token_type, :user_id, :username, :avatar_img, :access_token
+    attributes :email, :token_type, :user_id, :username, :avatar, :access_token
 
     def user_id
       object.id
@@ -8,10 +8,6 @@ module V1
 
     def token_type
       'Bearer'
-    end
-
-    def avatar_img
-      object.avatar.url
     end
   end
 end

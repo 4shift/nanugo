@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>나만의 온라인 사수! 클레비</title>
 
@@ -15,6 +14,7 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="cordova.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&sensor=false"></script>
 
   </head>
   <body ng-app="NanuGO">
@@ -34,6 +34,7 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+
     <script src="js/controllers/app/main.js"></script>
     <script src="js/controllers/auth/main.js"></script>
     <script src="js/controllers/profile/main.js"></script>
@@ -59,6 +60,7 @@
 
     <!-- directives -->
     <script src="js/directives/common/main.js"></script>
+    <script src="js/directives/google/map.js"></script>
 
     <!-- components -->
     <script src="js/components/interceptor/http-auth-interceptor.js"></script>

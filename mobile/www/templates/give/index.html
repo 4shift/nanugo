@@ -1,87 +1,19 @@
 <ion-view hide-nav-bar="true" hide-back-button="true">
-  <ion-content overflow-scroll="false">
+  <ion-content>
     <div class="padding">
-      <h2>나눌 물건을 올려주세요</h2>
-      <div class="photo-upload-container">
+      <div class="photo-upload-container" ng-class="images.length > 0 ? '' : 'empty'">
         <div class="dummy"></div>
         <div class="photo-container-box">
-          <div class="photo-container" data-i="1">
+          <div class="photo-container" ng-repeat="image in images track by $index">
             <div class="photo-upload">
               <i class="icon-close remove-button"></i>
-              <div class="select-photo-text">
+              <div class="preview">
+                <img ng-src="{{image}}" width="100%">
               </div>
-              <div class="spinner hidden">
-                <p>Uploading…</p>
-                <img class="photo-spinner" src="//d12azzhof0chfb.cloudfront.net/assets/spinner-01195c7995ae7fa9e9bc6094d0c44b94.gif">
-              </div>
-              <div class="error hidden">
-                <i class="ion-alert-circled text-warning"></i>
-                <p>
-                  <span class="text-warning">Server error!</span>
-                  <br>
-                  <span>Please try again.</span>
-                </p>
-              </div>
-              <div class="preview"></div>
             </div>
           </div>
-          <div class="photo-container" data-i="2">
+          <div class="photo-container">
             <div class="photo-upload">
-              <i class="icon-close remove-button"></i>
-              <div class="select-photo-text">
-              </div>
-              <div class="spinner hidden"><p>Uploading…</p>
-                <img class="photo-spinner" src="//d12azzhof0chfb.cloudfront.net/assets/spinner-01195c7995ae7fa9e9bc6094d0c44b94.gif">
-              </div>
-              <div class="error hidden">
-                <i class="ion-alert-circled text-warning"></i>
-                <p>
-                  <span class="text-warning">Server error!</span>
-                  <br>
-                  <span>Please try again.</span>
-                </p>
-              </div>
-              <div class="preview"></div>
-            </div>
-          </div>
-          <div class="photo-container" data-i="3">
-            <div class="photo-upload">
-              <i class="icon-close remove-button"></i>
-              <div class="select-photo-text">
-              </div>
-              <div class="spinner hidden">
-                <p>Uploading…</p>
-                <img class="photo-spinner" src="//d12azzhof0chfb.cloudfront.net/assets/spinner-01195c7995ae7fa9e9bc6094d0c44b94.gif">
-              </div>
-              <div class="error hidden">
-                <i class="ion-alert-circled text-warning"></i>
-                <p>
-                  <span class="text-warning">Server error!</span>
-                  <br>
-                  <span>Please try again.</span>
-                </p>
-              </div>
-              <div class="preview"></div>
-            </div>
-          </div>
-          <div class="photo-container" data-i="4">
-            <div class="photo-upload">
-              <i class="icon-close remove-button"></i>
-              <div class="select-photo-text">
-              </div>
-              <div class="spinner hidden">
-                <p>Uploading…</p>
-                <img class="photo-spinner" src="//d12azzhof0chfb.cloudfront.net/assets/spinner-01195c7995ae7fa9e9bc6094d0c44b94.gif">
-              </div>
-              <div class="error hidden">
-                <i class="ion-alert-circled text-warning"></i>
-                <p>
-                  <span class="text-warning">Server error!</span>
-                  <br>
-                  <span>Please try again.</span>
-                </p>
-              </div>
-              <div class="preview"></div>
             </div>
           </div>
         </div>
@@ -89,19 +21,20 @@
     </div>
 
     <div class="padding">
-      <div class="center-wrapper">
-        <a class="btn circle-btn" ng-click="takePicture()">
-          <i class="ion-plus-round"></i>
-        </a>
+      <div class="row">
+        <div class="col col-50">
+          <a class="button button-full button-positive" ng-click="takePicture()">바로촬영</a>
+        </div>
+        <div class="col col-50">
+          <a class="button button-full button-calm" ng-click="getPicture()">앨범등록</a>
+        </div>
       </div>
-      <!--
-      <div class="button-bar bar-energized ">
-        <a class="button activated" ng-click="takePicture()">바로촬영</a>
-        <a class="button" ng-click="getPicture()">앨범등록</a>
-      </div>
-      -->
-      <hr>
+
       <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Address</span>
+          <ion-google-place placeholder="Enter an address, Apt# and ZIP" ng-model="location" current-location="true"/>
+        </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">First Name</span>
           <input type="text" placeholder="John">

@@ -1,4 +1,5 @@
 #item-index {
+
   .row, .col {
     padding: 0;
   }
@@ -37,7 +38,7 @@
 }
 
 #item-detail {
-  .item-detail-wrapper {
+  &.item-detail-wrapper {
     .slider-slide {
       img {
         display: block;
@@ -55,19 +56,79 @@
     font-weight: bold;
   }
 
-  .item-information {
-    padding: 10px 10px 20px 10px;
-    border-bottom: 1px solid #ddd;
+  section {
+    padding: 10px 15px 20px 15px;
+    border-bottom: 1px solid $gray-background-bolder;
+    background-color: $white-color;
+
+    &.user-information {
+      text-align: center;
+
+      .condition-header {
+        color: $black-sub-color;
+      }
+
+      .condition-container {
+        margin-bottom: 25px;
+      }
+
+      .delivery-method {
+
+        .shipping,
+        .pickup {
+          display: inline-block;
+        }
+
+        .pickup {
+          margin-left: 30px;
+        }
+
+        i {
+          font-size: 40px;
+
+          &.yes {
+            color: $blue-shade-color-4;
+          }
+
+          &.no {
+            color: $gray-disabled-color;
+          }
+        }
+      }
+    }
+
+    &.recommended-wrapper {
+      padding: 10px;
+      text-align: center;
+      color: $black-sub-color;
+      font-weight: bold;
+      background-color: $gray-disabled-color;
+      border-bottom: 1px solid $gray-background-bolder;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 
   .add-to-wish {
-    font-size: 1.5em;
-    padding-bottom: 10px;
+    margin: 20px 0 25px 0;
+    font-size: 1.6em;
+
+    a {
+      color: black;
+    }
+
+    i {
+      color: red;
+    }
   }
 
   .share {
     position: relative;
     float: left;
+    margin-bottom: 25px;
     width: 100%;
     min-height: 1px;
     list-style-type: none;
