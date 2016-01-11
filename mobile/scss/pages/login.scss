@@ -2,82 +2,85 @@
 	login
 */
 
-.main-login-page,
-.signup-page
-{
-	@include page-slogan();
-	text-align:center;
-
-	@include content-bg(cover, #FFF);
-
-
-	.logo{
-		@include content-bg(contain,transparent);
-		background-image: url('../img/a_logo.png');
-		width:25%;
-		height:15%;
-		margin: 25% auto 25px auto;
-	}
-
-
-	.pseudo-link{
-		color: $text-color-link;
-		font-size: 15px;
-		text-decoration: none;
-	}
-
-	.list {
-		width:88%;
-		margin: 20% auto 30px auto;
-		label.lock{
-			&:after{
-				@include inline-icons('../img/lock_darkui.png', 22px, 22px, 14px, 0, 0, 0, 9%);
-				left: -22px;
-			}
-
-		}
-
-		label.username{
-			&:after{
-				@include inline-icons('../img/user_darkui.png', 20px, 20px, 14px, 0, 0, 0, 9%);
-				left: -22px;
-			}
-		}
-
-		label.email{
-			&:after{
-				@include inline-icons('../img/email_darkui.png', 20px, 20px, 14px, 0, 0, 0, 9%);
-				left: -22px;
-			}
-		}
-		label.item-input{
-			padding: 10px 0 4px 45px;
-			background: transparent;
-			border-width: 0 0 1px 0;
-			border-style: solid;
-			border-color: #606170;
-			::-webkit-input-placeholder {
-			   color: #acadb5;
-			}
-
-			:-moz-placeholder { /* Firefox 18- */
-			   color: #acadb5;
-			}
-
-			::-moz-placeholder {  /* Firefox 19+ */
-			   color: #acadb5;
-			}
-
-			:-ms-input-placeholder {
-			   color: #acadb5;
-			}
-			input[type="text"],
-			input[type="password"]{
-				font-size : 16px;
-				color: #fff;
-				letter-spacing: 0.5px;
-			}
-		}
-	}
-
+.signin-page {
+	// margin-top: 60px;
 }
+//
+// .main-login-page,
+// .signup-page
+// {
+// 	@include page-slogan();
+// 	text-align:center;
+//
+// 	@include content-bg(cover, #FFF);
+//
+// 	.logo{
+// 		@include content-bg(contain,transparent);
+// 		background-image: url('../img/a_logo.png');
+// 		width:25%;
+// 		height:15%;
+// 		margin: 25% auto 25px auto;
+// 	}
+//
+//
+// 	.pseudo-link{
+// 		color: $text-color-link;
+// 		font-size: 15px;
+// 		text-decoration: none;
+// 	}
+//
+// 	.list {
+// 		width:88%;
+// 		margin: 20% auto 30px auto;
+// 		label.lock{
+// 			&:after{
+// 				@include inline-icons('../img/lock_darkui.png', 22px, 22px, 14px, 0, 0, 0, 9%);
+// 				left: -22px;
+// 			}
+//
+// 		}
+//
+// 		label.username{
+// 			&:after{
+// 				@include inline-icons('../img/user_darkui.png', 20px, 20px, 14px, 0, 0, 0, 9%);
+// 				left: -22px;
+// 			}
+// 		}
+//
+// 		label.email{
+// 			&:after{
+// 				@include inline-icons('../img/email_darkui.png', 20px, 20px, 14px, 0, 0, 0, 9%);
+// 				left: -22px;
+// 			}
+// 		}
+// 		label.item-input{
+// 			padding: 10px 0 4px 45px;
+// 			background: transparent;
+// 			border-width: 0 0 1px 0;
+// 			border-style: solid;
+// 			border-color: #606170;
+// 			::-webkit-input-placeholder {
+// 			   color: #acadb5;
+// 			}
+//
+// 			:-moz-placeholder { /* Firefox 18- */
+// 			   color: #acadb5;
+// 			}
+//
+// 			::-moz-placeholder {  /* Firefox 19+ */
+// 			   color: #acadb5;
+// 			}
+//
+// 			:-ms-input-placeholder {
+// 			   color: #acadb5;
+// 			}
+// 			input[type="text"],
+// 			input[type="password"]{
+// 				font-size : 16px;
+// 				color: #fff;
+// 				letter-spacing: 0.5px;
+// 			}
+// 		}
+// 	}
+//
+// }

@@ -1,4 +1,4 @@
-<ion-view view-title="Postings" hide-back-button="true" hide-tabs='false'>
+<ion-view view-title="" hide-back-button="true" hide-tabs='false'>
   <ion-nav-buttons side="left">
     <button class="button button-icon icon ion-search">
     </button>
@@ -9,58 +9,60 @@
       10
     </button>
   </ion-nav-buttons>
-  <ion-content class="custom-header">
+  <ion-content>
     <ion-refresher
       pulling-text="Pull to refresh..."
       on-refresh="doRefresh()">
     </ion-refresher>
-    <ion-item collection-repeat="item in collection" item-width="'50%'" item-height="292" item-render-buffer="8">
-    <!-- <div ng-repeat="item in collection"> -->
-      <!-- <div class="row" ng-if="$even"> -->
-        <!-- <div class="col col-50"> -->
-          <a href="#/tabs/items/{{collection[$index].id}}">
-            <div class="list card">
-              <div class="item-image">
-                <img ng-src="{{collection[$index].first_image}}">
-              </div>
-              <div class="item">
-                <h3>{{collection[$index].title}}</h3>
-                <p>From {{collection[$index].desc}}</p>
-                <div class="actions">
-                  <span class="wish">
-                    <i class="icon ion-ios-heart-outline"></i>
-                    120
-                  </span>
-                  <i class="icon ion-social-usd-outline"></i>
-                  {{collection[$index].price}}
+    <div id="item-index" class="item-index-wrapper">
+      <!-- <ion-item collection-repeat="item in collection" item-width="'50%'" item-height="292" item-render-buffer="8"> -->
+      <div ng-repeat="item in collection">
+        <div class="row">
+          <div class="col col-50">
+            <a href="#/tabs/items/{{collection[$index].id}}">
+              <div class="first-item-wrapper">
+                <div class="item-image">
+                  <img ng-src="{{collection[$index].first_image}}">
+                </div>
+                <div class="item">
+                  <h3>{{collection[$index].title}}</h3>
+                  <p>From {{collection[$index].desc}}</p>
+                  <div class="actions">
+                    <span class="wish">
+                      <i class="icon ion-ios-heart-outline"></i>
+                      120
+                    </span>
+                    <i class="icon ion-social-usd-outline"></i>
+                    {{collection[$index].price}}
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        <!-- </div>
-        <div class="col col-50">
-          <a href="#/app/items/{{collection[$index+1].id}}">
-            <div class="list card">
-              <div class="item-image">
-                <img ng-src="{{collection[$index+1].first_image}}">
-              </div>
-              <div class="item">
-                <h3>{{collection[$index+1].title}}</h3>
-                <p>From {{collection[$index+1].desc}}</p>
-                <div class="actions">
-                  <span class="wish">
-                    <i class="icon ion-ios-heart-outline"></i>
-                    120
-                  </span>
-                  <i class="icon ion-social-usd-outline"></i>
-                  {{collection[$index+1].price}}
+            </a>
+          </div>
+          <div class="col col-50">
+            <a href="#/tabs/items/{{collection[$index+1].id}}">
+              <div class="second-item-wrapper">
+                <div class="item-image">
+                  <img ng-src="{{collection[$index+1].first_image}}">
+                </div>
+                <div class="item">
+                  <h3>{{collection[$index+1].title}}</h3>
+                  <p>From {{collection[$index+1].desc}}</p>
+                  <div class="actions">
+                    <span class="wish">
+                      <i class="icon ion-ios-heart-outline"></i>
+                      120
+                    </span>
+                    <i class="icon ion-social-usd-outline"></i>
+                    {{collection[$index+1].price}}
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
-      </div> -->
-    </ion-item>
+      </div>
+    </div>
     <ion-infinite-scroll
       on-infinite="loadMore()"
       distance="1%">

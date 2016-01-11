@@ -9867,45 +9867,10 @@ extending components from ionic.app.scss
   font-size: 16px;
   line-height: 32px; }
 
-.bar-header {
-  border: 0px !important;
-  border-bottom-color: transparent !important;
-  background-image: none !important;
-  border-bottom: none !important; }
-
-.bar-bottom-header {
-  border: 1px !important;
-  border-bottom-color: #666 !important;
-  border-bottom: #666 !important; }
-
 .button-block.button {
-  margin: 10px auto;
+  margin: 5px auto;
   width: 80%;
   font-weight: bold; }
-
-.bar-light {
-  background-color: transparent !important;
-  /* or transparent, or background:none */
-  border: none; }
-  .bar-light .button-clear.button {
-    border-color: transparent;
-    background: none;
-    box-shadow: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px; }
-
-.has-header {
-  top: 0; }
-
-.custom-header {
-  top: 44px; }
-
-.list:last-child.card {
-  margin-bottom: 0; }
-
-.card {
-  margin: 0; }
 
 /*
 	main css
@@ -10193,112 +10158,6 @@ button {
 /*
 	login
 */
-.main-login-page,
-.signup-page {
-  text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #FFF; }
-  .main-login-page .slogan,
-  .signup-page .slogan {
-    color: #556a78;
-    font-weight: 400;
-    line-height: 21px;
-    margin: 50px auto;
-    font-size: 15px;
-    width: 88%;
-    letter-spacing: 0.25px; }
-  .main-login-page .logo,
-  .signup-page .logo {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    background-image: url("../img/a_logo.png");
-    width: 25%;
-    height: 15%;
-    margin: 25% auto 25px auto; }
-  .main-login-page .pseudo-link,
-  .signup-page .pseudo-link {
-    color: #0185a2;
-    font-size: 15px;
-    text-decoration: none; }
-  .main-login-page .list,
-  .signup-page .list {
-    width: 88%;
-    margin: 20% auto 30px auto; }
-    .main-login-page .list label.lock:after,
-    .signup-page .list label.lock:after {
-      content: "";
-      background: url("../img/lock_darkui.png");
-      width: 22px;
-      height: 22px;
-      display: block;
-      background-repeat: no-repeat;
-      top: 14px;
-      position: absolute;
-      background-position: center;
-      margin: 0 0 0 9%;
-      background-size: contain;
-      left: -22px; }
-    .main-login-page .list label.username:after,
-    .signup-page .list label.username:after {
-      content: "";
-      background: url("../img/user_darkui.png");
-      width: 20px;
-      height: 20px;
-      display: block;
-      background-repeat: no-repeat;
-      top: 14px;
-      position: absolute;
-      background-position: center;
-      margin: 0 0 0 9%;
-      background-size: contain;
-      left: -22px; }
-    .main-login-page .list label.email:after,
-    .signup-page .list label.email:after {
-      content: "";
-      background: url("../img/email_darkui.png");
-      width: 20px;
-      height: 20px;
-      display: block;
-      background-repeat: no-repeat;
-      top: 14px;
-      position: absolute;
-      background-position: center;
-      margin: 0 0 0 9%;
-      background-size: contain;
-      left: -22px; }
-    .main-login-page .list label.item-input,
-    .signup-page .list label.item-input {
-      padding: 10px 0 4px 45px;
-      background: transparent;
-      border-width: 0 0 1px 0;
-      border-style: solid;
-      border-color: #606170; }
-      .main-login-page .list label.item-input ::-webkit-input-placeholder,
-      .signup-page .list label.item-input ::-webkit-input-placeholder {
-        color: #acadb5; }
-      .main-login-page .list label.item-input :-moz-placeholder,
-      .signup-page .list label.item-input :-moz-placeholder {
-        /* Firefox 18- */
-        color: #acadb5; }
-      .main-login-page .list label.item-input ::-moz-placeholder,
-      .signup-page .list label.item-input ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: #acadb5; }
-      .main-login-page .list label.item-input :-ms-input-placeholder,
-      .signup-page .list label.item-input :-ms-input-placeholder {
-        color: #acadb5; }
-      .main-login-page .list label.item-input input[type="text"],
-      .main-login-page .list label.item-input input[type="password"],
-      .signup-page .list label.item-input input[type="text"],
-      .signup-page .list label.item-input input[type="password"] {
-        font-size: 16px;
-        color: #fff;
-        letter-spacing: 0.5px; }
-
 /*
 	signup
 */
@@ -10564,33 +10423,68 @@ button {
         color: #babcc6;
         font-size: 13px; }
 
-.card .item {
+#item-index .row, #item-index .col {
+  padding: 0; }
+
+#item-index .first-item-wrapper,
+#item-index .second-item-wrapper {
+  padding: 5px 2.5px 0 2.5px; }
+
+#item-index .first-item-wrapper {
+  margin-left: 2.5px; }
+
+#item-index .second-item-wrapper {
+  margin-right: 2.5px; }
+
+#item-index .item {
+  margin: 0;
   font-size: .8em;
   padding-bottom: 10px; }
-  .card .item p {
+  #item-index .item p {
     font-size: 1em; }
 
-.card .actions {
+#item-index .actions {
   color: #999;
   margin-top: 5px; }
-  .card .actions .wish {
+  #item-index .actions .wish {
     float: right; }
 
-.item-price {
-  position: absolute;
-  top: 340px;
-  padding: 3px 12px;
+#item-detail .item-detail-wrapper .slider-slide img {
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+#item-detail .item-price {
+  float: right;
+  font-size: 1.5em;
+  padding: 10px 15px;
   background-color: white;
   font-weight: bold; }
 
-.item-information {
-  padding: 10px; }
+#item-detail .item-information {
+  padding: 10px 10px 20px 10px;
+  border-bottom: 1px solid #ddd; }
 
-.item-wrapper .slider-slide {
+#item-detail .add-to-wish {
+  font-size: 1.5em;
+  padding-bottom: 10px; }
+
+#item-detail .share {
   position: relative;
-  background: black; }
-  .item-wrapper .slider-slide img {
-    opacity: .8; }
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  list-style-type: none; }
+  #item-detail .share li {
+    display: inline-block;
+    height: 24px;
+    margin-right: 15px; }
+    #item-detail .share li img {
+      width: 40px;
+      height: 40px; }
+
+#item-detail .item-index-wrapper {
+  padding-bottom: 15px; }
 
 .give-header {
   display: inline-block;

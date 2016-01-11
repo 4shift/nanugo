@@ -1,5 +1,23 @@
-.card {
+#item-index {
+  .row, .col {
+    padding: 0;
+  }
+
+  .first-item-wrapper,
+  .second-item-wrapper {
+    padding: 5px 2.5px 0 2.5px;
+  }
+
+  .first-item-wrapper {
+    margin-left: 2.5px;
+  }
+
+  .second-item-wrapper {
+    margin-right: 2.5px;
+  }
+
   .item {
+    margin: 0;
     font-size: .8em;
     padding-bottom: 10px;
 
@@ -18,25 +36,55 @@
   }
 }
 
-.item-price {
-  position: absolute;
-  top: 340px;
-  padding: 3px 12px;
-  background-color: white;
-  font-weight: bold;
-}
-
-.item-information {
-  padding: 10px;
-}
-
-.item-wrapper {
-  .slider-slide {
-    position: relative;
-    background: black;
-
-    img {
-      opacity: .8;
+#item-detail {
+  .item-detail-wrapper {
+    .slider-slide {
+      img {
+        display: block;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
     }
+  }
+
+  .item-price {
+    float: right;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    background-color: white;
+    font-weight: bold;
+  }
+
+  .item-information {
+    padding: 10px 10px 20px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .add-to-wish {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+  }
+
+  .share {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      height: 24px;
+      margin-right: 15px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .item-index-wrapper {
+    padding-bottom: 15px;
   }
 }

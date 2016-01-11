@@ -19,57 +19,56 @@ extending components from ionic.app.scss
   font-size: 16px;
   line-height: 32px;
 }
-
-.bar-header {
-  border: 0px !important;
-  border-bottom-color: transparent !important;
-  background-image: none !important;
-  border-bottom: none !important;
-}
-
-.bar-bottom-header {
-  border: 1px !important;
-  border-bottom-color: #666 !important;
-  border-bottom: #666 !important;
-}
+//
+// .bar-header {
+//   border: 0px !important;
+//   border-bottom-color: transparent !important;
+//   background-image: none !important;
+//   border-bottom: none !important;
+// }
+//
+// .bar-bottom-header {
+//   border: 1px !important;
+//   border-bottom-color: #666 !important;
+//   border-bottom: #666 !important;
+// }
 
 .button {
 	@extend .button;
 
 	&.button-block {
-		margin: 10px auto;
+		margin: 5px auto;
 		width: 80%;
 		font-weight: bold;
 	}
 }
 
-.bar-light {
-  background-color: transparent !important; /* or transparent, or background:none */
-	border: none;
-
-  .button-clear.button {
-    border-color: transparent;
-    background: none;
-    box-shadow: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-  }
-}
-
-
-.has-header {
-	top: 0;
-}
-
-.custom-header {
-	top: 44px;
-}
-
-.list:last-child.card {
-	margin-bottom: 0;
-}
-
-.card {
-	margin: 0;
-}
+// .bar-light {
+//   background-color: transparent !important; /* or transparent, or background:none */
+// 	border: none;
+//
+//   .button-clear.button {
+//     border-color: transparent;
+//     background: none;
+//     box-shadow: none;
+//     color: white;
+//     font-weight: bold;
+//     font-size: 16px;
+//   }
+// }
+//
+// .has-header {
+// 	top: 0;
+// }
+//
+// .custom-header {
+// 	top: 44px;
+// }
+//
+// .list:last-child.card {
+// 	margin-bottom: 0;
+// }
+//
+// .card {
+// 	margin: 0;
+// }
