@@ -14,7 +14,7 @@ angular.module('ion-google-place', [])
     return {
       require: '?ngModel',
       restrict: 'E',
-      template: '<input type="text" readonly="readonly" class="ion-google-place" autocomplete="off">',
+      template: '<input type="text" readonly="readonly" class="ion-google-place" name="location" autocomplete="off" required />',
       replace: true,
       scope: {
         ngModel: '=?',
@@ -34,23 +34,26 @@ angular.module('ion-google-place', [])
         if(!!navigator.geolocation && scope.currentLocation){
           scope.displayCurrentLocation = true;
         }
+
         var POPUP_TPL = [
           '<div class="ion-google-place-container modal">',
           '<div class="bar bar-header item-input-inset">',
           '<label class="item-input-wrapper">',
           '<i class="icon ion-ios7-search placeholder-icon"></i>',
-          '<input class="google-place-search" type="search" ng-model="searchQuery" placeholder="' + (attrs.searchPlaceholder || 'Enter an address, place or ZIP code') + '">',
+          '<input class="google-place-search" type="search" ng-model="searchQuery" placeholder="' + (attrs.searchPlaceholder || '대략적인 주소를 입력해 주세요 (동/읍/면)') + '" />',
           '</label>',
           '<button class="button button-clear">',
-          attrs.labelCancel || 'Cancel',
+          attrs.labelCancel || '취소',
           '</button>',
           '</div>',
           '<ion-content class="has-header has-header">',
           '<ion-list>',
           '<ion-item type="item-text-wrap" ng-click="setCurrentLocation()" ng-if="displayCurrentLocation">',
-          'Use current location',
+          '<i class="ion-location"></i>',
+          '현재 위치를 사용',
           '</ion-item>',
           '<ion-item ng-repeat="location in locations" type="item-text-wrap" ng-click="selectLocation(location)">',
+          '<i class="ion-location"></i>',
           '{{location.formatted_address}}',
           '</ion-item>',
           '</ion-list>',
@@ -82,7 +85,7 @@ angular.module('ion-google-place', [])
 
           scope.setCurrentLocation = function(){
             var location = {
-              formatted_address: 'getting current location...'
+              formatted_address: '현재 위치를 가져오는 중...'
             };
             ngModel.$setViewValue(location);
             ngModel.$render();
@@ -98,19 +101,15 @@ angular.module('ion-google-place', [])
               $ionicBackdrop.release();
             })
             .catch(function(error){
-              console.log('erreur catch',error);
-              //if(error.from == 'getLocation'){
-              //    getLocationError(error);
-              //} else {
-              //    //TODO when error from reverse geocode
-              //}
               var location = {
-                formatted_address: 'Error in getting current location'
+                formatted_address: '현재 위치를 가져오는데 실패했습니다.'
               };
+
               ngModel.$setViewValue(location);
               ngModel.$render();
               el.element.css('display', 'none');
               $ionicBackdrop.release();
+
               $timeout(function(){
                 ngModel.$setViewValue(null);
                 ngModel.$render();

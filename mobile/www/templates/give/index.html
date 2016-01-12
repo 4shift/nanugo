@@ -21,7 +21,7 @@
     </div>
 
     <div class="padding">
-      <div class="row">
+      <div class="row" ng-show="images.length < 4">
         <div class="col col-50">
           <a class="button button-full button-positive" ng-click="takePicture()">바로촬영</a>
         </div>
@@ -29,25 +29,67 @@
           <a class="button button-full button-calm" ng-click="getPicture()">앨범등록</a>
         </div>
       </div>
-
-      <div class="list">
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Address</span>
-          <ion-google-place placeholder="Enter an address, Apt# and ZIP" ng-model="location" current-location="true"/>
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">First Name</span>
-          <input type="text" placeholder="John">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Last Name</span>
-          <input type="text" placeholder="Suhr">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Email</span>
-          <input type="text" placeholder="john@suhr.com">
-        </label>
-      </div>
     </div>
+
+    <form name="postform" novalidate>
+      <div class="list">
+        <div class="item item-divider ng-binding">상품정보 입력</div>
+        <label class="item item-input">
+          <span class="input-label">제목</span>
+          <input type="text" placeholder="멋진 제목을 붙여주세요" name="title" ng-model="shared_item.title" ng-minlength="4" ng-maxlength="255" required />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">설명</span>
+        	<textarea rows="4" cols="10" name="description" ng-model="shared_item.description" ng-minlength="6" required></textarea>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">카테고리</span>
+          <select ng-model="shared_item.department" data-ng-options="key as key for (key, value) in categories" ng-change="categoryChanged()">
+            <option value="">카테고리 선택</option>
+          </select>
+        </label>
+        <label class="item item-input item-select" ng-show="shared_item.department !== ''">
+          <span class="input-label">하위 카테고리</span>
+          <select ng-model="shared_item.subcategory" data-ng-options="subcategory for subcategory in subcategories">
+            <option value="">하위 카테고리 선택</option>
+          </select>
+        </label>
+
+        <div class="item item-divider ng-binding">부가정보 입력</div>
+        <label class="item item-input">
+          <span class="input-label">위치</span>
+          <ion-google-place placeholder="간략한 주소를 입력하세요 (동/읍/면)" ng-model="shared_item.location" current-location="true" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">가격</span>
+          <input type="number" placeholder="20" name="price" ng-model="shared_item.price" required />
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            상태
+          </div>
+          <select ng-model="shared_item.condition">
+            <option value="0">신품</option>
+            <option value="1">거의신품</option>
+            <option value="2">중고품</option>
+            <option value="3">고장/깨짐</option>
+          </select>
+        </label>
+
+        <div class="item item-divider ng-binding">배송방법 지정</div>
+        <ion-checkbox ng-model="shared_item.delivers" ng-repeat="method in delivers">{{method.text}}</ion-checkbox>
+        <div class="padding">
+          <p ng-show="postform.location.$error.required">* 위치정보는 필수항목입니다</p>
+          <p ng-show="postform.title.$error.required">* 제목은 필수항목입니다</p>
+          <p ng-show="postform.description.$error.required">* 설명은 필수항목입니다</p>
+          <p ng-show="postform.price.$error.required">* 가격은 필수항목입니다</p>
+          <p ng-show="postform.title.$error.minlength">* 제목은 최소 4자 이상이어야 합니다</p>
+          <p ng-show="postform.description.$error.minlength">* 설명은 최소 6자 이상이어야 합니다</p>
+        </div>
+        <div class="padding">
+          <button class="button button-block button-positive" ng-disabled="postform.$invalid" ng-click="submit()">등록하기</button>
+        </div>
+      </div>
+    </form>
   </ion-content>
 </ion-view>

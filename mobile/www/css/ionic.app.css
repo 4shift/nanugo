@@ -9880,6 +9880,17 @@ extending components from ionic.app.scss
 .uppercase {
   text-transform: uppercase; }
 
+.ion-location {
+  margin-right: 10px;
+  font-size: 16px;
+  color: red; }
+
+input[type="number"] {
+  text-align: right; }
+
+.input-label {
+  width: 20%; }
+
 .button-block.button {
   margin: 5px auto;
   width: 80%;
@@ -10562,7 +10573,7 @@ button {
     text-align: center; }
     .photo-upload-container .photo-container .photo-upload {
       background: transparent;
-      border: 2px dashed #a7a7a8;
+      border: 1px dashed #a7a7a8;
       border-radius: 2px;
       padding: 0;
       position: relative;
@@ -10605,9 +10616,11 @@ button {
         font-size: 63px; }
       .photo-upload-container .photo-container .photo-upload .preview {
         position: relative; }
+        .photo-upload-container .photo-container .photo-upload .preview img {
+          width: 100%; }
       .photo-upload-container .photo-container .photo-upload .remove-button {
         position: absolute;
-        display: none;
+        display: block;
         z-index: 1;
         top: 5px;
         right: 5px;

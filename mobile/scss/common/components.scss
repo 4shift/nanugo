@@ -37,6 +37,20 @@ extending components from ionic.app.scss
 .uppercase {
   text-transform: uppercase;
 }
+
+.ion-location {
+  margin-right: 10px;
+  font-size: 16px;
+  color: red;
+}
+
+input[type="number"] {
+  text-align: right;
+}
+
+.input-label {
+  width: 20%;
+}
 //
 // .bar-header {
 //   border: 0px !important;
