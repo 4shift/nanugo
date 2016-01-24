@@ -38,6 +38,7 @@ angular.module('services.models.item', [])
 
     // post /api/items
     itemModel.prototype.create = function() {
+      var self = this;
       var deferred = $q.defer();
 
       var success = function(response, status, headers, config) {
@@ -48,7 +49,9 @@ angular.module('services.models.item', [])
         deferred.reject(error);
       }
 
-      $http.item(this.url, {item : self.info}).success(success).error(error);
+      console.log({item: self.info});
+
+      $http.post(this.url, {item: self.info}).success(success).error(error);
 
       return deferred.promise;
     }
@@ -67,7 +70,7 @@ angular.module('services.models.item', [])
         return deferred.reject(error);
       }
 
-      $http.put(this.url + '/' + self.info.objectId, {item : self.info}).success(success).error(error);
+      $http.put(this.url + '/' + self.info.objectId, {item: self.info}).success(success).error(error);
 
       return deferred.promise;
     }
