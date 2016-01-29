@@ -3949,6 +3949,8 @@ footer.footer,
     font-family: 'YRD';
     src: url(//d12azzhof0chfb.cloudfront.net/assets/YRD-febd3e9a2bd6e94b8859d735aae60e8e.ttf) format('truetype')
 }
+
+
 i.yrd-symbol {
     font-family: 'YRD';
     font-style: normal
@@ -5222,7 +5224,12 @@ textarea#settings .multiple select {
 }
 .card img {
     width: 240px;
-    height: 240px
+    height: 240px;
+
+    &.go-symbol {
+      width: 20px;
+      height: 20px;
+    }
 }
 .card h4.title {
     height: 1.25em;

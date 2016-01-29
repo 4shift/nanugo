@@ -54,7 +54,8 @@
           </a>
           <span class="spacer">&nbsp;&nbsp;</span>
           <a class="yrd-balance" data-target="#help-yrd-modal" data-toggle="modal">
-            <i class="yrd-symbol"></i>
+            <!-- <i class="yrd-symbol"></i> -->
+            <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추" %>
             <span class="hidden-xs"><%= current_user.point.to_s %></span>
             <span class="visible-xs-inline">25</span>
           </a>

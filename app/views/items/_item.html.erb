@@ -9,7 +9,7 @@
   <section class="details">
     <h4 class="title"><%= item.desc %></h4>
     <h4 class="price-container">
-      <i class="yrd-symbol"></i>
+      <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
       <span class="price"><%= item.price.to_s %></span>
     </h4>
   </section>
