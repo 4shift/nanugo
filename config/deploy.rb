@@ -1,6 +1,3 @@
-set :default_stage, 'production'
-
-require 'mina/multistage'
 require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
