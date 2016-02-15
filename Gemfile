@@ -69,6 +69,4 @@ group :production do
 end
 
 gem 'mina'
-gem 'mina-sidekiq', :require => false
 gem 'mina-unicorn', :require => false
-gem 'mina-multistage', :require => false
