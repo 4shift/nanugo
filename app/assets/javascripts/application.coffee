@@ -10,5 +10,4 @@
 #= require bootstrap-sprockets
 #= require cloudinary
 #= require underscore
-#= require_tree ./lib
 #= require_tree ./applications

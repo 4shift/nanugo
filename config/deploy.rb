@@ -17,6 +17,11 @@ set :domain, '182.161.126.8'
 set :repository, 'https://github.com/4shift/nanugo.git'
 set :user, 'deploy'
 set :forward_agent, true
+set :deploy_to, '/srv/repository/www/nanugo'
+set :branch, 'master'
+set :rails_env, 'production'
+set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
+set :unicorn_env, "production"
 set :port, '22'
 
 # For system-wide RVM install.
