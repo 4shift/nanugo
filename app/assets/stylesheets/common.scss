@@ -4200,7 +4200,7 @@ i {
 }
 @media(min-width:1200px) {
     #referral-landing-page .how-it-works .shop-for-free .image-container {
-        background-image: url("step3.jpg");
+        background-image: url(asset-path("step3.jpg"));
         background-size: 100%
     }
 }

@@ -546,7 +546,7 @@
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    background: url("step3.jpg");
+    background: url(asset-path("step3.jpg"));
     background-color: #f6e7d1;
     background-size: cover
   }
@@ -797,7 +797,7 @@
   }
   @media(min-width:1200px) {
     .how-it-works-postings .wrapper .shop-for-free .image-container {
-      background-image: url("step3.jpg");
+      background-image: url(asset-path("step3.jpg"));
       background-size: 100%
     }
   }
@@ -1269,7 +1269,7 @@
   }
   @media(min-width:992px) {
     .declutter {
-      background: url('get-the-app-bg.jpg') no-repeat top left;
+      background: url(asset-path('get-the-app-bg.jpg')) no-repeat top left;
       background-size: cover;
     }
   }
