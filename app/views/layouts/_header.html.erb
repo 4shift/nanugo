@@ -31,12 +31,12 @@
           <a href="#" data-target="#signup-modal" data-toggle="modal" class="btn btn-outline">회원가입</a>
         </li>
         <li class="signup hidden-sm hidden-md hidden-lg">
-          <a href="/signup">회원가입</a>
+          <a href="#" data-target="#signup-modal" data-toggle="modal">회원가입</a>
         </li>
         <li class="yrd-balance">
           <a href="#" data-target="#help-yrd-modal" data-toggle="modal">
-            <i class="yrd-symbol"></i>
-            25
+            <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
+            5,000
           </a>
         </li>
       <% else %>
@@ -67,19 +67,19 @@
               <%= link_to "상품보기", postings_path %>
             </li>
             <li>
-              <a href="/users/eon-jeong-lee">프로필 설정</a>
+              <a href="#">프로필 설정</a>
             </li>
             <li>
-              <a href="/referrals">친구 초대하기</a>
+              <a href="#">친구 초대하기</a>
             </li>
             <li>
-              <a href="/settings">계정설정</a>
+              <a href="#">계정설정</a>
             </li>
             <li>
-              <a href="/redeem_promo_code">프로모션 코드</a>
+              <a href="#">프로모션 코드</a>
             </li>
             <li>
-              <a href="/support">도움말</a>
+              <a href="#">도움말</a>
             </li>
             <li>
               <%= link_to "로그아웃", destroy_user_session_path, method: :delete %>

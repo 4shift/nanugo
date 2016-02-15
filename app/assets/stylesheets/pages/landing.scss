@@ -424,7 +424,7 @@
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step1_v3_tweaked-bb576f8d514adb15b6bfb1597e8149bd.jpg);
+    background: url("step1.jpg");
     background-color: #936b9f;
     background-size: cover
   }
@@ -472,7 +472,7 @@
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step2-e33f67a522a21e36bb4b2672ecdc2ee5.jpg);
+    background: url("step2.jpg");
     background-color: #f5a545;
     background-size: cover
   }
@@ -546,7 +546,7 @@
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3-9db6c43a28ab7b19066b33357e95bfea.jpg);
+    background: url("step3.jpg");
     background-color: #f6e7d1;
     background-size: cover
   }
@@ -558,7 +558,7 @@
   }
   @media(min-width:768px) and (max-width:1199px) {
     .how-it-works .shop-for-free .image-container {
-      background: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3_tablet-18eb238c32722e012798605fc3df5273.png);
+      background: url("step3_tablet.png");
       background-color: #f6e7d1;
       background-size: 80%;
       height: 340px
@@ -781,7 +781,7 @@
     }
   }
   .how-it-works-postings .wrapper .let-it-go .image-container {
-    background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step2-e33f67a522a21e36bb4b2672ecdc2ee5.jpg);
+    background-image: url("step2.jpg");
     background-color: #f5a545;
     background-size: cover
   }
@@ -792,12 +792,12 @@
   }
   @media(min-width:768px) and (max-width:1199px) {
     .how-it-works-postings .wrapper .shop-for-free .image-container {
-      background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3_tablet-18eb238c32722e012798605fc3df5273.png)
+      background-image: url("step3_tablet.png")
     }
   }
   @media(min-width:1200px) {
     .how-it-works-postings .wrapper .shop-for-free .image-container {
-      background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3-9db6c43a28ab7b19066b33357e95bfea.jpg);
+      background-image: url("step3.jpg");
       background-size: 100%
     }
   }
@@ -1269,7 +1269,7 @@
   }
   @media(min-width:992px) {
     .declutter {
-      background: url('//d12azzhof0chfb.cloudfront.net/assets/landing/get-the-app-bg-5d9337d1b957b31ebc0cdabd2c9b6adc.jpg') no-repeat top left;
+      background: url('get-the-app-bg.jpg') no-repeat top left;
       background-size: cover;
     }
   }

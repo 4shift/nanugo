@@ -4194,13 +4194,13 @@ i {
 }
 @media(min-width:768px) and (max-width:1199px) {
     #referral-landing-page .how-it-works .shop-for-free .image-container {
-        background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3_tablet-18eb238c32722e012798605fc3df5273.png);
+        background-image: url("step3_tablet.png");
         background-size: 85%
     }
 }
 @media(min-width:1200px) {
     #referral-landing-page .how-it-works .shop-for-free .image-container {
-        background-image: url(//d12azzhof0chfb.cloudfront.net/assets/landing/step3-9db6c43a28ab7b19066b33357e95bfea.jpg);
+        background-image: url("step3.jpg");
         background-size: 100%
     }
 }

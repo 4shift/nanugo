@@ -219,7 +219,9 @@
         <% end %>
         <label class="sr-only" for="exampleInputAmount">단위 (나누고 포인트)</label>
         <div class="input-group">
-          <span class="input-group-addon"><i class="yrd-symbol"></i></span>
+          <span class="input-group-addon">
+            <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "15x15" %>
+          </span>
           <%= f.text_field :price, class: "form-control", placeholder: "포인트" %>
         </div>
       </div>
