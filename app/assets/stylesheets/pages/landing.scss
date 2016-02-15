@@ -424,7 +424,7 @@
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    background: url("step1.jpg");
+    background: url(asset-path("step1.jpg"));
     background-color: #936b9f;
     background-size: cover
   }
@@ -472,7 +472,7 @@
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    background: url("step2.jpg");
+    background: url(asset-path("step2.jpg"));
     background-color: #f5a545;
     background-size: cover
   }
@@ -781,7 +781,7 @@
     }
   }
   .how-it-works-postings .wrapper .let-it-go .image-container {
-    background-image: url("step2.jpg");
+    background-image: url(asset-path("step2.jpg"));
     background-color: #f5a545;
     background-size: cover
   }
