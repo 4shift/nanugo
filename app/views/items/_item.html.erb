@@ -1,10 +1,12 @@
 <%= link_to item_path(item), class: "card posting-container item-container posting" do %>
   <div class="image">
     <%= image_tag item.first_image %>
-    <div class="status">
-      <i class="icon-just_in_tag"></i>
-      <span>Just in</span>
-    </div>
+    <% if Time.current.beginning_of_day <= item.created_at && Time.current.end_of_day >= item.created_at %>
+      <div class="status">
+        <i class="icon-just_in_tag"></i>
+        <span>신규등록</span>
+      </div>
+    <% end %>
   </div>
   <section class="details">
     <h4 class="title"><%= item.desc %></h4>

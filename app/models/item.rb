@@ -38,4 +38,6 @@ class Item < ActiveRecord::Base
 
   scope :in_department, ->(department) { where("department = ?", department: department) }
   scope :in_subcategory, ->(subcategory) { where("subcategory = ?", subcategory: subcategory) }
+
+  default_scope { order(:created_at => :desc) }
 end
