@@ -12,7 +12,7 @@
     <h4 class="title"><%= item.desc %></h4>
     <h4 class="price-container">
       <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-      <span class="price"><%= item.price.to_s %></span>
+      <span class="price"><%= number_to_currency(item.price, format: "%n") %></span>
     </h4>
   </section>
   <div class="badge hidden"></div>

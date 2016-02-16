@@ -1,0 +1,235 @@
+# Korean (한글) translations for Ruby on Rails
+# by John Hwang (jhwang@tavon.org)
+# http://github.com/tavon
+
+ko:
+  date:
+    formats:
+      default: "%Y/%m/%d"
+      short: "%m/%d"
+      long: "%Y년 %m월 %d일 (%a)"
+
+    day_names: [일요일, 월요일, 화요일, 수요일, 목요일, 금요일, 토요일]
+    abbr_day_names: [일, 월, 화, 수, 목, 금, 토]
+
+    month_names: [~, 1월, 2월, 3월, 4월, 5월, 6월, 7월, 8월, 9월, 10월, 11월, 12월]
+    abbr_month_names: [~, 1월, 2월, 3월, 4월, 5월, 6월, 7월, 8월, 9월, 10월, 11월, 12월]
+
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      short: "%y/%m/%d %H:%M"
+      long: "%Y년 %B %d일, %H시 %M분 %S초"
+    am: "오전"
+    pm: "오후"
+
+  # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
+  datetime:
+    distance_in_words:
+      half_a_minute: "30초"
+      less_than_x_seconds:
+        one:   "일초 이하"
+        other: "%{count}초 이하"
+      x_seconds:
+        one:   "일초"
+        other: "%{count}초"
+      less_than_x_minutes:
+        one:   "일분 이하"
+        other: "%{count}분 이하"
+      x_minutes:
+        one:   "일분"
+        other: "%{count}분"
+      about_x_hours:
+        one:   "약 한시간전"
+        other: "약 %{count}시간"
+      x_days:
+        one:   "하루"
+        other: "%{count}일"
+      about_x_months:
+        one:   "약 한달"
+        other: "약 %{count}달"
+      x_months:
+        one:   "한달"
+        other: "%{count}달"
+      about_x_years:
+        one:   "약 일년"
+        other: "약 %{count}년"
+      over_x_years:
+        one:   "일년 이상"
+        other: "%{count}년 이상"
+    prompts:
+      year:   "년"
+      month:  "월"
+      day:    "일"
+      hour:   "시"
+      minute: "분"
+      second: "초"
+
+  number:
+    # Used in number_with_delimiter()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: "."
+      # Delimets thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: ","
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+
+    # Used in number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
+        format: "%u%n"
+        unit: "₩"
+        # These three are to override number.format and are optional
+        separator: "."
+        delimiter: ","
+        precision: 0
+
+    # Used in number_to_percentage()
+    percentage:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+
+    # Used in number_to_precision()
+    precision:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+
+    # Used in number_to_human_size()
+    human:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        precision: 1
+      storage_units: [Bytes, KB, MB, GB, TB]
+
+# Used in array.to_sentence.
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: "과 "
+      last_word_connector: ", "
+
+  activerecord:
+    models:
+      user: "사용자"
+      page: "페이지"
+      dictionary: "사전"
+      comment: "댓글"
+      admin_user: "관리자"
+      category: "카테고리"
+      beta: "베타"
+
+    attributes:
+      user:
+        username: "닉네임"
+        email: "이메일"
+        password: "비밀번호"
+        password_confirmation: "비밀번호 확인"
+        remember_me: "로그인 기억하기"
+        current_password: "현재 비밀번호"
+        terms_of_service: "이용약관"
+        agreement: "개인정보취급방침"
+      page:
+        title: "제목"
+        content: "내용"
+        slug: "대표단어"
+      dictionary:
+        keyword: "타이틀"
+        content: "내용"
+        slug: "대표단어"
+      category:
+        name: "카테고리명"
+        description: "설명"
+      beta:
+        user_id: "회원님"
+
+    errors:
+      template:
+        header:
+          one:    "한개의 오류가 발생해 {{model}}를 저장 할 수 없습니다"
+          other:  "%{count}개의 오류가 발생해 {{model}}를 저장 할 수 없습니다"
+        # The variable :count is also available
+        body: "다음 항목에 문제가 발견했습니다:"
+
+      messages:
+        inclusion: "은(는) 목록에 포함되어 있지 않습니다"
+        exclusion: "은(는) 예약되어 있습니다"
+        invalid: "이(가) 정상적이지 않습니다."
+        confirmation: "은(는) 비밀번호와 일치해야 합니다."
+        accepted: "은(는) 인정되어야 합니다"
+        empty: "을(를) 입력해 주세요.."
+        blank: "을(를) 입력해 주세요."
+        too_long: "이(가) 너무 깁니다 (최대 %{count}자 까지)"
+        too_short: "이(가) 너무 짧습니다. (최소 %{count}자 이상)"
+        wrong_length: "은(는) 길이가 틀렸습니다 (%{count}자를 필요합니다)"
+        taken: "은(는) 이미 사용중입니다."
+        not_a_number: "은(는) 숫자가 아닙니다"
+        greater_than: "은(는) %{count}이상을 요구합니다"
+        greater_than_or_equal_to: "은(는) %{count}과 같거나 이상을 요구합니다"
+        equal_to: "은(는) %{count}과 같아야 합니다"
+        less_than: "은(는) %{count}과 같아야 합니다"
+        less_than_or_equal_to: "은(는) %{count}과 같거나 이하을 요구합니다"
+        odd: "은(는) 홀수을 요구합니다"
+        even: "은(는) 짝수을 요구합니다"
+
+  cancan:
+    access_denied: "죄송합니다. 귀하는 접근권한이 없습니다."
+
+  cbschool:
+    confirmation_instruction:
+      title: "클레비 회원가입 인증메일입니다."
+      heading: "인증주소 클릭 후 회원가입이 완료됩니다."
+      paragraph: "안녕하세요. 클레비입니다. <br />아래의 인증주소를 클릭해 주세요.<br /><br />"
+      link: "내 계정 활성화하기"
+    password_instruction:
+      title: "클레비 비밀번호 변경 안내메일입니다."
+      heading: "클레비에서 비밀번호 찾기 안내드립니다."
+      paragraph: "아래의 주소를 클릭하시면 비밀번호 변경 페이지로 이동합니다. <br />보안을 위해 새로운 비밀번호로 변경해 주세요.<br /><br />"
+      link: "내 비밀번호 변경하러 가기"
+    copyright: "© 2015 Clebee®, All Rights Reserved. <br>상호명 : (주)클레비   사업자등록번호 : 144-81-27026 | 02.6049.4990 <br>경기도 성남시 분당구 대왕판교로 645번길 14 경기창조경제혁신센터 8층"
+
+    common:
+      mypage: "내 강의실"
+      learn: "배우고"
+      upload: "올리고"
+      feedback: "피드백"
+      mentors: "멘토단"
+      open_library: "오픈라이브러리"
+      guide: "이용안내"
+      help: "고객센터"
+      terms: "이용약관"
+      privacy: "개인정보 취급방침"
+      thanks: "감사합니다."
+
+    header:
+      snb_header:
+
+    member:
+      signup: "가입하기"
+      signin: "로그인"
+      signout: "로그아웃"
+      email: "이메일"
+      password: "비밀번호"
+      remember: "로그인상태 유지"
+      or: " 또는 "
+      naver_id: "네이버 아이디로 로그인"
+      naver_login: "네이버로 로그인"
+      facebook_id: "페이스북 아이디로 로그인"
+      facebook_login: "페이스북 로그인"
+      forgot_password: "비밀번호를 잊어버렸어요."
+      agree_terms: "가입함으로써 귀하는 당사의 <a href='#'><span class='fc-blue'>이용약관</span></a> 및 <a href='#'><span class='fc-blue'>개인보호 취급방침</span></a>에 동의하게 됩니다."
+      has_account: "이미 계정이 있으신가요? "
+      find_password: "비밀번호 찾기"
+      reset_password: "비밀번호 다시 설정"
+      renew_password: "새로운 비밀번호로 변경해 주세요."
+      set_password: "비밀번호 변경"

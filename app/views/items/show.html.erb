@@ -49,7 +49,7 @@
           <div class="item-price">
             <h2>
               <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-              <%= @item.price.to_s %>
+              <%= number_to_currency(@item.price, format: "%n") %>
             </h2>
           </div>
         </section>
@@ -168,7 +168,7 @@
               <h4 class="title">Cream Knit Infinity Scarf</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                5,000
+                <%= number_to_currency(5000, format: "%n") %>
               </h4>
             </section>
           </a>
@@ -180,7 +180,7 @@
               <h4 class="title">Purple Wallet With Silver Inside</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                15,000
+                <%= number_to_currency(15000, format: "%n") %>
               </h4>
             </section>
           </a>
@@ -192,7 +192,7 @@
               <h4 class="title">SnapBack</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                5,000
+                <%= number_to_currency(5000, format: "%n") %>
               </h4>
             </section>
           </a>
@@ -204,7 +204,7 @@
               <h4 class="title">LEI Very Nice Poly Rayon Gray Aqua Scarf</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                13,000
+                <%= number_to_currency(13000, format: "%n") %>
               </h4>
             </section>
           </a>
@@ -216,7 +216,7 @@
               <h4 class="title">Scarf/shawl</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                5,000
+                <%= number_to_currency(5000, format: "%n") %>
               </h4>
             </section>
           </a>
@@ -228,7 +228,7 @@
               <h4 class="title">LAST DAY Purple Knit Winter Gloves</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                1,000
+                <%= number_to_currency(1000, format: "%n") %>
               </h4>
             </section>
           </a>
@@ -240,7 +240,7 @@
               <h4 class="title">Belt Bundle</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                5,000
+                <%= number_to_currency(5000, format: "%n") %>
               </h4>
             </section>
           </a>
@@ -252,7 +252,7 @@
               <h4 class="title">Brighton Ladies Belt M</h4>
               <h4 class="price-container">
                 <%= image_tag "g-button.png", class: "go-symbol", alt: "나누고 단추", size: "20x20" %>
-                40,000
+                <%= number_to_currency(40000, format: "%n") %>
               </h4>
             </section>
           </a>
