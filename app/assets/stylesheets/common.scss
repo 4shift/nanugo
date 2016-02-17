@@ -4194,7 +4194,7 @@ i {
 }
 @media(min-width:768px) and (max-width:1199px) {
     #referral-landing-page .how-it-works .shop-for-free .image-container {
-        background-image: url("step3_tablet.png");
+        background-image: url(asset-path("step3_tablet.png"));
         background-size: 85%
     }
 }

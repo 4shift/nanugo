@@ -33,8 +33,6 @@
 #  point                  :integer          default(0), not null
 #
 
-# require 'carrierwave/orm/activerecord'
-
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -47,10 +45,6 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :roles
   has_many :items
-
-  # mount_uploader :avatar, AvatarUploader
-
-  # validate :avatar_size_validation
 
   def password_required?
     super if confirmed?
@@ -121,7 +115,7 @@ class User < ActiveRecord::Base
         member.provider = auth.provider
         member.uid = auth.uid
         member.email = auth.info.email
-        member.username = auth.info.name.gsub(' ', '_')
+        member.username = auth.info.name
         member.avatar = "http://graph.facebook.com/#{auth.uid}/picture?width=400&height=400"
         member.password = Devise.friendly_token[0,20] + rand(5..30).to_s
         member.skip_confirmation!
