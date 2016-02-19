@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
          :confirmable, :omniauthable, omniauth_providers: [:facebook]
 
   after_create :update_access_token!
-  after_create :give_thanks_point
+  after_create :give_thanks_point!
 
   has_and_belongs_to_many :roles
   has_many :items
@@ -133,7 +133,7 @@ class User < ActiveRecord::Base
     save
   end
 
-  def give_thanks_point
+  def give_thanks_point!
     self.point = ENV["SIGNUP_POINT"].to_i
     save
   end
