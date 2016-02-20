@@ -187,16 +187,16 @@ ko:
 
   cbschool:
     confirmation_instruction:
-      title: "클레비 회원가입 인증메일입니다."
+      title: "나누고 회원가입 인증메일입니다."
       heading: "인증주소 클릭 후 회원가입이 완료됩니다."
-      paragraph: "안녕하세요. 클레비입니다. <br />아래의 인증주소를 클릭해 주세요.<br /><br />"
+      paragraph: "안녕하세요. 나누고입니다. <br />아래의 인증주소를 클릭해 주세요.<br /><br />"
       link: "내 계정 활성화하기"
     password_instruction:
-      title: "클레비 비밀번호 변경 안내메일입니다."
-      heading: "클레비에서 비밀번호 찾기 안내드립니다."
+      title: "나누고 비밀번호 변경 안내메일입니다."
+      heading: "나누고에서 비밀번호 찾기 안내드립니다."
       paragraph: "아래의 주소를 클릭하시면 비밀번호 변경 페이지로 이동합니다. <br />보안을 위해 새로운 비밀번호로 변경해 주세요.<br /><br />"
       link: "내 비밀번호 변경하러 가기"
-    copyright: "© 2015 Clebee®, All Rights Reserved. <br>상호명 : (주)클레비   사업자등록번호 : 144-81-27026 | 02.6049.4990 <br>경기도 성남시 분당구 대왕판교로 645번길 14 경기창조경제혁신센터 8층"
+    copyright: "© 2015 Clebee®, All Rights Reserved. <br>상호명 : (주)나누고   사업자등록번호 : 144-81-27026 | 02.6049.4990 <br>경기도 성남시 분당구 대왕판교로 645번길 14 경기창조경제혁신센터 8층"
 
     common:
       mypage: "내 강의실"

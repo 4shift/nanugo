@@ -16,11 +16,11 @@ ko:
       unconfirmed: "계속하기 전에 이메일 주소를 인증해야 합니다."
     mailer:
       confirmation_instructions:
-        subject: "[클레비] 이메일 인증 지침"
+        subject: "[나누고] 이메일 인증 지침"
       reset_password_instructions:
-        subject: "[클레비] 비밀번호 재설정 지침"
+        subject: "[나누고] 비밀번호 재설정 지침"
       unlock_instructions:
-        subject: "[클레비] 잠금 해제 지침"
+        subject: "[나누고] 잠금 해제 지침"
     omniauth_callbacks:
       failure: "%{reason}(으)로 인하여 %{kind}(으)로부터 인증받지 못했습니다."
       success: "%{kind} 계정으로부터 인증되었습니다."
