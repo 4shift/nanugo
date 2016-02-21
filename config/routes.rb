@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   use_doorkeeper
-  get 'pages/home' => 'high_voltage/pages#show', id: 'home'
+
   as :user do
       patch '/user/confirmation' => 'confirmations#update', :via => :patch, :as => :update_user_confirmation
   end
@@ -16,8 +16,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :items, except: [:index, :new]
+
   get '/postings' => 'items#index'
   get '/post' => 'items#new'
+
   resources :namespace, path: '/', constraints: { id: /[a-zA-Z.0-9_\-]+/ }, only: [] do
     resources :uploads, only: [:create] do
       collection do
@@ -28,4 +30,6 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: "pages#home"
+
+  get "/*id" => 'pages#show', as: :page, format: false
 end

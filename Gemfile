@@ -44,6 +44,8 @@ gem 'rails-api', '~> 0.4.0'
 gem 'active_model_serializers', '~> 0.8.3'
 gem 'will_paginate', '~> 3.0.6'
 
+gem 'meta-tags'
+
 group :development do
   gem 'annotate', '~> 2.6.0.beta2'
   gem 'better_errors'
