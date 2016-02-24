@@ -5,7 +5,7 @@ class Ability
   def initialize(user)
     user ||= User.new # guest user (not logged in)
 
-    if user.has_role?('admin')
+    if user.has_role? :admin
       admin user
     else
       customer user
@@ -17,6 +17,7 @@ class Ability
   def admin(user)
     can :read, :all
     can :access, :rails_admin
+    can :dashboard
     #
     # # customers can view their own tickets, its replies and attachments
     # can [:create, :read], Reply, ticket: { user_id: user.id }

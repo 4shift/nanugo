@@ -34,6 +34,9 @@
 #
 
 class User < ActiveRecord::Base
+
+  ROLES = %w[admin moderator author banned].freeze
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -43,8 +46,7 @@ class User < ActiveRecord::Base
   after_create :update_access_token!
   after_create :give_thanks_point!
 
-  has_and_belongs_to_many :roles
-  has_many :items
+  has_many :items, dependent: :destroy
 
   def password_required?
     super if confirmed?
@@ -71,12 +73,22 @@ class User < ActiveRecord::Base
     self.encrypted_password.blank?
   end
 
-  def only_if_unconfirmed
-    pending_any_confirmation {yield}
+  def has_role?(role)
+    roles.include?(role.to_s)
   end
 
-  def has_role?(role)
-    roles.include?(role)
+  def roles=(roles)
+    self.roles_mask = (roles & ROLES).map { |r| 2 ** ROLES.index(r) }.inject(0, :+)
+  end
+
+  def roles
+    ROLES.reject do |r|
+      ((roles_mask.to_i || 0) & 2 ** ROLES.index(r)).zero?
+    end
+  end
+
+  def only_if_unconfirmed
+    pending_any_confirmation {yield}
   end
 
   class << self
@@ -138,7 +150,4 @@ class User < ActiveRecord::Base
     save
   end
 
-  # def avatar_size_validation
-  #   errors[:avatar] << "사용자 이미지 파일은 최대 2MB를 넘을 수 없습니다." if avatar.size > 2.megabytes
-  # end
 end
