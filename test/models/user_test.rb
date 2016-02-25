@@ -31,6 +31,7 @@
 #  longitude              :float
 #  access_token           :string
 #  point                  :integer          default(0), not null
+#  roles_mask             :integer
 #
 
 require 'test_helper'

@@ -24,9 +24,12 @@
 #
 
 class Item < ActiveRecord::Base
+
+  FULFILLMENT_OPTIONS = %w[pickup shipping]
+  CONDITION = %w[brand almost used broken]
   CATEGORY = ["Women", "Men", "Kids", "Baby", "Home", "Health & Beauty",
               "Sports & Outdoor", "Electronics & Games", "Hobbies & DIY",
-              "Movies & Music", "Books", "Unisex", "Tools"]
+              "Movies & Music", "Books", "Unisex", "Tools"].freeze
 
   self.per_page = 20
 

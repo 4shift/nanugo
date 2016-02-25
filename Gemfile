@@ -68,6 +68,7 @@ end
 group :production do
   gem 'unicorn'
   gem 'unicorn-worker-killer'
+  gem 'rails_12factor'
 end
 
 gem 'mina'
