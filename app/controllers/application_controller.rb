@@ -13,7 +13,35 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  rescue_from Encoding::CompatibilityError do |exception|
+    log_exception(exception)
+    render "errors/server_error", layout: "errors", status: 500
+  end
+
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    log_exception(exception)
+    render "errors/not_found", layout: "errors", status: 404
+  end
+
   protected
+
+  def render_403
+    head :forbidden
+  end
+
+  def render_404
+    render file: Rails.root.join("public", "404"), layout: false, status: "404"
+  end
+
+  def render_500
+    render file: Rails.root.join("public", "500"), layout: false, status: "500"
+  end
+
+  def log_exception(exception)
+    application_trace = ActionDispatch::ExceptionWrapper.new(env, exception).application_trace
+    application_trace.map!{ |t| "  #{t}\n" }
+    logger.error "\n#{exception.class.name} (#{exception.message}):\n#{application_trace.join}"
+  end
 
   def configure_permitted_parameters
    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation) }

@@ -7,13 +7,8 @@ production: &base
   outgoing_emails:
     enabled: true
     from: webmaster@nanugo.co.kr
-    display_name: 4shift.com
+    display_name: nanugo.co.kr
     reply_to: noreply@nanugo.co.kr
-
-    delivery_method: :sendmail
-    sendmail_settings:
-      location: /usr/sbin/sendmail
-      arguments: '-i -t'
 
     smtp_settings:
       address: localhost

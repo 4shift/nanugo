@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222065158) do
+ActiveRecord::Schema.define(version: 20160307044437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,14 +28,14 @@ ActiveRecord::Schema.define(version: 20160222065158) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string   "title",                     default: "", null: false
+    t.string   "title",                              default: "", null: false
     t.string   "desc"
     t.string   "department"
     t.string   "subcategory"
     t.string   "size_type"
     t.string   "structured_size"
-    t.integer  "condition",                 default: 0,  null: false
-    t.integer  "price",           limit: 8, default: 0,  null: false
+    t.integer  "condition",                          default: 0,  null: false
+    t.integer  "price",                    limit: 8, default: 0,  null: false
     t.string   "first_image"
     t.string   "second_image"
     t.string   "third_image"
@@ -43,9 +43,10 @@ ActiveRecord::Schema.define(version: 20160222065158) do
     t.string   "location"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
     t.integer  "user_id"
+    t.integer  "fulfillment_options_mask"
   end
 
   add_index "items", ["department"], name: "index_items_on_department", using: :btree

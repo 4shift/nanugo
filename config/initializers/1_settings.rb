@@ -38,3 +38,21 @@ Settings.gravatar['enabled']      = true if Settings.gravatar['enabled'].nil?
 Settings.gravatar['plain_url']  ||= 'http://www.gravatar.com/avatar/%{hash}?s=%{size}&d=%{default_url}'
 Settings.gravatar['ssl_url']    ||= 'https://secure.gravatar.com/avatar/%{hash}?s=%{size}&d=%{default_url}'
 Settings.gravatar['default']    ||= 'https://www.clebee.net/assets/no_avatar.jpg'
+
+# Outgoing emails
+Settings['outgoing_emails'] ||= Settingslogic.new({})
+Settings['outgoing_emails'].tap do |opts|
+  # For backward compatibility. TODO remove in next major release.
+  opts['enabled'] ||= Settings.outgoing_emails['enabled']
+  opts['from'] ||= Settings.outgoing_emails['from']
+  opts['display_name'] ||= Settings.outgoing_emails['display_name']
+  opts['reply_to'] ||= Settings.outgoing_emails['reply_to']
+
+  opts['enabled'] ||= opts['enabled'].nil?
+  opts['display_name'] ||= "Nanugo"
+  opts['from'] ||= "webmaster@#{Settings.nanugo.host}"
+  opts['reply_to'] ||= "noreply@#{Settings.nanugo.host}"
+  opts['delivery_method'] ||= :smtp
+  opts['sendmail_settings'] ||= {}
+  opts['smtp_settings'] ||= {}
+end
