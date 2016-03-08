@@ -14,13 +14,10 @@ require 'mina/unicorn'
 
 set :term_mode, nil
 set :domain, '182.161.126.8'
-# set :domain, '182.161.126.47'
 set :repository, 'https://github.com/4shift/nanugo.git'
 set :user, 'deploy'
-# set :user, 'clebee'
 set :forward_agent, true
 set :deploy_to, '/srv/repository/www/nanugo'
-# set :deploy_to, '/home/clebee/www/nanugo'
 set :branch, 'master'
 set :rails_env, 'production'
 set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"

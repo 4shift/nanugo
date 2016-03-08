@@ -8,6 +8,5 @@
 #= require jquery_ujs
 #= require jquery.remotipart
 #= require bootstrap-sprockets
-#= require cloudinary
 #= require underscore
 #= require_tree ./applications
