@@ -26,7 +26,7 @@
         <%= form_for(resource, :as => resource_name, :url => user_registration_path, :html => { :id => "signup-box" }, :format => :json, :remote => true, authenticity_token: true) do |f| %>
           <div class="fields">
             <div class="form-group">
-              <%= f.email_field :email, placeholder: "이메일을 입력해 주세요.", autofocus: true, autocomplete: "off" %>
+              <%= f.email_field :email, placeholder: "이메일을 입력해 주세요.", required: true, autofocus: true, autocomplete: "off" %>
             </div>
           </div>
           <div class="signup">

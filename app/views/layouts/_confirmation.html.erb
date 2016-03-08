@@ -10,19 +10,19 @@
           <hr />
         </div>
         <div id="js-error-messages" class="result"></div>
-        <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-          <div class="field">
+        <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), :html => { :id => "confirmation-box" }, :format => :json, :remote => true, authenticity_token: true) do |f| %>
+          <div class="fields">
             <div class="form-group">
               <%= f.email_field :email, placeholder: "인증메일을 받을 이메일을 입력해 주세요.", autofocus: true %>
             </div>
           </div>
           <div class="confirmation_send">
-            <%= f.submit "인증메일 재전송" %>
+            <%= f.submit "재전송" %>
           </div>
         <% end %>
       </section>
       <section class="text-center">
-        <span>아직 nanuGO 계정이 없나요? <a href="#" class="js-modal-signup-at-confirmation"> 계정 만들기</a> </span>
+        <span>아직 nanuGO 계정이 없나요? <a href="#" class="js-modal-signup-at-confirmation">계정 만들기</a> </span>
       </section>
     </div>
   </div>

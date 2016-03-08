@@ -78,22 +78,27 @@
   #signup .login-wrapper header > h1,
   #login .signup-wrapper header > h1,
   #signup .signup-wrapper header > h1,
+  #confirmation .confirmation-wrapper header > h1,
   #login .login-wrapper header > h2,
   #signup .login-wrapper header > h2,
   #login .signup-wrapper header > h2,
   #signup .signup-wrapper header > h2,
+  #confirmation .confirmation-wrapper header > h2,
   #login .login-wrapper header > h3,
   #signup .login-wrapper header > h3,
   #login .signup-wrapper header > h3,
   #signup .signup-wrapper header > h3,
+  #confirmation .confirmation-wrapper header > h3,
   #login .login-wrapper header > h4,
   #signup .login-wrapper header > h4,
   #login .signup-wrapper header > h4,
   #signup .signup-wrapper header > h4,
+  #confirmation .confirmation-wrapper header > h4,
   #login .login-wrapper header > h5,
   #signup .login-wrapper header > h5,
   #login .signup-wrapper header > h5,
   #signup .signup-wrapper header > h5,
+  #confirmation .confirmation-wrapper header > h5,
   #login .login-wrapper header > h6,
   #signup .login-wrapper header > h6,
   #login .signup-wrapper header > h6,
@@ -283,10 +288,9 @@ textarea#confirmation .fields .form-group input {
 @media(min-width:992px) {
   #login .login,
   #signup .login,
-  #confirmation .confirmation,
   #login .signup,
   #signup .signup,
-  #confirmation .confirmation {
+  #confirmation .confirmation_send {
     float: left;
     width: 16.66666667%;
   }
@@ -295,20 +299,20 @@ textarea#confirmation .fields .form-group input {
 @media(max-width:991px) {
   #login .login,
   #signup .login,
-  #confirmation .confirmation,
+  #confirmation .confirmation_send,
   #login .signup,
   #signup .signup,
-  #confirmation .confirmation {
+  #confirmation .confirmation_send {
     padding: 0 12px;
   }
 }
 
 #login .login input,
 #signup .login input,
-#confirmation .confirmation input,
+#confirmation .confirmation_send input,
 #login .signup input,
 #signup .signup input,
-#confirmation .confirmation input {
+#confirmation .confirmation_send input {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -336,10 +340,10 @@ textarea#confirmation .fields .form-group input {
 }
 #login .login input:focus,
 #signup .login input:focus,
-#confirmation .confirmation input:focus,
+#confirmation .confirmation_send input:focus,
 #login .signup input:focus,
 #signup .signup input:focus,
-#confirmation .confirmation input:focus {
+#confirmation .confirmation_send input:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -349,12 +353,12 @@ textarea#confirmation .fields .form-group input {
 #signup .login input:hover,
 #login .signup input:hover,
 #signup .signup input:hover,
-#confirmation .confirmation input:hover,
+#confirmation .confirmation_send input:hover,
 #login .login input:focus,
 #signup .login input:focus,
 #login .signup input:focus,
 #signup .signup input:focus,
-#confirmation .confirmation input:focus {
+#confirmation .confirmation_send input:focus {
   color: $main-bg-color;
   text-decoration: none;
 }
@@ -363,12 +367,12 @@ textarea#confirmation .fields .form-group input {
 #signup .login input:active,
 #login .signup input:active,
 #signup .signup input:active,
-#confirmation .confirmation input:active,
+#confirmation .confirmation_send input:active,
 #login .login input.active,
 #signup .login input.active,
 #login .signup input.active,
 #signup .signup input.active,
-#confirmation .confirmation input.active {
+#confirmation .confirmation_send input.active {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -378,12 +382,12 @@ textarea#confirmation .fields .form-group input {
 #signup .login input.disabled,
 #login .signup input.disabled,
 #signup .signup input.disabled,
-#confirmation .confirmation input.disabled,
+#confirmation .confirmation_send input.disabled,
 #login .login input[disabled],
 #signup .login input[disabled],
 #login .signup input[disabled],
 #signup .signup input[disabled],
-#confirmation .confirmation input[disabled],
+#confirmation .confirmation_send input[disabled],
 fieldset[disabled] #login .login input,
 fieldset[disabled] #signup .login input,
 fieldset[disabled] #login .signup input,
@@ -398,7 +402,8 @@ fieldset[disabled] #signup .signup input {
 #login .login input.btn-link,
 #signup .login input.btn-link,
 #login .signup input.btn-link,
-#signup .signup input.btn-link {
+#signup .signup input.btn-link,
+#confirmation .confirmation_send input.btn-link {
   color: $main-color;
   padding: 0;
 }
@@ -406,7 +411,8 @@ fieldset[disabled] #signup .signup input {
 #login .login input.btn-outline,
 #signup .login input.btn-outline,
 #login .signup input.btn-outline,
-#signup .signup input.btn-outline {
+#signup .signup input.btn-outline,
+#confirmation .confirmation_send input.btn-outline {
   border: 1px solid;
   border-color: #9b9b9b;
   background-color: transparent;
@@ -417,7 +423,8 @@ fieldset[disabled] #signup .signup input {
 #login .login input.btn-outline:hover,
 #signup .login input.btn-outline:hover,
 #login .signup input.btn-outline:hover,
-#signup .signup input.btn-outline:hover {
+#signup .signup input.btn-outline:hover,
+#confirmation .confirmation_send input.btn-outline:hover {
   color: $main-color;
   border-color: $button-border-color;
 }
@@ -425,14 +432,16 @@ fieldset[disabled] #signup .signup input {
 #login .login input.btn-outline:active,
 #signup .login input.btn-outline:active,
 #login .signup input.btn-outline:active,
-#signup .signup input.btn-outline:active {
+#signup .signup input.btn-outline:active,
+#confirmation .confirmation_send input.btn-outline:active {
   box-shadow: none;
 }
 
 #login .login input.btn-full-width,
 #signup .login input.btn-full-width,
 #login .signup input.btn-full-width,
-#signup .signup input.btn-full-width {
+#signup .signup input.btn-full-width,
+#confirmation .confirmation_send input.btn-full-width {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
