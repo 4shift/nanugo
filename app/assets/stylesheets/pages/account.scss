@@ -24,26 +24,28 @@
 }
 
 #login h1,
-#signup h1 {
+#signup h1,
+#confirmation h1, {
   font-size: 32px;
   font-family: $default-font;
   color: $account-h1-color;
 }
 
 @media(max-width:767px) {
-  #login h1, #signup h1 {
+  #login h1, #signup h1, #confirmation h1 {
     font-size: 18px;
   }
 }
 
 #login h4,
-#signup h4 {
+#signup h4,
+#confirmation h4, {
   color: $account-h1-color;
   font-weight: 200;
 }
 
 @media(max-width:767px) {
-  #login h4, #signup h4 {
+  #login h4, #signup h4, #confirmation h4 {
     font-size: 14px
   }
 }
@@ -51,7 +53,8 @@
 #login .login-wrapper,
 #signup .login-wrapper,
 #login .signup-wrapper,
-#signup .signup-wrapper {
+#signup .signup-wrapper,
+#confirmation .confirmation-wrapper {
   position: absolute;
   padding: 0 60px;
   top: 50%;
@@ -65,7 +68,8 @@
 #login .login-wrapper header,
 #signup .login-wrapper header,
 #login .signup-wrapper header,
-#signup .signup-wrapper header {
+#signup .signup-wrapper header,
+#confirmation .confirmation-wrapper header, {
   margin-bottom: 30px
 }
 
@@ -93,7 +97,8 @@
   #login .login-wrapper header > h6,
   #signup .login-wrapper header > h6,
   #login .signup-wrapper header > h6,
-  #signup .signup-wrapper header > h6 {
+  #signup .signup-wrapper header > h6,
+  #confirmation .confirmation-wrapper header > h6 {
     margin: 27px 0 18px 0;
   }
 }
@@ -102,7 +107,8 @@
   #login .login-wrapper,
   #signup .login-wrapper,
   #login .signup-wrapper,
-  #signup .signup-wrapper {
+  #signup .signup-wrapper,
+  #confirmation .confirmation-wrapper {
     width: 80%;
   }
 }
@@ -111,15 +117,25 @@
   #login .login-wrapper,
   #signup .login-wrapper,
   #login .signup-wrapper,
-  #signup .signup-wrapper {
+  #signup .signup-wrapper,
+  #confirmation .confirmation-wrapper {
     width: 280px;
     padding: 15px;
     font-size: 14px;
   }
 }
 
+#login .result,
+#signup .result,
+#confirmation .result {
+  padding-bottom: 10px;
+  text-align: center;
+  color: $input-focus-color;
+}
+
 #login .seperator,
-#signup .seperator {
+#signup .seperator,
+#confirmation .seperator {
   text-align: center;
   display: block;
   margin-left: auto;
@@ -129,13 +145,15 @@
 }
 
 #login .seperator hr,
-#signup .seperator hr {
+#signup .seperator hr,
+#confirmation .seperator hr {
   height: 2px;
   background: $hr-color;
 }
 
 #login .seperator span,
-#signup .seperator span {
+#signup .seperator span,
+#confirmation .seperator span {
   display: inline-block;
   padding: 0 24px;
   background: $main-bg-color;
@@ -144,7 +162,8 @@
 }
 
 #login .fields,
-#signup .fields {
+#signup .fields,
+#confirmation .fields {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -154,14 +173,16 @@
 
 @media(min-width:992px) {
   #login .fields,
-  #signup .fields {
+  #signup .fields,
+  #confirmation .fields {
     float: left;
     width: 83.33333333%;
   }
 }
 
 #login .fields .form-group,
-#signup .fields .form-group {
+#signup .fields .form-group,
+#confirmation .fields .form-group {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -171,14 +192,16 @@
 
 @media(min-width:992px) {
   #login .fields .form-group,
-  #signup .fields .form-group {
+  #signup .fields .form-group,
+  #confirmation .fields .form-group {
     float: left;
     width: 100%;
   }
 }
 
 #login .fields .form-group input,
-#signup .fields .form-group input {
+#signup .fields .form-group input,
+#confirmation .fields .form-group input {
   display: block;
   width: 100%;
   height: 38px;
@@ -201,22 +224,26 @@
 }
 
 #login .fields .form-group input:-moz-placeholder,
-#signup .fields .form-group input:-moz-placeholder {
+#signup .fields .form-group input:-moz-placeholder,
+#confirmation .fields .form-group input:-moz-placeholder {
   color: $gray-color;
 }
 
 #login .fields .form-group input:-ms-input-placeholder,
-#signup .fields .form-group input:-ms-input-placeholder {
+#signup .fields .form-group input:-ms-input-placeholder,
+#confirmation .fields .form-group input:-ms-input-placeholder {
   color: $gray-color;
 }
 
 #login .fields .form-group input::-webkit-input-placeholder,
-#signup .fields .form-group input::-webkit-input-placeholder {
+#signup .fields .form-group input::-webkit-input-placeholder,
+#confirmation .fields .form-group input::-webkit-input-placeholder {
   color: $gray-color;
 }
 
 #login .fields .form-group input:focus,
-#signup .fields .form-group input:focus {
+#signup .fields .form-group input:focus,
+#confirmation .fields .form-group input:focus {
   border-color: $input-focus-color;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
@@ -224,21 +251,26 @@
 
 #login .fields .form-group input[disabled],
 #signup .fields .form-group input[disabled],
+#confirmation .fields .form-group input[disabled],
 #login .fields .form-group input[readonly],
 #signup .fields .form-group input[readonly],
+#confirmation .fields .form-group input[readonly],
 fieldset[disabled] #login .fields .form-group input,
-fieldset[disabled] #signup .fields .form-group input {
+fieldset[disabled] #signup .fields .form-group input,
+fieldset[disabled] #confirmation .fields .form-group input {
   cursor: not-allowed;
   background-color: $input-bg-color;
 }
 
 textarea#login .fields .form-group input,
-textarea#signup .fields .form-group input {
+textarea#signup .fields .form-group input,
+textarea#confirmation .fields .form-group input {
   height: auto;
 }
 
 #login .login,
 #signup .login,
+#confirmation .confirmation,
 #login .signup,
 #signup .signup {
   position: relative;
@@ -251,8 +283,10 @@ textarea#signup .fields .form-group input {
 @media(min-width:992px) {
   #login .login,
   #signup .login,
+  #confirmation .confirmation,
   #login .signup,
-  #signup .signup {
+  #signup .signup,
+  #confirmation .confirmation {
     float: left;
     width: 16.66666667%;
   }
@@ -261,16 +295,20 @@ textarea#signup .fields .form-group input {
 @media(max-width:991px) {
   #login .login,
   #signup .login,
+  #confirmation .confirmation,
   #login .signup,
-  #signup .signup {
+  #signup .signup,
+  #confirmation .confirmation {
     padding: 0 12px;
   }
 }
 
 #login .login input,
 #signup .login input,
+#confirmation .confirmation input,
 #login .signup input,
-#signup .signup input {
+#signup .signup input,
+#confirmation .confirmation input {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -298,8 +336,10 @@ textarea#signup .fields .form-group input {
 }
 #login .login input:focus,
 #signup .login input:focus,
+#confirmation .confirmation input:focus,
 #login .signup input:focus,
-#signup .signup input:focus {
+#signup .signup input:focus,
+#confirmation .confirmation input:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -309,10 +349,12 @@ textarea#signup .fields .form-group input {
 #signup .login input:hover,
 #login .signup input:hover,
 #signup .signup input:hover,
+#confirmation .confirmation input:hover,
 #login .login input:focus,
 #signup .login input:focus,
 #login .signup input:focus,
-#signup .signup input:focus {
+#signup .signup input:focus,
+#confirmation .confirmation input:focus {
   color: $main-bg-color;
   text-decoration: none;
 }
@@ -321,10 +363,12 @@ textarea#signup .fields .form-group input {
 #signup .login input:active,
 #login .signup input:active,
 #signup .signup input:active,
+#confirmation .confirmation input:active,
 #login .login input.active,
 #signup .login input.active,
 #login .signup input.active,
-#signup .signup input.active {
+#signup .signup input.active,
+#confirmation .confirmation input.active {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -334,10 +378,12 @@ textarea#signup .fields .form-group input {
 #signup .login input.disabled,
 #login .signup input.disabled,
 #signup .signup input.disabled,
+#confirmation .confirmation input.disabled,
 #login .login input[disabled],
 #signup .login input[disabled],
 #login .signup input[disabled],
 #signup .signup input[disabled],
+#confirmation .confirmation input[disabled],
 fieldset[disabled] #login .login input,
 fieldset[disabled] #signup .login input,
 fieldset[disabled] #login .signup input,

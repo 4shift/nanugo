@@ -22,12 +22,11 @@
           <hr />
           <span>또는</span>
         </div>
-        <div id="js-error-messages" class="blind">
-        </div>
-        <%= form_for(resource, :as => resource_name, :url => user_registration_path, :html => { :id => "signup-box"}, :format => :json, :remote => true, authenticity_token: true) do |f| %>
+        <div id="js-error-messages" class="result"></div>
+        <%= form_for(resource, :as => resource_name, :url => user_registration_path, :html => { :id => "signup-box" }, :format => :json, :remote => true, authenticity_token: true) do |f| %>
           <div class="fields">
             <div class="form-group">
-              <%= f.email_field :email, placeholder: "Email Address", autofocus: true, autocomplete: "off" %>
+              <%= f.email_field :email, placeholder: "이메일을 입력해 주세요.", autofocus: true, autocomplete: "off" %>
             </div>
           </div>
           <div class="signup">
@@ -36,7 +35,8 @@
         <% end %>
       </section>
       <section class="text-center">
-        <span>이미 nanuGO 계정이 있으신가요? <a href="#" class="js-modal-signin">로그인하기</a> </span>
+        <div>이미 nanuGO 계정이 있으신가요? <a href="#" class="js-modal-signin">로그인하기</a></div>
+        <div>인증메일을 다시 받고 싶으신가요? <a href="#" class="js-modal-confirmation">인증메일 재전송</a></div>
       </section>
     </div>
   </div>
