@@ -60,7 +60,7 @@ $ ->
         setTimeout ( ->
           $("#confirmation #js-error-messages").text("나누고 인증메일이 전송되었습니다. 이메일을 확인해 주세요.")
         ), 2000
-      .on "ajax:error", "#signup-box", (e, xhr, status, error) ->
+      .on "ajax:error", "#confirmation-box", (e, xhr, status, error) ->
         $("#confirmation #js-error-messages").html("이메일 정보가 올바르지 않거나 서비스에 문제가 발생했습니다. 문제가 지속된다면 관리자에게 문의 바랍니다.")
 
     #
