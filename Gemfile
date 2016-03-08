@@ -9,8 +9,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'puma'
-gem 'rails_12factor', group: :production
+# gem 'puma'
+# gem 'rails_12factor', group: :production
 
 gem 'bootstrap-sass', '~> 3.0'
 gem 'font-awesome-sass', '~> 4.3.0'
