@@ -10,7 +10,7 @@ production:
   api_key: 864863422983684
   api_secret: NlPXGRK_NuiqhO4Zgk-8UX5Gbww
   enhance_image_tag: true
-  static_image_support: true
+  static_image_support: false
 
 test:
   cloud_name: my_cloud_name
