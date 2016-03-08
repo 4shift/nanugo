@@ -36,7 +36,7 @@ gem 'rails_admin', '~> 0.8.1'
 gem 'request_store'
 gem 'settingslogic'
 gem 'underscore-rails'
-gem 'cloudinary'
+gem 'cloudinary', require: false
 
 gem 'sidekiq', '~> 3.3'
 gem 'sinatra', require: false
