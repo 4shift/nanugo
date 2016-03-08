@@ -109,8 +109,6 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise-async (0.9.0)
-      devise (~> 3.2)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
     doorkeeper (3.1.0)
@@ -362,7 +360,6 @@ DEPENDENCIES
   cloudinary
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.0)
-  devise-async (= 0.9.0)
   doorkeeper
   fastclick-rails
   ffaker

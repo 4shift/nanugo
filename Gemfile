@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -19,7 +18,7 @@ gem "animate-rails"
 gem 'ionicons-rails'
 
 gem 'devise', '~> 3.4.0'   # or later
-gem 'devise-async', '0.9.0'
+# gem 'devise-async', '0.9.0'
 gem 'doorkeeper'
 gem 'omniauth', '~> 1.1.3'
 gem 'omniauth-facebook'

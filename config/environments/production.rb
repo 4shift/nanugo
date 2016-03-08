@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -46,7 +46,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :info
+  config.log_level = :debug
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -77,17 +77,18 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'nanugo.co.kr', port: 80 }
-  config.action_mailer.asset_host = "http://nanugo.co.kr"
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.asset_host = "http://localhost:3000"
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
     authentication: :plain,
-    address: "smtp.mailgun.org",
+    address: ENV["SMTP_HOST"],
     port: 587,
-    domain: "nanugo.co.kr",
-    user_name: "postmaster@nanugo.co.kr",
-    password: "8b82d3adcb3f567d9f857d41e64971a3",
+    domain: ENV["SMTP_DOMAIN"],
+    user_name: ENV["SMTP_USERNAME"],
+    password: ENV["SMTP_PASSWORD"],
     enable_starttls_auto: true
   }
 

@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: nanugo_production
-  username: nanugo
-  password: <%= ENV['NANUGO_DATABASE_PASSWORD'] %>
