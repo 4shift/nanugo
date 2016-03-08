@@ -83,11 +83,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     authentication: :plain,
-    address: ENV["SMTP_HOST"],
+    address: "smtp.mailgun.org",
     port: 587,
-    domain: ENV["SMTP_DOMAIN"],
-    user_name: ENV["SMTP_USERNAME"],
-    password: ENV["SMTP_PASSWORD"],
+    domain: "nanugo.co.kr",
+    user_name: "postmaster@nanugo.co.kr",
+    password: "8b82d3adcb3f567d9f857d41e64971a3",
     enable_starttls_auto: true
   }
 
