@@ -23,6 +23,11 @@ class ApplicationController < ActionController::Base
     render "errors/not_found", layout: "errors", status: 404
   end
 
+  rescue_from ActionController::RoutingError do |exception|
+    log_exception(exception)
+    render "errors/not_found", layout: "errors", status: 404
+  end
+
   protected
 
   def render_403

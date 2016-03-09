@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  use_doorkeeper
+  # use_doorkeeper
 
   as :user do
       patch '/user/confirmation' => 'confirmations#update', :via => :patch, :as => :update_user_confirmation
@@ -33,4 +33,5 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get "/*id" => 'pages#show', as: :page, format: false
+  
 end
