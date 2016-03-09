@@ -5,6 +5,21 @@ class ConfirmationsController < Devise::ConfirmationsController
   skip_before_filter :require_no_authentication
   skip_before_filter :authenticate_user!
 
+  # POST /resource/confirmation
+  def create
+    self.resource = resource_class.send_confirmation_instructions(resource_params)
+    yield resource if block_given?
+
+    if successfully_sent?(resource)
+      respond_with resource, location: after_resending_confirmation_instructions_path_for(resource_name)
+    else
+      respond_to do |format|
+        format.json { render :json => resource.errors.full_messages.first, :status => :unprocessable_entity }
+        format.html { respond_with resource }
+      end
+    end
+  end
+
   # PUT /resource/confirmation
   def update
     with_unconfirmed_confirmable do

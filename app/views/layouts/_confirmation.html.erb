@@ -16,13 +16,14 @@
               <%= f.email_field :email, placeholder: "인증메일을 받을 이메일을 입력해 주세요.", autofocus: true %>
             </div>
           </div>
-          <div class="confirmation_send">
+          <div class="confirmation-send">
             <%= f.submit "재전송" %>
           </div>
         <% end %>
       </section>
       <section class="text-center">
-        <span>아직 nanuGO 계정이 없나요? <a href="#" class="js-modal-signup-at-confirmation">계정 만들기</a> </span>
+        <div>이미 nanugo 계정이 있으신가요? <a href="#" class="js-modal-signin-at-confirmation">로그인하기</a></div>
+        <div>아직 nanugo 계정이 없나요? <a href="#" class="js-modal-signup-at-confirmation">계정만들기</a></div>
       </section>
     </div>
   </div>

@@ -14,6 +14,19 @@ body {
   visibility: hidden;
 }
 
+#error_explanation {
+  padding: 0 20px;
+  color: $input-focus-color;
+
+  h2 {
+    font-size: 18px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+}
+
 @media(max-width:767px) {
   .mobile {
     display: block !important;

@@ -290,7 +290,7 @@ textarea#confirmation .fields .form-group input {
   #signup .login,
   #login .signup,
   #signup .signup,
-  #confirmation .confirmation_send {
+  #confirmation .confirmation-send {
     float: left;
     width: 16.66666667%;
   }
@@ -299,20 +299,20 @@ textarea#confirmation .fields .form-group input {
 @media(max-width:991px) {
   #login .login,
   #signup .login,
-  #confirmation .confirmation_send,
+  #confirmation .confirmation-send,
   #login .signup,
   #signup .signup,
-  #confirmation .confirmation_send {
+  #confirmation .confirmation-send {
     padding: 0 12px;
   }
 }
 
 #login .login input,
 #signup .login input,
-#confirmation .confirmation_send input,
+#confirmation .confirmation-send input,
 #login .signup input,
 #signup .signup input,
-#confirmation .confirmation_send input {
+#confirmation .confirmation-send input {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -340,10 +340,10 @@ textarea#confirmation .fields .form-group input {
 }
 #login .login input:focus,
 #signup .login input:focus,
-#confirmation .confirmation_send input:focus,
+#confirmation .confirmation-send input:focus,
 #login .signup input:focus,
 #signup .signup input:focus,
-#confirmation .confirmation_send input:focus {
+#confirmation .confirmation-send input:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -353,12 +353,12 @@ textarea#confirmation .fields .form-group input {
 #signup .login input:hover,
 #login .signup input:hover,
 #signup .signup input:hover,
-#confirmation .confirmation_send input:hover,
+#confirmation .confirmation-send input:hover,
 #login .login input:focus,
 #signup .login input:focus,
 #login .signup input:focus,
 #signup .signup input:focus,
-#confirmation .confirmation_send input:focus {
+#confirmation .confirmation-send input:focus {
   color: $main-bg-color;
   text-decoration: none;
 }
@@ -367,12 +367,12 @@ textarea#confirmation .fields .form-group input {
 #signup .login input:active,
 #login .signup input:active,
 #signup .signup input:active,
-#confirmation .confirmation_send input:active,
+#confirmation .confirmation-send input:active,
 #login .login input.active,
 #signup .login input.active,
 #login .signup input.active,
 #signup .signup input.active,
-#confirmation .confirmation_send input.active {
+#confirmation .confirmation-send input.active {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -382,12 +382,12 @@ textarea#confirmation .fields .form-group input {
 #signup .login input.disabled,
 #login .signup input.disabled,
 #signup .signup input.disabled,
-#confirmation .confirmation_send input.disabled,
+#confirmation .confirmation-send input.disabled,
 #login .login input[disabled],
 #signup .login input[disabled],
 #login .signup input[disabled],
 #signup .signup input[disabled],
-#confirmation .confirmation_send input[disabled],
+#confirmation .confirmation-send input[disabled],
 fieldset[disabled] #login .login input,
 fieldset[disabled] #signup .login input,
 fieldset[disabled] #login .signup input,
@@ -403,7 +403,7 @@ fieldset[disabled] #signup .signup input {
 #signup .login input.btn-link,
 #login .signup input.btn-link,
 #signup .signup input.btn-link,
-#confirmation .confirmation_send input.btn-link {
+#confirmation .confirmation-send input.btn-link {
   color: $main-color;
   padding: 0;
 }
@@ -412,7 +412,7 @@ fieldset[disabled] #signup .signup input {
 #signup .login input.btn-outline,
 #login .signup input.btn-outline,
 #signup .signup input.btn-outline,
-#confirmation .confirmation_send input.btn-outline {
+#confirmation .confirmation-send input.btn-outline {
   border: 1px solid;
   border-color: #9b9b9b;
   background-color: transparent;
@@ -424,7 +424,7 @@ fieldset[disabled] #signup .signup input {
 #signup .login input.btn-outline:hover,
 #login .signup input.btn-outline:hover,
 #signup .signup input.btn-outline:hover,
-#confirmation .confirmation_send input.btn-outline:hover {
+#confirmation .confirmation-send input.btn-outline:hover {
   color: $main-color;
   border-color: $button-border-color;
 }
@@ -433,7 +433,7 @@ fieldset[disabled] #signup .signup input {
 #signup .login input.btn-outline:active,
 #login .signup input.btn-outline:active,
 #signup .signup input.btn-outline:active,
-#confirmation .confirmation_send input.btn-outline:active {
+#confirmation .confirmation-send input.btn-outline:active {
   box-shadow: none;
 }
 
@@ -441,7 +441,7 @@ fieldset[disabled] #signup .signup input {
 #signup .login input.btn-full-width,
 #login .signup input.btn-full-width,
 #signup .signup input.btn-full-width,
-#confirmation .confirmation_send input.btn-full-width {
+#confirmation .confirmation-send input.btn-full-width {
   width: 100%;
   margin-left: 0;
   margin-right: 0;

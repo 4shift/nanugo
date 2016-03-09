@@ -1,16 +1,28 @@
-<h2>Resend confirmation instructions</h2>
+<%= content_for :body_id, 'resend_confirmation' %>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div id="signup">
+  <section class="hero">
+    <div class="signup-wrapper">
+      <header>
+        <h1>인증메일 재전송</h1>
+        <h4>인증메일 재전송을 위해 아래의 내용을 확인해 주세요.</h4>
+      </header>
+      <section class="confirmation">
+        <div class="seperator">
+          <hr />
+        </div>
+        <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { id: "confirmation-box", method: :post }) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="fields">
+            <div class="form-group">
+              <%= f.email_field :email, placeholder: "인증메일을 받을 이메일을 입력해 주세요.", autofocus: true %>
+            </div>
+          </div>
+          <div class="signup">
+            <%= f.submit "재전송" %>
+          </div>
+        <% end %>
+      </section>
+    </div>
+  </section>
+</div>
