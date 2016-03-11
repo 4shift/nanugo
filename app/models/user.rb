@@ -35,6 +35,7 @@
 #
 
 class User < ActiveRecord::Base
+  has_merit
 
   ROLES = %w[admin moderator author banned].freeze
 
@@ -147,8 +148,8 @@ class User < ActiveRecord::Base
   end
 
   def give_thanks_point!
-    self.point = ENV["SIGNUP_POINT"].to_i
-    save
+    # self.point = ENV["SIGNUP_POINT"].to_i
+    # save
   end
 
 end

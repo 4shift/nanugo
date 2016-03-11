@@ -38,6 +38,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    ambry (0.3.1)
     animate-rails (1.0.9)
       rails
     annotate (2.6.10)
@@ -157,6 +158,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    merit (2.3.2)
+      ambry (~> 0.3.0)
     meta-tags (2.0.0)
       actionpack (>= 3.0.0)
     meta_request (0.3.4)
@@ -368,6 +371,7 @@ DEPENDENCIES
   high_voltage (~> 2.4.0)
   ionicons-rails
   jquery-rails
+  merit
   meta-tags
   meta_request
   mina

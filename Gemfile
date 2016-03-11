@@ -36,6 +36,7 @@ gem 'request_store'
 gem 'settingslogic'
 gem 'underscore-rails'
 gem 'cloudinary'
+gem 'merit'
 
 gem 'sidekiq', '~> 3.3'
 gem 'sinatra', require: false
